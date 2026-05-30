@@ -306,12 +306,16 @@ def collection_cutoff(existing_payload: dict[str, Any], now: dt.datetime,
     return now - dt.timedelta(days=max(0, days)), "lookback"
 
 def load_match_words(path: Path | None = None) -> dict[str, list[str]]:
-    """Load per-topic match words from config. Falls back to empty dict."""
+    """Load per-topic match words from config. Returns empty dict on any error."""
     p = path or DEFAULT_MATCH_WORDS
     if not p.exists():
         return {}
-    data = load_json(p)
-    return data.get("topics", {})
+    try:
+        data = load_json(p)
+        return data.get("topics", {}) if isinstance(data, dict) else {}
+    except Exception:
+        print(f"Warning: cannot load {p}, falling back to keyword matching", file=sys.stderr)
+        return {}
 
 
 def keyword_score(topic: Topic, paper: dict[str, Any],
@@ -416,7 +420,7 @@ def call_openai_compatible(prompt: str) -> dict[str, Any]:
     model = os.getenv("LLM_MODEL", "deepseek-chat" if os.getenv("DEEPSEEK_API_KEY") else "gpt-4o-mini")
     endpoint = base_url.rstrip("/") + "/chat/completions"
     payload = {"model": model, "temperature": 0.2,
-               "response_format": {"type": "json_object"},
+               # DeepSeek does not support response_format
                "messages": [{"role": "system", "content": "你是严谨的论文技术分析助手。只输出合法 JSON，不要输出 Markdown。"},
                             {"role": "user", "content": prompt}]}
     req = urllib.request.Request(endpoint, data=json.dumps(payload).encode("utf-8"),
