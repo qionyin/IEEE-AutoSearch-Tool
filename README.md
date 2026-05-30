@@ -1,4 +1,4 @@
-﻿# Paper Daily
+# Paper Daily
 
 每天自动追踪 IEEE 新论文，按你的研究方向打分，并生成中文论文摘要。项目使用 GitHub Actions 自动抓取论文，用 GitHub Pages 展示网页。
 

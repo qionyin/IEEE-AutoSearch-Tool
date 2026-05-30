@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 from __future__ import annotations
 import argparse, concurrent.futures, datetime as dt, email.utils, html, json, os, re, sys, time, urllib.error, urllib.parse, urllib.request
 from dataclasses import dataclass
@@ -99,7 +99,7 @@ def load_issue_config(default_config: dict[str, Any]) -> dict[str, Any]:
 def s2_query_for_topic(topic: Topic) -> str:
     terms = []
     for keyword in topic.keywords[:8]:
-        terms.append(f"\"{keyword}\"")
+        terms.append(f'"{keyword}"')
     return " OR ".join(terms) if terms else topic.name
 
 def load_partitions(partition_path: Path | None = None) -> dict[str, set[str]]:
@@ -251,7 +251,7 @@ def collection_cutoff(existing_payload: dict[str, Any], now: dt.datetime,
     return now - dt.timedelta(days=max(0, days)), "lookback"
 
 def keyword_score(topic: Topic, paper: dict[str, Any]) -> tuple[float, list[str]]:
-    haystack = f"{paper.get(\"title\", \"\")} {paper.get(\"summary\", \"\")}".lower()
+    haystack = f"{paper.get("title", "")} {paper.get("summary", "")}".lower()
     hits = []
     weighted = 0.0
     for keyword in topic.keywords:
@@ -263,8 +263,8 @@ def keyword_score(topic: Topic, paper: dict[str, Any]) -> tuple[float, list[str]
     return score, hits[:6]
 
 def lexical_overlap_score(topic: Topic, paper: dict[str, Any]) -> float:
-    topic_terms = set(re.findall(r"[a-zA-Z0-9]+", f"{topic.description} {\" \".join(topic.keywords)}".lower()))
-    paper_terms = set(re.findall(r"[a-zA-Z0-9]+", f"{paper.get(\"title\", \"\")} {paper.get(\"summary\", \"\")}".lower()))
+    topic_terms = set(re.findall(r"[a-zA-Z0-9]+", f"{topic.description} {" ".join(topic.keywords)}".lower()))
+    paper_terms = set(re.findall(r"[a-zA-Z0-9]+", f"{paper.get("title", "")} {paper.get("summary", "")}".lower()))
     if not topic_terms or not paper_terms:
         return 0.0
     overlap = topic_terms & paper_terms
@@ -323,35 +323,35 @@ def call_openai_compatible(prompt: str) -> dict[str, Any]:
     return json.loads(data["choices"][0]["message"]["content"])
 
 def build_llm_prompt(topic: Topic, paper: dict[str, Any], base_match: dict[str, Any]) -> str:
-    journal_line = f"期刊：{paper.get(\"journal\", \"未知\")}\n分区：{paper.get(\"partition\", \"其他\")}" if paper.get("journal") else ""
+    journal_line = f"期刊：{paper.get("journal", "未知")}\n分区：{paper.get("partition", "其他")}" if paper.get("journal") else ""
     return f"""请根据论文标题、摘要和我的研究方向，输出精确中文分析。不要夸大摘要中没有的信息；如果证据不足，请明确说明。
 
 我的研究方向：
 名称：{topic.name}
 描述：{topic.description}
-关键词：{\", \".join(topic.keywords)}
+关键词：{", ".join(topic.keywords)}
 
 论文信息：
-标题：{paper.get(\"title\", \"\")}
-作者：{\", \".join(paper.get(\"authors\", [])[:8])}
-摘要：{paper.get(\"summary\", \"\")}
+标题：{paper.get("title", "")}
+作者：{", ".join(paper.get("authors", [])[:8])}
+摘要：{paper.get("summary", "")}
 {journal_line}
 
 基础匹配信息：
-分数：{base_match.get(\"score\")}
-等级：{base_match.get(\"level\")}
-原因：{base_match.get(\"reason\")}
+分数：{base_match.get("score")}
+等级：{base_match.get("level")}
+原因：{base_match.get("reason")}
 
 请输出 JSON，字段必须为：
 {{
-  \"problem\": \"论文要解决的问题，中文，1-2句\",
-  \"method\": \"核心方法，中文，1-2句\",
-  \"innovation\": \"相对已有工作的具体创新点，中文，2-3点合并成一段\",
-  \"evidence\": \"摘要中可核验的实验、理论或系统证据；没有则写证据不足\",
-  \"limitations\": \"可能局限或需要阅读全文确认的点\",
-  \"why_relevant\": \"为什么匹配我的研究方向\",
-  \"match_score_adjustment\": 0.0,
-  \"match_level\": \"high|medium|low\"
+  "problem": "论文要解决的问题，中文，1-2句",
+  "method": "核心方法，中文，1-2句",
+  "innovation": "相对已有工作的具体创新点，中文，2-3点合并成一段",
+  "evidence": "摘要中可核验的实验、理论或系统证据；没有则写证据不足",
+  "limitations": "可能局限或需要阅读全文确认的点",
+  "why_relevant": "为什么匹配我的研究方向",
+  "match_score_adjustment": 0.0,
+  "match_level": "high|medium|low"
 }}"""
 
 def summarize_with_llm(topic: Topic, paper: dict[str, Any],
@@ -362,29 +362,29 @@ def summarize_with_llm(topic: Topic, paper: dict[str, Any],
     try:
         data = call_openai_compatible(prompt)
     except Exception as exc:
-        print(f"Warning: LLM summary failed for {paper.get(\"id\")}: {exc}", file=sys.stderr)
+        print(f"Warning: LLM summary failed for {paper.get("id")}: {exc}", file=sys.stderr)
         return fallback_summary(paper, base_match), base_match
-    summary = {"problem": str(data.get(\"problem\", \"\")),
-               \"method\": str(data.get(\"method\", \"\")),
-               \"innovation\": str(data.get(\"innovation\", \"\")),
-               \"evidence\": str(data.get(\"evidence\", \"\")),
-               \"limitations\": str(data.get(\"limitations\", \"\")),
-               \"why_relevant\": str(data.get(\"why_relevant\", \"\"))}
-    adjustment = float(data.get(\"match_score_adjustment\", 0.0) or 0.0)
-    adjusted_score = max(0.0, min(1.0, base_match[\"score\"] + adjustment))
-    adjusted_level = str(data.get(\"match_level\") or match_level(adjusted_score)).lower()
-    if adjusted_level not in {\"high\", \"medium\", \"low\"}:
+    summary = {"problem": str(data.get("problem", "")),
+               "method": str(data.get("method", "")),
+               "innovation": str(data.get("innovation", "")),
+               "evidence": str(data.get("evidence", "")),
+               "limitations": str(data.get("limitations", "")),
+               "why_relevant": str(data.get("why_relevant", ""))}
+    adjustment = float(data.get("match_score_adjustment", 0.0) or 0.0)
+    adjusted_score = max(0.0, min(1.0, base_match["score"] + adjustment))
+    adjusted_level = str(data.get("match_level") or match_level(adjusted_score)).lower()
+    if adjusted_level not in {"high", "medium", "low"}:
         adjusted_level = match_level(adjusted_score)
     adjusted_match = dict(base_match)
-    adjusted_match[\"score\"] = round(adjusted_score, 3)
-    adjusted_match[\"level\"] = adjusted_level
-    adjusted_match[\"llm_reason\"] = summary[\"why_relevant\"]
+    adjusted_match["score"] = round(adjusted_score, 3)
+    adjusted_match["level"] = adjusted_level
+    adjusted_match["llm_reason"] = summary["why_relevant"]
     return summary, adjusted_match
 
 def summarize_one(args: tuple[Topic, dict[str, Any]]) -> tuple[str, dict[str, str], dict[str, Any]]:
     topic, paper = args
-    paper_id = str(paper.get(\"id\", \"\"))
-    summary, adjusted_match = summarize_with_llm(topic, paper, paper[\"best_match\"])
+    paper_id = str(paper.get("id", ""))
+    summary, adjusted_match = summarize_with_llm(topic, paper, paper["best_match"])
     return paper_id, summary, adjusted_match
 
 def dedupe_papers(papers: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -632,7 +632,7 @@ def main() -> None:
     payload = collect(args.config, args.output, args.days, args.max_per_topic,
                       args.max_summaries, args.max_stored_papers, args.max_data_bytes,
                       args.incremental_since_last_run, args.recent_history_days)
-    print(f"Wrote {len(payload[\"papers\"])} papers to {args.output}")
+    print(f"Wrote {len(payload["papers"])} papers to {args.output}")
 
 if __name__ == "__main__":
     main()
