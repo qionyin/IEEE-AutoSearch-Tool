@@ -1,67 +1,29 @@
 {
-  "_comment": "required_words ?????????match_words ????????",
+  "_comment": "required_words 必须命中至少一个，match_words 命中越多分数越高",
   "topics": {
     "nn_antenna": {
-      "required_words": [
-        "antenna"
-      ],
+      "required_words": ["antenna"],
       "match_words": [
-        "neural",
-        "network",
-        "learning",
-        "deep",
-        "surrogate",
-        "model",
-        "prediction",
-        "regression",
-        "data-driven",
-        "AI",
-        "machine learning",
-        "optimization",
-        "design",
-        "modeling",
-        "simulation",
-        "electromagnetic",
-        "microwave",
-        "patch",
-        "array",
-        "radiation",
-        "gain",
-        "bandwidth",
-        "frequency",
-        "impedance",
-        "HFSS",
-        "CST",
-        "FEM"
+        "neural", "network", "learning", "deep",
+        "surrogate", "model", "prediction", "regression",
+        "data-driven", "AI", "machine learning",
+        "optimization", "design", "modeling",
+        "simulation", "electromagnetic", "microwave",
+        "patch", "array", "radiation", "gain",
+        "bandwidth", "frequency", "impedance",
+        "HFSS", "CST", "FEM"
       ]
     },
     "algo_antenna": {
-      "required_words": [
-        "antenna"
-      ],
+      "required_words": ["antenna"],
       "match_words": [
-        "optimization",
-        "algorithm",
-        "evolutionary",
-        "genetic",
-        "swarm",
-        "particle",
-        "PSO",
-        "GA",
-        "multi-objective",
-        "surrogate",
-        "parameterized",
-        "design",
-        "simulation",
-        "electromagnetic",
-        "modeling",
-        "array",
-        "radiation",
-        "gain",
-        "bandwidth",
-        "frequency",
-        "microwave",
-        "HFSS"
+        "optimization", "algorithm",
+        "evolutionary", "genetic", "swarm",
+        "particle", "PSO", "GA", "multi-objective",
+        "surrogate", "parameterized", "design",
+        "simulation", "electromagnetic", "modeling",
+        "array", "radiation", "gain", "bandwidth",
+        "frequency", "microwave", "HFSS"
       ]
     }
   }
