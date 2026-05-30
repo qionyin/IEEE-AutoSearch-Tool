@@ -1,6 +1,6 @@
 {
-  "generated_at": "Sat, 30 May 2026 07:39:40 +0000",
-  "generated_at_iso": "2026-05-30T07:39:40.200927+00:00",
+  "generated_at": "Sat, 30 May 2026 07:40:34 +0000",
+  "generated_at_iso": "2026-05-30T07:40:34.739123+00:00",
   "config_source": "file",
   "topics": [
     {
@@ -111,7 +111,7 @@
         "why_relevant": "neural; network; learning; model; prediction; ai"
       },
       "first_seen_at": "2026-05-30T07:39:40.200927+00:00",
-      "last_seen_at": "2026-05-30T07:39:40.200927+00:00",
+      "last_seen_at": "2026-05-30T07:40:34.739123+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -188,7 +188,7 @@
         "why_relevant": "network; model; ai; optimization; design; electromagnetic"
       },
       "first_seen_at": "2026-05-30T07:08:10.014574+00:00",
-      "last_seen_at": "2026-05-30T07:39:40.200927+00:00",
+      "last_seen_at": "2026-05-30T07:40:34.739123+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -263,7 +263,7 @@
         "why_relevant": "neural; network; learning; model; ai; optimization"
       },
       "first_seen_at": "2026-05-30T07:08:10.014574+00:00",
-      "last_seen_at": "2026-05-30T07:39:40.200927+00:00",
+      "last_seen_at": "2026-05-30T07:40:34.739123+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -343,7 +343,7 @@
         "why_relevant": "model; ai; optimization; design; modeling; simulation"
       },
       "first_seen_at": "2026-05-30T07:39:40.200927+00:00",
-      "last_seen_at": "2026-05-30T07:39:40.200927+00:00",
+      "last_seen_at": "2026-05-30T07:40:34.739123+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -424,7 +424,7 @@
         "why_relevant": "optimization; algorithm; evolutionary; ga; surrogate; design"
       },
       "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:39:40.200927+00:00",
+      "last_seen_at": "2026-05-30T07:40:34.739123+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -504,7 +504,7 @@
         "why_relevant": "model; ai; optimization; design; modeling; simulation"
       },
       "first_seen_at": "2026-05-30T07:39:40.200927+00:00",
-      "last_seen_at": "2026-05-30T07:39:40.200927+00:00",
+      "last_seen_at": "2026-05-30T07:40:34.739123+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -581,7 +581,7 @@
         "why_relevant": "learning; deep; model; ai; optimization; design"
       },
       "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:39:40.200927+00:00",
+      "last_seen_at": "2026-05-30T07:40:34.739123+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -654,7 +654,7 @@
         "why_relevant": "network; learning; deep; model; regression; ai"
       },
       "first_seen_at": "2026-05-30T07:39:40.200927+00:00",
-      "last_seen_at": "2026-05-30T07:39:40.200927+00:00",
+      "last_seen_at": "2026-05-30T07:40:34.739123+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -731,7 +731,7 @@
         "why_relevant": "surrogate; model; ai; design; simulation; electromagnetic"
       },
       "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:39:40.200927+00:00",
+      "last_seen_at": "2026-05-30T07:40:34.739123+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -808,7 +808,7 @@
         "why_relevant": "model; ai; optimization; design; simulation; array"
       },
       "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:39:40.200927+00:00",
+      "last_seen_at": "2026-05-30T07:40:34.739123+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -882,7 +882,7 @@
         "why_relevant": "neural; network; model; ai; design; radiation"
       },
       "first_seen_at": "2026-05-30T07:39:40.200927+00:00",
-      "last_seen_at": "2026-05-30T07:39:40.200927+00:00",
+      "last_seen_at": "2026-05-30T07:40:34.739123+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -959,7 +959,7 @@
         "why_relevant": "network; ai; design; simulation; array; gain"
       },
       "first_seen_at": "2026-05-30T07:39:40.200927+00:00",
-      "last_seen_at": "2026-05-30T07:39:40.200927+00:00",
+      "last_seen_at": "2026-05-30T07:40:34.739123+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -1037,7 +1037,7 @@
         "why_relevant": "model; ai; optimization; modeling; array; radiation"
       },
       "first_seen_at": "2026-05-30T07:39:40.200927+00:00",
-      "last_seen_at": "2026-05-30T07:39:40.200927+00:00",
+      "last_seen_at": "2026-05-30T07:40:34.739123+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -1117,7 +1117,7 @@
         "why_relevant": "deep; ai; optimization; array; radiation; gain"
       },
       "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:39:40.200927+00:00",
+      "last_seen_at": "2026-05-30T07:40:34.739123+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -1194,7 +1194,7 @@
         "why_relevant": "ai; design; simulation; electromagnetic; radiation; gain"
       },
       "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:39:40.200927+00:00",
+      "last_seen_at": "2026-05-30T07:40:34.739123+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -1588,7 +1588,7 @@
         "why_relevant": "optimization; algorithm; design"
       },
       "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:39:40.200927+00:00",
+      "last_seen_at": "2026-05-30T07:40:34.739123+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -2045,7 +2045,7 @@
         "why_relevant": "learning; machine learning"
       },
       "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:39:40.200927+00:00",
+      "last_seen_at": "2026-05-30T07:40:34.739123+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -3849,7 +3849,7 @@
     "new_paper_count": 17,
     "days": 180,
     "collection_mode": "lookback",
-    "collection_cutoff_iso": "2025-12-01T07:39:40.200927+00:00",
+    "collection_cutoff_iso": "2025-12-01T07:40:34.739123+00:00",
     "max_per_topic": 25,
     "llm_enabled": true,
     "llm_concurrency": 2,
@@ -3857,7 +3857,7 @@
     "successful_fetches": 2,
     "failed_fetches": 0,
     "retained_paper_count": 34,
-    "retained_recent_low_count": 37,
+    "retained_recent_low_count": 31,
     "dropped_low_relevance_count": 0,
     "max_stored_papers": 800,
     "max_data_bytes": 8388608,
