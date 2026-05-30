@@ -1,6 +1,6 @@
 {
-  "generated_at": "Sat, 30 May 2026 05:19:51 +0000",
-  "generated_at_iso": "2026-05-30T05:19:51.185558+00:00",
+  "generated_at": "Sat, 30 May 2026 05:35:25 +0000",
+  "generated_at_iso": "2026-05-30T05:35:25.288449+00:00",
   "config_source": "file",
   "topics": [
     {
@@ -203,26 +203,25 @@
     "new_paper_count": 0,
     "days": 7,
     "collection_mode": "lookback",
-    "collection_cutoff_iso": "2026-05-23T05:03:51.033609+00:00",
+    "collection_cutoff_iso": "2026-05-23T05:35:25.288449+00:00",
     "max_per_topic": 25,
     "llm_enabled": true,
     "llm_concurrency": 2,
     "recent_history_days": 45,
-    "successful_fetches": 0,
-    "failed_fetches": 2,
+    "successful_fetches": 2,
+    "failed_fetches": 0,
     "retained_paper_count": 2,
     "retained_recent_low_count": 1,
     "dropped_low_relevance_count": 0,
     "max_stored_papers": 800,
     "max_data_bytes": 8388608,
-    "data_bytes": 13459,
+    "data_bytes": 13405,
     "storage_trimmed_count": 0,
     "storage_trimmed_by_level": {
       "high": 0,
       "medium": 0,
       "low": 0,
       "unknown": 0
-    },
-    "last_error": "All data source requests failed."
+    }
   }
 }
