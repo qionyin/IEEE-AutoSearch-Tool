@@ -1,75 +1,36 @@
 {
-  "generated_at": "Sat, 30 May 2026 05:44:08 +0000",
-  "generated_at_iso": "2026-05-30T05:44:08.991550+00:00",
+  "generated_at": "Sat, 30 May 2026 05:52:26 +0000",
+  "generated_at_iso": "2026-05-30T05:52:26.199806+00:00",
   "config_source": "file",
   "topics": [
     {
-      "id": "llm_low_precision_quantization",
-      "name": "大模型低精度量化",
-      "description": "关注大语言模型低比特量化、混合精度、量化感知训练、后训练量化、权重量化、激活量化、KV cache 量化以及量化对推理性能和精度的影响。",
+      "id": "nn_antenna",
+      "name": "神经网络天线优化",
+      "description": "关注神经网络、深度学习、代理模型在天线设计、建模和优化中的应用，包括数据驱动建模和智能优化。",
       "keywords": [
-        "large language model quantization",
-        "LLM quantization",
-        "low-bit quantization",
-        "post-training quantization",
-        "weight-only quantization",
-        "activation quantization",
-        "mixed precision",
-        "FP8",
-        "INT4",
-        "INT8",
-        "KV cache quantization"
+        "neural network antenna optimization",
+        "deep learning antenna design",
+        "surrogate model antenna",
+        "machine learning antenna",
+        "AI-assisted antenna optimization",
+        "data-driven antenna modeling",
+        "neuro-network antenna",
+        "ANN antenna"
       ]
     },
     {
-      "id": "tensor_compute_unit_architecture",
-      "name": "张量计算单元结构",
-      "description": "关注 GPU/NPU/TPU 张量计算单元、矩阵乘加阵列、数据流架构、片上存储层次、低精度张量核、AI 加速器微架构和算子映射。",
+      "id": "algo_antenna",
+      "name": "算法天线优化",
+      "description": "关注进化算法、群体智能、多目标优化等算法在天线设计中的应用，包括遗传算法、粒子群、以及参数化建模优化。",
       "keywords": [
-        "tensor processing unit",
-        "tensor core",
-        "matrix multiply unit",
-        "systolic array",
-        "AI accelerator architecture",
-        "NPU architecture",
-        "GPU tensor core",
-        "low precision tensor compute",
-        "dataflow architecture",
-        "on-chip memory hierarchy"
-      ]
-    },
-    {
-      "id": "llm_inference_cluster_communication",
-      "name": "大模型推理集群通信优化",
-      "description": "关注分布式大模型推理、prefill/decode 分离、张量并行、流水并行、专家并行、跨节点通信、调度、负载均衡和 serving 系统吞吐延迟优化。",
-      "keywords": [
-        "LLM inference serving",
-        "distributed inference",
-        "inference cluster",
-        "tensor parallelism",
-        "pipeline parallelism",
-        "expert parallelism",
-        "all-reduce",
-        "collective communication",
-        "prefill decode disaggregation",
-        "serving scheduler"
-      ]
-    },
-    {
-      "id": "kvcache_compression_storage_scheduling",
-      "name": "KV cache 压缩与存储调度",
-      "description": "关注大模型推理中的 KV cache 压缩、淘汰、分页、卸载、预取、层级存储、显存管理和长上下文推理效率优化。",
-      "keywords": [
-        "KV cache compression",
-        "KV cache eviction",
-        "KV cache scheduling",
-        "paged attention",
-        "attention cache",
-        "long context inference",
-        "memory offloading",
-        "GPU memory management",
-        "cache prefetching",
-        "LLM serving memory"
+        "antenna optimization algorithm",
+        "evolutionary antenna optimization",
+        "genetic algorithm antenna",
+        "particle swarm antenna",
+        "multi-objective antenna optimization",
+        "swarm intelligence antenna",
+        "parameterized antenna optimization",
+        "surrogate-assisted antenna optimization"
       ]
     }
   ],
@@ -239,7 +200,7 @@
       },
       "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
       "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "W7162149650",
@@ -322,7 +283,7 @@
       },
       "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
       "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "W7161915960",
@@ -406,7 +367,7 @@
       },
       "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
       "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "W7161916004",
@@ -493,7 +454,7 @@
       },
       "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
       "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "W7162605672",
@@ -575,7 +536,7 @@
       },
       "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
       "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "W7162474673",
@@ -656,7 +617,7 @@
       },
       "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
       "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "W7162149442",
@@ -730,7 +691,7 @@
       },
       "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
       "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "W7161916845",
@@ -809,7 +770,7 @@
       },
       "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
       "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "W7162045077",
@@ -887,7 +848,7 @@
       },
       "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
       "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "W7161915961",
@@ -961,7 +922,7 @@
       },
       "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
       "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "W7162475087",
@@ -1037,7 +998,7 @@
       },
       "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
       "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "W7162149936",
@@ -1122,7 +1083,7 @@
       },
       "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
       "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "W7161204476",
@@ -1201,7 +1162,7 @@
       },
       "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
       "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "W7160969331",
@@ -1278,7 +1239,7 @@
       },
       "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
       "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "W7161091255",
@@ -1351,7 +1312,7 @@
       },
       "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
       "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "W7162606149",
@@ -1426,7 +1387,7 @@
       },
       "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
       "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "W7162045346",
@@ -1499,7 +1460,7 @@
       },
       "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
       "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "W7162044767",
@@ -1586,7 +1547,7 @@
       },
       "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
       "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "W7137861966",
@@ -1661,7 +1622,7 @@
       },
       "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
       "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "W7162218603",
@@ -1744,7 +1705,7 @@
       },
       "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
       "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "W7162606140",
@@ -1816,7 +1777,7 @@
       },
       "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
       "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "W7162149330",
@@ -1891,7 +1852,7 @@
       },
       "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
       "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "W7162149711",
@@ -1967,7 +1928,7 @@
       },
       "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
       "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "W7160727400",
@@ -2042,7 +2003,7 @@
       },
       "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
       "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "W7160727535",
@@ -2129,7 +2090,7 @@
       },
       "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
       "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "W7162218217",
@@ -2213,7 +2174,7 @@
       },
       "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
       "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "W7162219022",
@@ -2294,7 +2255,7 @@
       },
       "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
       "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "W7161915101",
@@ -2367,7 +2328,7 @@
       },
       "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
       "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "W7162606253",
@@ -2440,7 +2401,7 @@
       },
       "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
       "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "2605.28488v1",
@@ -2522,22 +2483,22 @@
   ],
   "stats": {
     "paper_count": 31,
-    "new_paper_count": 29,
-    "days": 30,
+    "new_paper_count": 0,
+    "days": 7,
     "collection_mode": "lookback",
-    "collection_cutoff_iso": "2026-04-30T05:44:08.991550+00:00",
-    "max_per_topic": 10,
+    "collection_cutoff_iso": "2026-05-23T05:52:26.199806+00:00",
+    "max_per_topic": 25,
     "llm_enabled": true,
     "llm_concurrency": 2,
     "recent_history_days": 45,
-    "successful_fetches": 4,
+    "successful_fetches": 2,
     "failed_fetches": 0,
-    "retained_paper_count": 2,
-    "retained_recent_low_count": 1,
+    "retained_paper_count": 31,
+    "retained_recent_low_count": 25,
     "dropped_low_relevance_count": 0,
     "max_stored_papers": 800,
     "max_data_bytes": 8388608,
-    "data_bytes": 156667,
+    "data_bytes": 155262,
     "storage_trimmed_count": 0,
     "storage_trimmed_by_level": {
       "high": 0,
