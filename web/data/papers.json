@@ -1,6 +1,6 @@
 {
-  "generated_at": "Sat, 30 May 2026 06:09:37 +0000",
-  "generated_at_iso": "2026-05-30T06:09:37.084711+00:00",
+  "generated_at": "Sat, 30 May 2026 06:11:37 +0000",
+  "generated_at_iso": "2026-05-30T06:11:37.834235+00:00",
   "config_source": "file",
   "topics": [
     {
@@ -71,8 +71,7 @@
             "model",
             "data-driven",
             "modeling"
-          ],
-          "llm_reason": "论文聚焦于数据驱动的天线代理模型，使用神经网络（ANFIS）进行天线几何参数预测，直接对应我的研究方向“神经网络天线优化”中的代理模型、数据驱动建模和智能优化。"
+          ]
         },
         {
           "topic_id": "algo_antenna",
@@ -99,29 +98,92 @@
           "model",
           "data-driven",
           "modeling"
-        ],
-        "llm_reason": "论文聚焦于数据驱动的天线代理模型，使用神经网络（ANFIS）进行天线几何参数预测，直接对应我的研究方向“神经网络天线优化”中的代理模型、数据驱动建模和智能优化。"
+        ]
       },
       "chinese_summary": {
-        "problem": "针对可穿戴微带贴片天线设计，解决传统全波仿真耗时长、迭代优化效率低的问题，实现从目标电磁性能到天线几何参数的快速预测。",
-        "method": "采用自适应神经模糊推理系统（ANFIS）构建代理模型，以谐振频率、反射系数、带宽和基板厚度为输入，预测贴片宽度、长度和馈点坐标，并系统评估四种隶属度函数的影响。",
-        "innovation": "1. 将ANFIS应用于可穿戴天线几何参数的逆向预测，实现从性能指标到尺寸的直接映射；2. 系统比较了三角、梯形、高斯和广义钟形隶属度函数对预测精度和收敛性的影响，发现广义钟形函数表现最优；3. 基于500个HFSS仿真样本构建数据集，验证了ANFIS作为替代全波仿真的快速代理模型的可行性。",
-        "evidence": "摘要中报告了子毫米级的平均绝对误差（patch尺寸）和高的回归系数，以及广义钟形函数的最低预测误差和稳定收敛性，但未提供具体数值。",
-        "limitations": "1. 数据集仅500样本，规模较小，可能影响模型泛化性；2. 仅针对2.4 GHz ISM频段的特定可穿戴天线，未验证其他频段或天线类型；3. 隶属度函数的选择基于经验，缺乏理论指导；4. 需要阅读全文确认误差具体数值和对比基准。",
-        "why_relevant": "论文聚焦于数据驱动的天线代理模型，使用神经网络（ANFIS）进行天线几何参数预测，直接对应我的研究方向“神经网络天线优化”中的代理模型、数据驱动建模和智能优化。"
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "This paper presents a data-driven optimization framework for wearable microstrip patch antennas operating near the 2.4 GHz ISM band using an Adaptive Network-Based Fuzzy Inference System (ANFIS).",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "??????network?optimization?surrogate?model?data-driven?modeling"
       },
       "first_seen_at": "2026-05-30T06:09:37.084711+00:00",
-      "last_seen_at": "2026-05-30T06:09:37.084711+00:00",
+      "last_seen_at": "2026-05-30T06:11:37.834235+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "W7138903160",
+      "source": "IEEE",
+      "title": "Automated experimentally validated antenna design framework using versatile parameterization scheme",
+      "authors": [
+        "Slawomir Koziel",
+        "Anna Pietrenko-Dabrowska",
+        "Stanislaw Szczepanski"
+      ],
+      "summary": "Modern antenna design is an intrinsic undertaking. It relies heavily on expert knowledge and computational tools, especially electromagnetic (EM) simulation software. The most daunting phase is the development of a fundamental antenna topology that exhibits the assumed functionality (such as antenna’ ability to operate across a broad or multiple frequency bands) while fulfilling other conditions (e.g., sufficiently small size). The process typically takes weeks of interactive work and involves partly trial-and-error-based geometry modification and parametric studies. As a result, a limited number of possible configurations may be examined. Unsupervised topology generation constitutes an attractive alternative, although the existing methodologies are computationally expensive or intrusive (e.g., require dedicated fast solvers and/or adjoint sensitivities). This study introduces a database-aided automated antenna design technique and its experimental validation. Our approach employs a flexible parameterization incorporating adjustable elliptical patches and gaps. Comprehensive simulation data acquired for diverse arrangements of the building blocks and substrate sizes is looked up at the design stage, and the most promising architecture is tuned using the expedited gradient-based optimizer. As demonstrated, the presented approach enabled the specification-based development of high-performance antenna geometries, requiring fewer than two hundred EM simulations. For illustration, several broadband, ultrawideband, and multi-band antennas are designed, including structures optimized for minimum size. A distinctive feature of the procedure is the ability to generate wideband antennas (e.g., 5–6 GHz, 3.1–5.8 GHZ), ultra-wideband structures (3.1–10.6 GHz), and up to triple-band radiators (e.g., 2.45–5.3–7.5 GHz), or devices featuring specific dimensions (e.g., fixed width or length). Due to highly unconventional antenna geometries rendered by the proposed approach, experimental validation of the developed structures is instrumental to corroborate the relevance of the methodology. Toward this end, selected designs are prototyped, and their electrical and field characteristics are measured, showing good agreement with full-wave simulations. This underscores the suitability of the proposed technique for automated antenna development with no expert interaction required.",
+      "published": "2026-03-18T00:00:00Z",
+      "updated": "2026-03-18T00:00:00Z",
+      "year": 2026,
+      "paper_url": "https://doi.org/https://doi.org/10.1038/s41598-026-43974-y",
+      "pdf_url": "https://www.nature.com/articles/s41598-026-43974-y_reference.pdf",
+      "doi": "https://doi.org/10.1038/s41598-026-43974-y",
+      "journal": "Scientific Reports",
+      "partition": "其他",
+      "categories": [],
+      "seed_topic": "algo_antenna",
+      "matches": [
+        {
+          "topic_id": "nn_antenna",
+          "topic_name": "神经网络天线优化",
+          "score": 0.19,
+          "level": "low",
+          "reason": "??????design",
+          "keyword_hits": [
+            "design"
+          ]
+        },
+        {
+          "topic_id": "algo_antenna",
+          "topic_name": "算法天线优化",
+          "score": 0.152,
+          "level": "low",
+          "reason": "??????design",
+          "keyword_hits": [
+            "design"
+          ]
+        }
+      ],
+      "best_match": {
+        "topic_id": "nn_antenna",
+        "topic_name": "神经网络天线优化",
+        "score": 0.19,
+        "level": "low",
+        "reason": "??????design",
+        "keyword_hits": [
+          "design"
+        ]
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "Modern antenna design is an intrinsic undertaking.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "??????design"
+      },
+      "first_seen_at": "2026-05-30T06:11:37.834235+00:00",
+      "last_seen_at": "2026-05-30T06:11:37.834235+00:00",
       "retained_from_previous_run": false
     }
   ],
   "stats": {
-    "paper_count": 1,
-    "new_paper_count": 1,
-    "days": 30,
+    "paper_count": 2,
+    "new_paper_count": 2,
+    "days": 180,
     "collection_mode": "lookback",
-    "collection_cutoff_iso": "2026-04-30T06:09:37.084711+00:00",
-    "max_per_topic": 10,
+    "collection_cutoff_iso": "2025-12-01T06:11:37.834235+00:00",
+    "max_per_topic": 25,
     "llm_enabled": true,
     "llm_concurrency": 2,
     "recent_history_days": 45,
@@ -132,7 +194,7 @@
     "dropped_low_relevance_count": 0,
     "max_stored_papers": 800,
     "max_data_bytes": 8388608,
-    "data_bytes": 7963,
+    "data_bytes": 11125,
     "storage_trimmed_count": 0,
     "storage_trimmed_by_level": {
       "high": 0,
