@@ -1,0 +1,3 @@
+# The collector intentionally uses only the Python standard library.
+# Keep this file so GitHub Actions and local setup have a stable place for
+# future optional dependencies.
