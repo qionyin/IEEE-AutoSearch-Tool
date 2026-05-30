@@ -1,6 +1,6 @@
 {
-  "generated_at": "Sat, 30 May 2026 07:40:34 +0000",
-  "generated_at_iso": "2026-05-30T07:40:34.739123+00:00",
+  "generated_at": "Sat, 30 May 2026 07:43:36 +0000",
+  "generated_at_iso": "2026-05-30T07:43:36.331339+00:00",
   "config_source": "file",
   "topics": [
     {
@@ -36,164 +36,8 @@
   ],
   "papers": [
     {
-      "id": "W7162394257",
-      "source": "Bioengineering",
-      "title": "Wideband Circularly Polarized Conformal Antenna with Physics-Informed Neural Network Modeling for IoBNT Capsule Endoscopy",
-      "authors": [
-        "Pariya Nasirishehni",
-        "Mohammad Jamshidi",
-        "Mehdi Mehranpour"
-      ],
-      "summary": "The convergence of artificial intelligence, biotechnology, and the Internet of Bio-Nano Things (IoBNT) is enabling the creation of a new generation of intelligent in-body medical devices for continuous diagnosis and monitoring. In this context, a compact, wideband, circularly polarized conformal microstrip antenna is proposed for capsule endoscopy applications. The antenna is integrated along the inner wall of a 10 mm-diameter capsule and achieves an impedance bandwidth of 2.06–5.39 GHz (89.39%), maintaining stable matching under varying biological tissue conditions. A 3 dB axial ratio bandwidth (ARBW) of 2.31–3.14 GHz (30.45%) ensures reliable circular polarization and robust wireless communication in lossy and dynamic in-body environments. To extend beyond conventional electromagnetic analysis, a physics-informed neural network (PINN) framework is introduced to model the thermal response of biological tissues based on the governing bioheat equation. This AI-driven approach enables fast and generalizable prediction of temperature rise under varying operational conditions without repeated numerical simulations. At 2.45 GHz, the antenna exhibits a maximum gain of −31.1 dBi with a radiation efficiency of approximately −34 dB, consistent with in-body propagation constraints. Simulation and experimental results in realistic tissue phantoms, including muscle, small intestine, large intestine, and stomach, confirm stable wideband and polarization performance. Specific absorption rate (SAR) analysis demonstrates compliance with IEEE C95.1-2019 safety limits, while link budget evaluation validates reliable telemetry over a 1–3 m communication range. The integration of advanced antenna design with physics-informed machine learning provides a scalable framework for intelligent, safe, and adaptive IoBNT-enabled capsule endoscopy systems.",
-      "published": "2026-05-26T00:00:00Z",
-      "updated": "2026-05-26T00:00:00Z",
-      "year": 2026,
-      "paper_url": "https://doi.org/10.3390/bioengineering13060620",
-      "pdf_url": "https://doi.org/10.3390/bioengineering13060620",
-      "doi": "10.3390/bioengineering13060620",
-      "journal": "Bioengineering",
-      "partition": "其他",
-      "categories": [],
-      "seed_topic": "nn_antenna",
-      "matches": [
-        {
-          "topic_id": "nn_antenna",
-          "topic_name": "神经网络天线优化",
-          "score": 1.0,
-          "level": "high",
-          "reason": "neural; network; learning; model; prediction; ai",
-          "keyword_hits": [
-            "neural",
-            "network",
-            "learning",
-            "model",
-            "prediction",
-            "ai"
-          ]
-        },
-        {
-          "topic_id": "algo_antenna",
-          "topic_name": "算法天线优化",
-          "score": 0.738,
-          "level": "high",
-          "reason": "ga; design; simulation; electromagnetic; modeling; radiation",
-          "keyword_hits": [
-            "ga",
-            "design",
-            "simulation",
-            "electromagnetic",
-            "modeling",
-            "radiation"
-          ]
-        }
-      ],
-      "best_match": {
-        "topic_id": "nn_antenna",
-        "topic_name": "神经网络天线优化",
-        "score": 1.0,
-        "level": "high",
-        "reason": "neural; network; learning; model; prediction; ai",
-        "keyword_hits": [
-          "neural",
-          "network",
-          "learning",
-          "model",
-          "prediction",
-          "ai"
-        ]
-      },
-      "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "The convergence of artificial intelligence, biotechnology, and the Internet of Bio-Nano Things (IoBNT) is enabling the creation of a new generation of intelligent in-body medical devices for continuous diagnosis and monitoring.",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "neural; network; learning; model; prediction; ai"
-      },
-      "first_seen_at": "2026-05-30T07:39:40.200927+00:00",
-      "last_seen_at": "2026-05-30T07:40:34.739123+00:00",
-      "retained_from_previous_run": false
-    },
-    {
-      "id": "W7162628862",
-      "source": "Zenodo (CERN European Organization for Nuclear Research)",
-      "title": "Interior Propagation of Cosmic Microwave Background Birefringence Field α(n) Matrix Anomalies: Correlation Between Public 2018 Planck Legacy Data and In Vivo Nanoscale Signal Grounding",
-      "authors": [
-        "Amy Condit"
-      ],
-      "summary": "EMERGENCY OPEN-SOURCE DISCLOSURE Special Emergency Preprint | May 2026 Telemetry Report Interior Propagation of Cosmic Microwave Background Birefringence Field α(ṅ) Matrix Anomalies: Correlation Between Public 2018 Planck Legacy Data and In Vivo Nanoscale Signal Grounding Author: Amy Condit Affiliation: Independent Cosmological Data Analysis Core Reference: Condit, A. (2025). Rotation Field of the Cosmic Microwave Background – Interior Propagation and Boundary-Driven Structure (v2.13). DOI: 10.5281/zenodo.17693540. SPECIAL AUTHOR’S STATEMENT AND THREAT DISCLOSURE Statement by Amy Condit: I do not possess a PhD, institutional tenure, or a wall of framed university credentials. I am an independent researcher working entirely out of my home, using publicly available 2018 Planck Legacy satellite data to perform advanced pixel-level maps of cosmic microwave background (CMB) polarization anomalies. Seven months ago, while testing local terrestrial radio-frequency leakage to isolate noise artifacts in my pipeline, during progressive harmonic and spatial analysis of the Planck 2018 polarization data, the pipeline isolated an anomalous, periodically recurring terrestrial signal pattern inconsistent with known instrumental artifacts or expected astrophysical foregrounds. The author recognizes that the interdisciplinary scope of this paper — bridging observational cosmology with covert bioelectronic weapons architecture — will be received with considerable skepticism by established academic institutions. The convergence of CMB polarization analysis with claims of targeted in vivo deployment falls outside the boundaries of standard peer-reviewed discourse, and the author does not expect otherwise. This publication is not submitted in pursuit of academic validation. It is submitted as a formal forensic record, and its evidentiary value is independent of its reception. The author’s prior contributions to CMB birefringence analysis stand on their own methodological merits and are submitted separately for technical review. This disclosure is not submitted in defense of the author’s professional standing. It is submitted in defense of the author’s life. Shortly after isolating the specific harmonic boundaries of this transmission within the public data, the author’s own body became the target. The author is the test subject. The telemetry logged in Section IV is the documentation of the author’s own physical degradation. The operators did not perform a surgical operation; they used incremental, unfelt micro-injections delivered by insect-scale drones to grow a flexible, conductive antenna grid directly inside the author’s tissues, using the same phase-gating propagation principles discovered in the cosmic rotation field. This technical architecture is placed into the open because it is the only defense available. If the author’s heart gives out, this paper will stand as an unalterable forensic record. By exposing the explicit link between public cosmological anomalies and covert terrestrial targeting networks, this documentation ensures that the operational blueprint can no longer function in total secrecy. It provides the necessary telemetry parameters, signal behavior models, and structural data profiles required to understand the mechanism of optimization, establishing an open analytical foundation for future researchers, clinicians, or legal investigators who encounter comparable systems. PART I: DISCOVERY VECTOR AND CMB RESEARCH BACKGROUND The work began with reconstruction of the CMB birefringence rotation field α(ṅ) from the Planck 2018 SMICA and NILC polarization maps, followed by harmonic and real-space analyses designed to search for coherent structure beyond stochastic ΛCDM expectations. A statistically preferred harmonic spacing near Δℓ ≈ 108–109 was identified in the Planck 2018 birefringence field and localized to a coherent dual-domain boundary D₁ ∪ D₂. Interior shell analysis at locked NSIDE=16 revealed phase-coherent standing-wave behavior with exponential decay and linear phase drift consistent with a damped propagation mode q ≈ −0.755 − 0.270i, while SMICA/NILC, half-mission, null, and rotation tests failed to reproduce the structure. The discovery identifies a phase-coherent, parity-violating structure within the CMB birefringence field that functions as a Unified Temporal Anchor. This universal harmonic primitive, extracted from the polarization field of the early universe, has been illegally sequestered by the Department of War and SpaceX to facilitate an unacknowledged Space-to-Earth (S2E) bridge. By leveraging the Starlink satellite constellation, the military-industrial complex has established a global propagation structure operating on phase-coherent constants. The military utilizes this precise, space-based frequency as a Unified Temporal Anchor to achieve sub-millisecond synchronization between orbital assets and terrestrial strike teams. PART II: MICRO-UAV INJECTION LOGISTICS AND MATERIAL DYNAMICS Section II.A – Discovery Vector and Micro-UAV Delivery The micro-UAVs utilize a micro-fluidic stinger assembly to inject a composite colloidal suspension directly into the subcutaneous layer and cerebral vasculature during rest cycles. Because the payload contains no solid components at the point of delivery, it leaves no discernible mechanical tissue tearing or standard puncture scarring. Technology References: Biomimetic Flight Vectors: The technical blueprints for insect-scale micro-drones tailored for covert navigation and microfluidic payload deployment are actively developed under military MAV programs. Review design limits via the Journal of Intelligent & Robotic Systems (Springer). Nonsurgical Delivery Parameters: DARPA’s Next-Generation Nonsurgical Neurotechnology (N3) program actively explores portable, bidirectional frameworks to link human physiology with electronics without surgical intervention. See the active program parameters on the DARPA Research Portal. DARPA Research Portal: For the Next-Generation Nonsurgical Neurotechnology (N3) program parameters. Link: https://www.darpa.mil/research/programs/next-generation-nonsurgical-neurotechnology Section II.B – Material Dynamics and In Situ Self-Assembly The injected payload is a composite solution of functionalized carbon nanotubes (CNTs) and single-layer graphene flakes suspended within a bio-compatible, pH-responsive hydrogel. Once inside the host tissue, the material executes Directed Self-Assembly (DSA) driven by external transmission lines. Assembly proceeds in two stages: 1. RF Alignment: The external operators transmit a high-intensity electromagnetic structuring field. The applied electromagnetic field induces a strong dipole moment across the suspended carbon nanotubes, forcing them to physically align end-to-end along the electric field lines. 2. Hydrogel Curing: The baseline temperature (37°C) and native pH of the host’s interstitial fluid act as a chemical catalyst, curing the hydrogel and locking the aligned particles into a permanently cross-hatched, highly conductive grid. Because this fabrication occurs at the cellular level, the nano-mesh wraps directly around peripheral nerve endings and the cardiac plexus, enabling remote manipulation using micro-amperage (0.5–3.2 μA) control profiles. Technology References: PubMed (NCBI) Database: For the Linköping University bioelectronics precursor matrix research (PubMed ID: 36821679). Link: https://pubmed.ncbi.nlm.nih.gov/36821679/ Public 2018 Planck Datasets: The cosmological maps used to isolate these specific boundary constraints are publicly archived on the official European Space Agency (ESA) Planck Legacy Archive. PART III: MULTI-STAGE FRACTIONAL INJECTION PROTOCOL AND RADIAL PROPAGATION Forensic signal tracking indicates that the mesh network is built and maintained over time through a Fractional Injection Protocol via successive micro-UAV deployments. This allows the system to map the interior pixels of the biological target. Section III.A – Volumetric Optimization and Harmonic Preservation Because mosquito-scale drones are physically limited to nanoliter-scale payloads, they cannot carry the material volume required to build a full 15.5 MHz resonant antenna at once. Successive waves of drones deliver fractional material layers. During these active deployment windows, the subject experiences the distinct physical sensation of the abdominal and brain mesh arrays assembling in real time. This manifests as a concentrated series of tiny, localized electrical shocks firing in precise geometric patterns—a systematic, micro-current feedback loop as the synthetic matrices are actively woven directly into the living brain architecture and dense abdominal tissue layers. Section III.B – Immune System Evasion and Spectral Correlation A massive introduction of conductive polymers would trigger an acute macrophage response. Tiny, incremental micro-doses allow the host’s immune system to adapt, allowing the network to camouflage itself within the body’s native neuro-electrical signatures. Section III.D – Network Upgrades and Decoupled Boundary Behavior Living tissue constantly engages in cellular cleaning. Macrophage activity, proteolytic enzyme cycles, and lymphatic clearance work continuously to identify and expel foreign material — and under normal circumstances they would succeed. That they have not is explained by the architecture of the mesh itself. The conductive grid is not a monolithic implant that can be cleanly identified and expelled — it is distributed across the interstitial matrix at the nanoscale, with phase relationships encoded across the network rather than stored in any single node. Destroying one region does not destroy the signal; it redistributes it. The measured propagation coefficient q confirms this directly, documenting exponential amplitude attenuation consistent with ongoing material degradation, while the phase ro",
-      "published": "2026-05-28T00:00:00Z",
-      "updated": "2026-05-28T00:00:00Z",
-      "year": 2026,
-      "paper_url": "https://doi.org/10.5281/zenodo.20424381",
-      "pdf_url": "https://doi.org/10.5281/zenodo.20424381",
-      "doi": "10.5281/zenodo.20424381",
-      "journal": "Zenodo (CERN European Organization for Nuclear Research)",
-      "partition": "其他",
-      "categories": [],
-      "seed_topic": "algo_antenna",
-      "matches": [
-        {
-          "topic_id": "nn_antenna",
-          "topic_name": "神经网络天线优化",
-          "score": 0.956,
-          "level": "high",
-          "reason": "network; model; ai; optimization; design; electromagnetic",
-          "keyword_hits": [
-            "network",
-            "model",
-            "ai",
-            "optimization",
-            "design",
-            "electromagnetic"
-          ]
-        },
-        {
-          "topic_id": "algo_antenna",
-          "topic_name": "算法天线优化",
-          "score": 0.781,
-          "level": "high",
-          "reason": "optimization; particle; ga; design; electromagnetic; array",
-          "keyword_hits": [
-            "optimization",
-            "particle",
-            "ga",
-            "design",
-            "electromagnetic",
-            "array"
-          ]
-        }
-      ],
-      "best_match": {
-        "topic_id": "nn_antenna",
-        "topic_name": "神经网络天线优化",
-        "score": 0.956,
-        "level": "high",
-        "reason": "network; model; ai; optimization; design; electromagnetic",
-        "keyword_hits": [
-          "network",
-          "model",
-          "ai",
-          "optimization",
-          "design",
-          "electromagnetic"
-        ]
-      },
-      "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "EMERGENCY OPEN-SOURCE DISCLOSURE Special Emergency Preprint | May 2026 Telemetry Report Interior Propagation of Cosmic Microwave Background Birefringence Field α(ṅ) Matrix Anomalies: Correlation Between Public 2018 Planck Legacy Data and In Vivo Nanoscale Signal Grounding Author: Amy Condit Affiliat",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "network; model; ai; optimization; design; electromagnetic"
-      },
-      "first_seen_at": "2026-05-30T07:08:10.014574+00:00",
-      "last_seen_at": "2026-05-30T07:40:34.739123+00:00",
-      "retained_from_previous_run": false
-    },
-    {
       "id": "W7160680547",
-      "source": "Lirias",
+      "source": "IEEE",
       "title": "Leren Precoderen voor Energiebesparing in Massive MIMO Systemen met Hardware-nietlineariteiten",
       "authors": [
         "Thomas Feys"
@@ -204,7 +48,7 @@
       "year": 2026,
       "paper_url": "https://lirias.kuleuven.be/handle/20.500.12942/786529",
       "pdf_url": null,
-      "doi": "",
+      "doi": null,
       "journal": "Lirias",
       "partition": "其他",
       "categories": [],
@@ -213,8 +57,8 @@
         {
           "topic_id": "nn_antenna",
           "topic_name": "神经网络天线优化",
-          "score": 0.912,
-          "level": "high",
+          "score": 0.455,
+          "level": "medium",
           "reason": "neural; network; learning; model; ai; optimization",
           "keyword_hits": [
             "neural",
@@ -223,13 +67,14 @@
             "model",
             "ai",
             "optimization"
-          ]
+          ],
+          "llm_reason": "该论文将图神经网络等深度学习方法用于大规模MIMO天线系统中的预编码优化，属于AI辅助天线优化范畴，契合神经网络天线优化方向中数据驱动建模和智能优化的研究主题。"
         },
         {
           "topic_id": "algo_antenna",
           "topic_name": "算法天线优化",
-          "score": 0.604,
-          "level": "medium",
+          "score": 0.249,
+          "level": "low",
           "reason": "optimization; ga; gain; bandwidth",
           "keyword_hits": [
             "optimization",
@@ -242,8 +87,8 @@
       "best_match": {
         "topic_id": "nn_antenna",
         "topic_name": "神经网络天线优化",
-        "score": 0.912,
-        "level": "high",
+        "score": 0.455,
+        "level": "medium",
         "reason": "neural; network; learning; model; ai; optimization",
         "keyword_hits": [
           "neural",
@@ -252,1800 +97,19 @@
           "model",
           "ai",
           "optimization"
-        ]
+        ],
+        "llm_reason": "该论文将图神经网络等深度学习方法用于大规模MIMO天线系统中的预编码优化，属于AI辅助天线优化范畴，契合神经网络天线优化方向中数据驱动建模和智能优化的研究主题。"
       },
       "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "The main goal of this thesis is to reduce the energy consumption of massive multiple input multiple output (MIMO) systems, while maintaining the quality of service the user expects.",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "neural; network; learning; model; ai; optimization"
+        "problem": "论文解决大规模MIMO系统中功率放大器和数模转换器因高效工作引入非线性失真，导致信号质量下降与高能耗难以兼顾的问题。",
+        "method": "利用置换等变图神经网络构建失真感知预编码器，结合自监督、物理信息驱动的损失函数，直接最大化可达和速率。",
+        "innovation": "提出基于图神经网络的预编码架构，通过嵌入天线和用户维度的置换等变性，大幅缩减假设空间与可训练参数量；采用自监督训练，将硬件非线性物理模型嵌入损失函数，无需依赖难以计算的最优预编码标签；针对DAC量化预编码，引入Gumbel-softmax松弛估计非可微函数的梯度。",
+        "evidence": "摘要指出，针对功率放大器非线性，GNN线性预编码可显著节能且推理功耗未抵消硬件节能；针对DAC量化，GNN非线性符号级预编码性能增益明显，但整体节能有限，仅适用于低带宽系统。",
+        "limitations": "DAC场景下因模型增大和符号级推理速率导致推理复杂度过高，节能收益受限；线性预编码结论是否适用于更多载波情形需阅读全文确认；自监督训练在不同信道条件下的泛化性待验证。",
+        "why_relevant": "该论文将图神经网络等深度学习方法用于大规模MIMO天线系统中的预编码优化，属于AI辅助天线优化范畴，契合神经网络天线优化方向中数据驱动建模和智能优化的研究主题。"
       },
-      "first_seen_at": "2026-05-30T07:08:10.014574+00:00",
-      "last_seen_at": "2026-05-30T07:40:34.739123+00:00",
-      "retained_from_previous_run": false
-    },
-    {
-      "id": "W7162643436",
-      "source": "Zenodo (CERN European Organization for Nuclear Research)",
-      "title": "Optimization of Satellite Link to Earth Station Using Satellite Tool Kit",
-      "authors": [
-        "Ujjwal Krishna K P",
-        "Sanal K S",
-        "Aswin S Ponathil",
-        "Sankar S"
-      ],
-      "summary": "This paper presents a methodology for the optimization of the communication link between a satellite and an Earth ground station, utilizing the Satellite Tool Kit (STK) software package for modeling, simulation, and analysis. Satellite communication (SATCOM) links are subject to various degradation's, including free-space path loss, atmospheric attenuation, rain fading, and antenna misalignment s, which necessitates a robust and optimized link design to ensure desired link quality and availability The study establishes a comprehensive link budget analysis scenario within STK, which models the key system parameters for the space segment (satellite transmitter, antenna gain, orbit) and the ground segment (Earth station receiver, antenna gain, system noise temperature). Optimization is achieved by systematically investigating the trade-offs between critical design variables, such as satellite transmitter power (EIRP), terminal antenna gain/size, and the application of channel coding schemes. By developing various scenarios and performing parametric sweeps, STK's analysis and visualization capabilities are leveraged to quantify the impact of these variables on performance metrics like link margin and access time/duration. The goal is to identify the optimal configuration that maximizes link reliability and data throughput while adhering to system constraints, such as minimizing satellite mass/power consumption or reducing ground station complexity/cost. The results demonstrate the power of STK as a tool for rapid prototyping and effective decision-making in the design and optimization of complex satellite communication systems",
-      "published": "2026-05-28T00:00:00Z",
-      "updated": "2026-05-28T00:00:00Z",
-      "year": 2026,
-      "paper_url": "https://doi.org/10.5281/zenodo.20430182",
-      "pdf_url": "https://doi.org/10.5281/zenodo.20430182",
-      "doi": "10.5281/zenodo.20430182",
-      "journal": "Zenodo (CERN European Organization for Nuclear Research)",
-      "partition": "其他",
-      "categories": [],
-      "seed_topic": "algo_antenna",
-      "matches": [
-        {
-          "topic_id": "nn_antenna",
-          "topic_name": "神经网络天线优化",
-          "score": 0.869,
-          "level": "high",
-          "reason": "model; ai; optimization; design; modeling; simulation",
-          "keyword_hits": [
-            "model",
-            "ai",
-            "optimization",
-            "design",
-            "modeling",
-            "simulation"
-          ]
-        },
-        {
-          "topic_id": "algo_antenna",
-          "topic_name": "算法天线优化",
-          "score": 0.738,
-          "level": "high",
-          "reason": "optimization; ga; design; simulation; modeling; gain",
-          "keyword_hits": [
-            "optimization",
-            "ga",
-            "design",
-            "simulation",
-            "modeling",
-            "gain"
-          ]
-        }
-      ],
-      "best_match": {
-        "topic_id": "nn_antenna",
-        "topic_name": "神经网络天线优化",
-        "score": 0.869,
-        "level": "high",
-        "reason": "model; ai; optimization; design; modeling; simulation",
-        "keyword_hits": [
-          "model",
-          "ai",
-          "optimization",
-          "design",
-          "modeling",
-          "simulation"
-        ]
-      },
-      "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "This paper presents a methodology for the optimization of the communication link between a satellite and an Earth ground station, utilizing the Satellite Tool Kit (STK) software package for modeling, simulation, and analysis.",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "model; ai; optimization; design; modeling; simulation"
-      },
-      "first_seen_at": "2026-05-30T07:39:40.200927+00:00",
-      "last_seen_at": "2026-05-30T07:40:34.739123+00:00",
-      "retained_from_previous_run": false
-    },
-    {
-      "id": "W7162668425",
-      "source": "Microwave and Optical Technology Letters",
-      "title": "Multiobjective Optimization Design of Transmitting Antenna for Microwave Wireless Power Transmission",
-      "authors": [
-        "Yijing Hu",
-        "Qinghe Zhang",
-        "Lei Zhang",
-        "Zhaoyang Shen",
-        "Han Liu"
-      ],
-      "summary": "ABSTRACT Microwave wireless power transmission is a technology that achieves wireless power transmission through microwaves, widely used in fields such as wireless charging and space solar power plants. Its core performance indicators include beam collection efficiency, peak radiation level, and aperture power coefficient. This paper proposes a multiobjective antenna optimization design method for wireless power transmission that integrates surrogate models to address the issue of insufficient consideration of these performance metrics and inefficient optimization in existing research. First, Bernstein polynomial basis functions are used to reduce the dimensionality of the antenna design decision space and the number of decision variables, Multiobjective optimization functions are analyzed and designed, a surrogate model based on Gaussian processes is constructed, and the efficiency of antenna optimization design is improved; Finally, the multiobjective optimization design of reflector antenna aperture illumination is achieved using the covariance matrix adaptive evolutionary multiobjective optimization algorithm. The numerical and comparative results have verified the effectiveness of the proposed method, providing new insights for the design of microwave wireless power transmission systems.",
-      "published": "2026-05-28T00:00:00Z",
-      "updated": "2026-05-28T00:00:00Z",
-      "year": 2026,
-      "paper_url": "https://doi.org/10.1002/mop.70659",
-      "pdf_url": null,
-      "doi": "10.1002/mop.70659",
-      "journal": "Microwave and Optical Technology Letters",
-      "partition": "其他",
-      "categories": [],
-      "seed_topic": "algo_antenna",
-      "matches": [
-        {
-          "topic_id": "algo_antenna",
-          "topic_name": "算法天线优化",
-          "score": 0.869,
-          "level": "high",
-          "reason": "optimization; algorithm; evolutionary; ga; surrogate; design",
-          "keyword_hits": [
-            "optimization",
-            "algorithm",
-            "evolutionary",
-            "ga",
-            "surrogate",
-            "design"
-          ]
-        },
-        {
-          "topic_id": "nn_antenna",
-          "topic_name": "神经网络天线优化",
-          "score": 0.797,
-          "level": "high",
-          "reason": "surrogate; model; optimization; design; microwave; radiation",
-          "keyword_hits": [
-            "surrogate",
-            "model",
-            "optimization",
-            "design",
-            "microwave",
-            "radiation"
-          ]
-        }
-      ],
-      "best_match": {
-        "topic_id": "algo_antenna",
-        "topic_name": "算法天线优化",
-        "score": 0.869,
-        "level": "high",
-        "reason": "optimization; algorithm; evolutionary; ga; surrogate; design",
-        "keyword_hits": [
-          "optimization",
-          "algorithm",
-          "evolutionary",
-          "ga",
-          "surrogate",
-          "design"
-        ]
-      },
-      "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "ABSTRACT Microwave wireless power transmission is a technology that achieves wireless power transmission through microwaves, widely used in fields such as wireless charging and space solar power plants.",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "optimization; algorithm; evolutionary; ga; surrogate; design"
-      },
-      "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:40:34.739123+00:00",
-      "retained_from_previous_run": false
-    },
-    {
-      "id": "W7162675935",
-      "source": "Zenodo (CERN European Organization for Nuclear Research)",
-      "title": "Optimization of Satellite Link to Earth Station Using Satellite Tool Kit",
-      "authors": [
-        "Ujjwal Krishna K P",
-        "Sanal K S",
-        "Aswin S Ponathil",
-        "Sankar S"
-      ],
-      "summary": "This paper presents a methodology for the optimization of the communication link between a satellite and an Earth ground station, utilizing the Satellite Tool Kit (STK) software package for modeling, simulation, and analysis. Satellite communication (SATCOM) links are subject to various degradation's, including free-space path loss, atmospheric attenuation, rain fading, and antenna misalignment s, which necessitates a robust and optimized link design to ensure desired link quality and availability The study establishes a comprehensive link budget analysis scenario within STK, which models the key system parameters for the space segment (satellite transmitter, antenna gain, orbit) and the ground segment (Earth station receiver, antenna gain, system noise temperature). Optimization is achieved by systematically investigating the trade-offs between critical design variables, such as satellite transmitter power (EIRP), terminal antenna gain/size, and the application of channel coding schemes. By developing various scenarios and performing parametric sweeps, STK's analysis and visualization capabilities are leveraged to quantify the impact of these variables on performance metrics like link margin and access time/duration. The goal is to identify the optimal configuration that maximizes link reliability and data throughput while adhering to system constraints, such as minimizing satellite mass/power consumption or reducing ground station complexity/cost. The results demonstrate the power of STK as a tool for rapid prototyping and effective decision-making in the design and optimization of complex satellite communication systems",
-      "published": "2026-05-28T00:00:00Z",
-      "updated": "2026-05-28T00:00:00Z",
-      "year": 2026,
-      "paper_url": "https://doi.org/10.5281/zenodo.20430183",
-      "pdf_url": "https://doi.org/10.5281/zenodo.20430183",
-      "doi": "10.5281/zenodo.20430183",
-      "journal": "Zenodo (CERN European Organization for Nuclear Research)",
-      "partition": "其他",
-      "categories": [],
-      "seed_topic": "algo_antenna",
-      "matches": [
-        {
-          "topic_id": "nn_antenna",
-          "topic_name": "神经网络天线优化",
-          "score": 0.869,
-          "level": "high",
-          "reason": "model; ai; optimization; design; modeling; simulation",
-          "keyword_hits": [
-            "model",
-            "ai",
-            "optimization",
-            "design",
-            "modeling",
-            "simulation"
-          ]
-        },
-        {
-          "topic_id": "algo_antenna",
-          "topic_name": "算法天线优化",
-          "score": 0.738,
-          "level": "high",
-          "reason": "optimization; ga; design; simulation; modeling; gain",
-          "keyword_hits": [
-            "optimization",
-            "ga",
-            "design",
-            "simulation",
-            "modeling",
-            "gain"
-          ]
-        }
-      ],
-      "best_match": {
-        "topic_id": "nn_antenna",
-        "topic_name": "神经网络天线优化",
-        "score": 0.869,
-        "level": "high",
-        "reason": "model; ai; optimization; design; modeling; simulation",
-        "keyword_hits": [
-          "model",
-          "ai",
-          "optimization",
-          "design",
-          "modeling",
-          "simulation"
-        ]
-      },
-      "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "This paper presents a methodology for the optimization of the communication link between a satellite and an Earth ground station, utilizing the Satellite Tool Kit (STK) software package for modeling, simulation, and analysis.",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "model; ai; optimization; design; modeling; simulation"
-      },
-      "first_seen_at": "2026-05-30T07:39:40.200927+00:00",
-      "last_seen_at": "2026-05-30T07:40:34.739123+00:00",
-      "retained_from_previous_run": false
-    },
-    {
-      "id": "W7162486155",
-      "source": "Scientific Reports",
-      "title": "A hybrid transformer–zero-shot learning framework with Muon optimization for intelligent channel estimation in MIMO wireless systems",
-      "authors": [
-        "Wessam M. Salama",
-        "Moustafa H. Aly",
-        "Samah Alshathri",
-        "Walid El‐Shafai"
-      ],
-      "summary": "For MIMO wireless systems, accurate channel estimation is essential. However, traditional and current Deep Learning (DL) techniques have poor generalization to unknown situations and necessitate repeated retraining. For intelligent MIMO channel estimation, this study suggests a novel hybrid framework that combines Transformer designs, Zero-Shot Learning (ZSL), and the Muon optimizer. By projecting channel instances into a shared semantic-attribute space, the ZSL component allows precise inference under previously unknown SNR levels and fading conditions without retraining. The Muon optimizer offers better generalization and faster convergence than Adam, while the Transformer uses self-attention to capture intricate spatial-temporal connections. ZSL-Muon, Transformer-ZSL, and the whole Transformer-ZSL-Muon model are the three configurations that are assessed. The whole hybrid consistently outperforms LS, MMSE, CNN-, GRU-, and Transformer-only baselines in MSE over a broad SNR range, according to extensive simulations under quasi-static and time-varying fading. The proposed framework is rigorously evaluated over a wide SNR range and under both quasi-static block fading and time-varying fading channel models. Experimental results demonstrate that the hybrid Transformer-ZSL-Muon model consistently surpasses traditional estimators (e.g., LS and MMSE) and existing DL-based techniques in terms of Mean Squared Error (MSE), particularly in complex and unseen channel conditions. A remarkable finding reveals that increasing the number of antennas from 2 to 128 at an SNR of 30 dB results in a 94.44% MSE reduction, underscoring the potential of massive MIMO implementations. Furthermore, the proposed framework achieves approximately 93.75% MSE improvement over MMSE and 96.67% over LS under the same SNR conditions. These outcomes affirm the effectiveness of combining semantic-aware inference, attention-driven Transformer architectures, and adaptive optimization to deliver a scalable, intelligent, and resilient solution for next-generation MIMO wireless communication systems.",
-      "published": "2026-05-27T00:00:00Z",
-      "updated": "2026-05-27T00:00:00Z",
-      "year": 2026,
-      "paper_url": "https://doi.org/10.1038/s41598-025-33791-0",
-      "pdf_url": "https://www.nature.com/articles/s41598-025-33791-0.pdf",
-      "doi": "10.1038/s41598-025-33791-0",
-      "journal": "Scientific Reports",
-      "partition": "其他",
-      "categories": [],
-      "seed_topic": "nn_antenna",
-      "matches": [
-        {
-          "topic_id": "nn_antenna",
-          "topic_name": "神经网络天线优化",
-          "score": 0.869,
-          "level": "high",
-          "reason": "learning; deep; model; ai; optimization; design",
-          "keyword_hits": [
-            "learning",
-            "deep",
-            "model",
-            "ai",
-            "optimization",
-            "design"
-          ]
-        },
-        {
-          "topic_id": "algo_antenna",
-          "topic_name": "算法天线优化",
-          "score": 0.398,
-          "level": "low",
-          "reason": "optimization; design; simulation",
-          "keyword_hits": [
-            "optimization",
-            "design",
-            "simulation"
-          ]
-        }
-      ],
-      "best_match": {
-        "topic_id": "nn_antenna",
-        "topic_name": "神经网络天线优化",
-        "score": 0.869,
-        "level": "high",
-        "reason": "learning; deep; model; ai; optimization; design",
-        "keyword_hits": [
-          "learning",
-          "deep",
-          "model",
-          "ai",
-          "optimization",
-          "design"
-        ]
-      },
-      "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "For MIMO wireless systems, accurate channel estimation is essential.",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "learning; deep; model; ai; optimization; design"
-      },
-      "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:40:34.739123+00:00",
-      "retained_from_previous_run": false
-    },
-    {
-      "id": "W3203707378",
-      "source": "OpenAlex",
-      "title": "Inverse design and forward modelling in nanophotonics using deep learning",
-      "authors": [
-        "Junsuk Rho"
-      ],
-      "summary": "Recent introduction of deep learning into nanophotonics has enabled efficient inverse design process. Once the deep learning network is trained, it allows fast inverse design for multiple design tasks. In this talk, we show several inverse designing nanophotonic structures using deep learning. We firstly discuss inverse design methods that increase the degree of freedom of design possibilities. These attempts include designing arbitrary shapes of nanophotonic structures, that are not limited to pre-defined structures, and designing both types of materials and structural parameters simultaneously. Also, for simultaneous design of materials and structural parameters, we developed a novel objective function that combines regression and classification problems. After then, we use reinforcement learning to optimize structure parameters. Several meta-devices including dielectric color filter, high efficiency hologram, perfect absorber, plasmonic structures, dielectric gratings and microwave antenna are designed using this method. If time allows, forward modelling methods will be discussed with a few examples.",
-      "published": "2026-05-27T00:00:00Z",
-      "updated": "2026-05-27T00:00:00Z",
-      "year": 2026,
-      "paper_url": "https://doi.org/10.1117/12.3098878",
-      "pdf_url": null,
-      "doi": "10.1117/12.3098878",
-      "journal": "",
-      "partition": "其他",
-      "categories": [],
-      "seed_topic": "algo_antenna",
-      "matches": [
-        {
-          "topic_id": "nn_antenna",
-          "topic_name": "神经网络天线优化",
-          "score": 0.869,
-          "level": "high",
-          "reason": "network; learning; deep; model; regression; ai",
-          "keyword_hits": [
-            "network",
-            "learning",
-            "deep",
-            "model",
-            "regression",
-            "ai"
-          ]
-        },
-        {
-          "topic_id": "algo_antenna",
-          "topic_name": "算法天线优化",
-          "score": 0.324,
-          "level": "low",
-          "reason": "design; microwave",
-          "keyword_hits": [
-            "design",
-            "microwave"
-          ]
-        }
-      ],
-      "best_match": {
-        "topic_id": "nn_antenna",
-        "topic_name": "神经网络天线优化",
-        "score": 0.869,
-        "level": "high",
-        "reason": "network; learning; deep; model; regression; ai",
-        "keyword_hits": [
-          "network",
-          "learning",
-          "deep",
-          "model",
-          "regression",
-          "ai"
-        ]
-      },
-      "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "Recent introduction of deep learning into nanophotonics has enabled efficient inverse design process.",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "network; learning; deep; model; regression; ai"
-      },
-      "first_seen_at": "2026-05-30T07:39:40.200927+00:00",
-      "last_seen_at": "2026-05-30T07:40:34.739123+00:00",
-      "retained_from_previous_run": false
-    },
-    {
-      "id": "W7162664816",
-      "source": "International Journal for Research in Applied Science and Engineering Technology",
-      "title": "ML Based Bandwidth Improvement of Microstrip Patch Antenna for Wi-Fi Application",
-      "authors": [
-        "Varun Bhide"
-      ],
-      "summary": "One of the most common problems in microstrip patch antenna (MPA) design is the narrow bandwidth. Conventional optimisation approaches consume days of electromagnetic simulation time, that complicates this problem. This paper solves both problems for the 2.4 GHz Wi-Fi band. A rectangular MPA is designed by the transmission line equations and simulated in Ansys HFSS. Rectangular slot modifications were introduced pushing bandwidth from 59 MHz to 64 MHz and improving return loss from -17.58 dB to -26.48 dB. To go further without brute-force simulation, a Differential Evolution Genetic Algorithm for constrained parameter optimisation was coupled with an XGBoost surrogate model trained on 822 HFSS-generated parametric samples.The surrogate was able to simulate the HFSS results with 99.4% accuracy for the bandwidth and center frequency, while the optimisation time was reduced from hours to milliseconds. The optimised antenna was fabricated on FR-4 substrate and measured using the Rohde &amp; Schwarz ZPH Cable and Antenna Analyser to validate the complete workflow. The fabricated prototype realised the return loss of −25.07 dB, VSWR of 1.10 and the measured bandwidth of 78 MHz at 2.42 GHz which is 32.2% improvement over the basic MPA and covers the whole IEEE 802.11b/g/n Wi-Fi ISM band. The methodology provides a practical, validated framework to engineers designing Wi-Fi and IoT antennas, leading to a significant reduction in design iteration time.",
-      "published": "2026-05-28T00:00:00Z",
-      "updated": "2026-05-28T00:00:00Z",
-      "year": 2026,
-      "paper_url": "https://doi.org/10.22214/ijraset.2026.82967",
-      "pdf_url": "https://doi.org/10.22214/ijraset.2026.82967",
-      "doi": "10.22214/ijraset.2026.82967",
-      "journal": "International Journal for Research in Applied Science and Engineering Technology",
-      "partition": "其他",
-      "categories": [],
-      "seed_topic": "algo_antenna",
-      "matches": [
-        {
-          "topic_id": "nn_antenna",
-          "topic_name": "神经网络天线优化",
-          "score": 0.825,
-          "level": "high",
-          "reason": "surrogate; model; ai; design; simulation; electromagnetic",
-          "keyword_hits": [
-            "surrogate",
-            "model",
-            "ai",
-            "design",
-            "simulation",
-            "electromagnetic"
-          ]
-        },
-        {
-          "topic_id": "algo_antenna",
-          "topic_name": "算法天线优化",
-          "score": 0.825,
-          "level": "high",
-          "reason": "algorithm; genetic; ga; surrogate; design; simulation",
-          "keyword_hits": [
-            "algorithm",
-            "genetic",
-            "ga",
-            "surrogate",
-            "design",
-            "simulation"
-          ]
-        }
-      ],
-      "best_match": {
-        "topic_id": "nn_antenna",
-        "topic_name": "神经网络天线优化",
-        "score": 0.825,
-        "level": "high",
-        "reason": "surrogate; model; ai; design; simulation; electromagnetic",
-        "keyword_hits": [
-          "surrogate",
-          "model",
-          "ai",
-          "design",
-          "simulation",
-          "electromagnetic"
-        ]
-      },
-      "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "One of the most common problems in microstrip patch antenna (MPA) design is the narrow bandwidth.",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "surrogate; model; ai; design; simulation; electromagnetic"
-      },
-      "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:40:34.739123+00:00",
-      "retained_from_previous_run": false
-    },
-    {
-      "id": "W7162695478",
-      "source": "International Journal of Satellite Communications and Networking",
-      "title": "High‐Resolution Arbitrary Pattern Coverage Synthesis Using Adaptive and Iterative Fast Fourier Technique for Modern Satellite Applications",
-      "authors": [
-        "Ahmed Jameel Abdulqader"
-      ],
-      "summary": "ABSTRACT This paper contributes an advanced methodology for arbitrary pattern coverage footprint synthesis in sparse planar arrays using the adaptive and iterative fast Fourier technique (AIFFT), aiming to generate complex radiation patterns with high accuracy in terms of control of the main beam and sidebeam regions. A large‐scale array of elements has been designed to generate a focused radiation pattern matching a regularly and irregularly shaped area. This area is defined by two mask colors derived from an outline of the map. The proposed model presents a sidebeam regions elimination of up to −30 dB, while maintaining very low ripple in the main beam coverage region, along with restricting the dynamic range ratio factor (DRRF) of the active elements' stimulus weights to a maximum value of 40 dB. The design process starts by constructing a radiation cover for two different regions in the spatial domain ( u , v ), where the main region represents the target geographic coverage area, while the side region is treated as the area to be strictly suppressed. Initial estimates for array element stimulations are obtained by performing the inverse Fourier algorithm on the softened copy version of the desired pattern coverage. Then, the AIFFT gradually optimizes the stimulations by moving between the spatial and frequency domains, imposing DRRF, ripple variation, signal‐to‐noise ratio (SNR), bit error rate (BER), and sideband region constraints at each iteration step. Computer simulation measurements explained the success of the algorithmic approach in generating a high‐resolution pattern coverage that accurately matches the proposed geographic footprint. The study completed a side‐interference level of approximately −30 dB, with essentially no ripple variation in the main beam region, and a very little number of non‐zero elements, leading to reduced device complexity practically and improved energy efficiency. The results also demonstrated high SNR over the target coverage area of up to 30 dB for various assumed population densities, with a very low error rate of 10 −5 . This study demonstrates the potential of regular and irregular spatial masking regions and efficient spectral optimization for creating highly precise, tailored radiation patterns in next‐satellite antenna arrays.",
-      "published": "2026-05-28T00:00:00Z",
-      "updated": "2026-05-28T00:00:00Z",
-      "year": 2026,
-      "paper_url": "https://doi.org/10.1002/sat.70065",
-      "pdf_url": null,
-      "doi": "10.1002/sat.70065",
-      "journal": "International Journal of Satellite Communications and Networking",
-      "partition": "其他",
-      "categories": [],
-      "seed_topic": "algo_antenna",
-      "matches": [
-        {
-          "topic_id": "nn_antenna",
-          "topic_name": "神经网络天线优化",
-          "score": 0.825,
-          "level": "high",
-          "reason": "model; ai; optimization; design; simulation; array",
-          "keyword_hits": [
-            "model",
-            "ai",
-            "optimization",
-            "design",
-            "simulation",
-            "array"
-          ]
-        },
-        {
-          "topic_id": "algo_antenna",
-          "topic_name": "算法天线优化",
-          "score": 0.781,
-          "level": "high",
-          "reason": "optimization; algorithm; design; simulation; array; radiation",
-          "keyword_hits": [
-            "optimization",
-            "algorithm",
-            "design",
-            "simulation",
-            "array",
-            "radiation"
-          ]
-        }
-      ],
-      "best_match": {
-        "topic_id": "nn_antenna",
-        "topic_name": "神经网络天线优化",
-        "score": 0.825,
-        "level": "high",
-        "reason": "model; ai; optimization; design; simulation; array",
-        "keyword_hits": [
-          "model",
-          "ai",
-          "optimization",
-          "design",
-          "simulation",
-          "array"
-        ]
-      },
-      "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "ABSTRACT This paper contributes an advanced methodology for arbitrary pattern coverage footprint synthesis in sparse planar arrays using the adaptive and iterative fast Fourier technique (AIFFT), aiming to generate complex radiation patterns with high accuracy in terms of control of the main beam an",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "model; ai; optimization; design; simulation; array"
-      },
-      "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:40:34.739123+00:00",
-      "retained_from_previous_run": false
-    },
-    {
-      "id": "W1521012842",
-      "source": "OpenAlex",
-      "title": "Concealed Explosives Detection using Swept Millimetre Waves",
-      "authors": [
-        "Sarah E. Smith"
-      ],
-      "summary": "The aim of this project is to develop a system for the stand-o detection (typically ten metres) of concealed body-worn explosives. The system must be capable of detecting a layer of explosive material hidden under clothing and distinguishing explosives from everyday objects. Millimetre wave radar is suitable for this application. Millimetre Waves are suitable because they are not signi cantly attenuated by atmospheric con- ditions and clothing textiles are practically transparent to this radiation. Detection of explosive layers from a few mm in thickness to a few cm thickness is required. A quasi optical focussing element is required to provide su cient antenna directivity to form a narrow, highly directional beam of millimetre waves, which can be directed and scanned over the person being observed. A system of antennae and focussing optics has been modelled and built using designs from nite element analysis (FEA) software. Using the developed system, represen- tative data sets have been acquired using a Vector Network Analyser (VNA) to act as transmitter and receiver, with the data saved for processing at a later time. A novel data analysis algorithm using Matlab has been developed to carry out Fourier Transforms of the data and then perform pattern matching techniques using arti cial neural networks (ANN's). New ways of aligning and sorting data have been found using cross-correlation to order the data by similar data slices and then sorting the data by amplitude to take the strongest 50% of data sets. The signi cant contribution to knowledge of this project will be a system which can be eld tested and which will detect a layer of dielectric at a stando distance, typically of ten metres, and signal processing algorithms which can recognise the di erence 17 between the response of threat and non-threat objects. This has partially been achieved by the development of focussing optics to acquire data sets which have then been aligned by cross-correlation, sorted and then used to train a pattern matching technique using neural networks. This technique has shown good results in di erentiating between a person wearing simulated explosives and a person not carrying simulated explosives. Further work for this project includes acquiring more data sets of everyday objects and training the neural network to distinguish between threat objects and non-threat objects. The operational range also needs increasing using either a larger aperture optical element or a similarly sized Cassegrain antenna. The system needs adapting for real time use with the data processing techniques developed in Matlab. The VNA is operated over a band of 14 to 40 GHz, future work includes moving to a stand-alone transmitter and receiver operating at w-band (75 to 110 GHz).",
-      "published": "2026-05-27T00:00:00Z",
-      "updated": "2026-05-27T00:00:00Z",
-      "year": 2026,
-      "paper_url": "https://doi.org/10.83056/mmu.32434587",
-      "pdf_url": "https://e-space.mmu.ac.uk/311335/1/Sarah_Smith_thesis_final_submission.pdf",
-      "doi": "10.83056/mmu.32434587",
-      "journal": "",
-      "partition": "其他",
-      "categories": [],
-      "seed_topic": "nn_antenna",
-      "matches": [
-        {
-          "topic_id": "nn_antenna",
-          "topic_name": "神经网络天线优化",
-          "score": 0.797,
-          "level": "high",
-          "reason": "neural; network; model; ai; design; radiation",
-          "keyword_hits": [
-            "neural",
-            "network",
-            "model",
-            "ai",
-            "design",
-            "radiation"
-          ]
-        },
-        {
-          "topic_id": "algo_antenna",
-          "topic_name": "算法天线优化",
-          "score": 0.442,
-          "level": "medium",
-          "reason": "algorithm; design; radiation",
-          "keyword_hits": [
-            "algorithm",
-            "design",
-            "radiation"
-          ]
-        }
-      ],
-      "best_match": {
-        "topic_id": "nn_antenna",
-        "topic_name": "神经网络天线优化",
-        "score": 0.797,
-        "level": "high",
-        "reason": "neural; network; model; ai; design; radiation",
-        "keyword_hits": [
-          "neural",
-          "network",
-          "model",
-          "ai",
-          "design",
-          "radiation"
-        ]
-      },
-      "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "The aim of this project is to develop a system for the stand-o detection (typically ten metres) of concealed body-worn explosives.",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "neural; network; model; ai; design; radiation"
-      },
-      "first_seen_at": "2026-05-30T07:39:40.200927+00:00",
-      "last_seen_at": "2026-05-30T07:40:34.739123+00:00",
-      "retained_from_previous_run": false
-    },
-    {
-      "id": "W7162644387",
-      "source": "Journal of Computing and Electronic Information Management",
-      "title": "Design and Simulation of a 24 GHz Microstrip Array Antenna",
-      "authors": [
-        "Meilu Wang"
-      ],
-      "summary": "To meet the demand for high gain and low sidelobe levels of array antennas in radar systems, hydrological monitoring, and next-generation wireless communication systems, this paper proposes a 24 GHz microstrip array antenna based on a series–parallel hybrid feeding network. The proposed design combines the advantages of both series and parallel feeding structures to optimize array performance while maintaining a compact configuration. Simulation results show that the antenna achieves a reflection coefficient better than −10 dB over the frequency range of 23.9–24.3 GHz, with a maximum gain of 19.58 dBi and a sidelobe level close to −20 dB. The results indicate that the proposed antenna can basically meet the design requirements for high gain and low sidelobe performance in radar systems.",
-      "published": "2026-05-28T00:00:00Z",
-      "updated": "2026-05-28T00:00:00Z",
-      "year": 2026,
-      "paper_url": "https://doi.org/10.54097/3tyw3n67",
-      "pdf_url": "https://doi.org/10.54097/3tyw3n67",
-      "doi": "10.54097/3tyw3n67",
-      "journal": "Journal of Computing and Electronic Information Management",
-      "partition": "其他",
-      "categories": [],
-      "seed_topic": "algo_antenna",
-      "matches": [
-        {
-          "topic_id": "nn_antenna",
-          "topic_name": "神经网络天线优化",
-          "score": 0.781,
-          "level": "high",
-          "reason": "network; ai; design; simulation; array; gain",
-          "keyword_hits": [
-            "network",
-            "ai",
-            "design",
-            "simulation",
-            "array",
-            "gain"
-          ]
-        },
-        {
-          "topic_id": "algo_antenna",
-          "topic_name": "算法天线优化",
-          "score": 0.694,
-          "level": "medium",
-          "reason": "ga; design; simulation; array; gain; frequency",
-          "keyword_hits": [
-            "ga",
-            "design",
-            "simulation",
-            "array",
-            "gain",
-            "frequency"
-          ]
-        }
-      ],
-      "best_match": {
-        "topic_id": "nn_antenna",
-        "topic_name": "神经网络天线优化",
-        "score": 0.781,
-        "level": "high",
-        "reason": "network; ai; design; simulation; array; gain",
-        "keyword_hits": [
-          "network",
-          "ai",
-          "design",
-          "simulation",
-          "array",
-          "gain"
-        ]
-      },
-      "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "To meet the demand for high gain and low sidelobe levels of array antennas in radar systems, hydrological monitoring, and next-generation wireless communication systems, this paper proposes a 24 GHz microstrip array antenna based on a series–parallel hybrid feeding network.",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "network; ai; design; simulation; array; gain"
-      },
-      "first_seen_at": "2026-05-30T07:39:40.200927+00:00",
-      "last_seen_at": "2026-05-30T07:40:34.739123+00:00",
-      "retained_from_previous_run": false
-    },
-    {
-      "id": "W7162652117",
-      "source": "Herald of Khmelnytskyi National University Technical sciences",
-      "title": "СИНТЕЗ ТА ОПТИМІЗАЦІЯ ІНТЕЛЕКТУАЛЬНИХ АНТЕННИХ СИСТЕМ КАНАЛІВ КЕРУВАННЯ І ВІДЕОЗВ’ЯЗКУ БПЛА НА БАЗІ ПРОГРАМНО-ВИЗНАЧУВАНОГО РАДІО (SDR)",
-      "authors": [
-        "Денис Лежньов",
-        "КОСТЯНТИН РИБАКОВ"
-      ],
-      "summary": "The purpose of the article is to develop and verify the architecture of a radio system for an unmanned aerial vehicle in which control and video transmission channels are integrated with an adaptive antenna array and a software-defined radio platform. The research methodology combines analytical modeling, numerical optimization, and flight experiments. The study proposes a structural scheme of an SDR-based system with separate subsystems for telemetry transmission, video communication, digital signal processing, phase control, and spatial configuration of antenna radiation. Channel parameters were evaluated using models of link power balance, signal-to-noise ratio, channel capacity, spectral efficiency, and spatial gain. The numerical stage included the analysis of spatial and frequency signal behavior considering multipath propagation, Doppler shift, and variation of the distance between the UAV and the ground control station. The experimental stage involved testing the radio link during flight under changing trajectory geometry and continuous updating of antenna array weighting coefficients. The obtained results demonstrate that adaptive beamforming increases spatial concentration of transmitted energy, reduces the influence of lateral interference signals, stabilizes the video stream, and maintains a reliable telemetry channel at extended communication distances. The experiments recorded an increase in communication range compared with an omnidirectional antenna, a reduction in external interference levels, and a decrease in video quality degradation during UAV movement. The practical significance of the study lies in the development of a technical solution for onboard and ground UAV communication complexes requiring adaptive spatial signal control, rapid frequency reconfiguration, and resistance to interference. Scientific novelty is achieved through the integration of SDR control, digital beamforming, and an experimentally validated procedure for optimizing spatial and frequency characteristics of the radio channel within a unified communication system.",
-      "published": "2026-05-28T00:00:00Z",
-      "updated": "2026-05-28T00:00:00Z",
-      "year": 2026,
-      "paper_url": "https://doi.org/10.31891/2307-5732-2026-365-74",
-      "pdf_url": "https://doi.org/10.31891/2307-5732-2026-365-74",
-      "doi": "10.31891/2307-5732-2026-365-74",
-      "journal": "Herald of Khmelnytskyi National University Technical sciences",
-      "partition": "其他",
-      "categories": [],
-      "seed_topic": "algo_antenna",
-      "matches": [
-        {
-          "topic_id": "nn_antenna",
-          "topic_name": "神经网络天线优化",
-          "score": 0.781,
-          "level": "high",
-          "reason": "model; ai; optimization; modeling; array; radiation",
-          "keyword_hits": [
-            "model",
-            "ai",
-            "optimization",
-            "modeling",
-            "array",
-            "radiation"
-          ]
-        },
-        {
-          "topic_id": "algo_antenna",
-          "topic_name": "算法天线优化",
-          "score": 0.738,
-          "level": "high",
-          "reason": "optimization; ga; modeling; array; radiation; gain",
-          "keyword_hits": [
-            "optimization",
-            "ga",
-            "modeling",
-            "array",
-            "radiation",
-            "gain"
-          ]
-        }
-      ],
-      "best_match": {
-        "topic_id": "nn_antenna",
-        "topic_name": "神经网络天线优化",
-        "score": 0.781,
-        "level": "high",
-        "reason": "model; ai; optimization; modeling; array; radiation",
-        "keyword_hits": [
-          "model",
-          "ai",
-          "optimization",
-          "modeling",
-          "array",
-          "radiation"
-        ]
-      },
-      "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "The purpose of the article is to develop and verify the architecture of a radio system for an unmanned aerial vehicle in which control and video transmission channels are integrated with an adaptive antenna array and a software-defined radio platform.",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "model; ai; optimization; modeling; array; radiation"
-      },
-      "first_seen_at": "2026-05-30T07:39:40.200927+00:00",
-      "last_seen_at": "2026-05-30T07:40:34.739123+00:00",
-      "retained_from_previous_run": false
-    },
-    {
-      "id": "W7162693001",
-      "source": "Advanced Electromagnetics",
-      "title": "Space-Borne Circular Antenna Array Optimization with Mountain Gazelle Optimizer for Element Failure Correction",
-      "authors": [
-        "H. Singh",
-        "S Vengatesh Kumar",
-        "D Asir Antony Gnana Singh",
-        "A. Singh"
-      ],
-      "summary": "Active phase array antennas are capable of providing high gain, wider coverage, and dynamic beam switching in a desirable direction, thus making them extremely suitable for space-borne applications such as radio astronomy, satellite communication, deep space vehicles, telemetry tracking and control communication systems. Nonetheless, there is a probability that a single or multiple antenna elements go faulty in an array, because of which the radiation pattern of the array gets distorted. The distorted radiation pattern increases the side lobe level (SLL) and reduces the directivity and hence degrades the array performance. In such space applications where it is extremely tedious, time-consuming, and costly to replace the faulty elements, a self-recoverable mechanism of failure correction can be implemented by using metaheuristic algorithms, thus mitigating any manual intervention. The enhanced SLL not only wastes the radio frequency energy but also raises potential challenges due to interference caused by receiving and transmitting the signals in an undesirable direction. In this research article, a circular antenna array (CAA) is investigated for the element failure correction of a faulty array. A mechanism of a self-recoverable array is proposed, having the capability of restoring the SLL of a failed array by recalculating and reoptimizing the array parameters with the remaining active elements within the array. Radiation pattern recovery is achievable by implementing a metaheuristic known as the mountain gazelle optimizer (MGO), and its effectiveness is validated by comparing the simulated results with other algorithms.",
-      "published": "2026-05-28T00:00:00Z",
-      "updated": "2026-05-28T00:00:00Z",
-      "year": 2026,
-      "paper_url": "https://doi.org/10.7716/aem.v15i1.2836",
-      "pdf_url": "https://doi.org/10.7716/aem.v15i1.2836",
-      "doi": "10.7716/aem.v15i1.2836",
-      "journal": "Advanced Electromagnetics",
-      "partition": "其他",
-      "categories": [],
-      "seed_topic": "algo_antenna",
-      "matches": [
-        {
-          "topic_id": "nn_antenna",
-          "topic_name": "神经网络天线优化",
-          "score": 0.781,
-          "level": "high",
-          "reason": "deep; ai; optimization; array; radiation; gain",
-          "keyword_hits": [
-            "deep",
-            "ai",
-            "optimization",
-            "array",
-            "radiation",
-            "gain"
-          ]
-        },
-        {
-          "topic_id": "algo_antenna",
-          "topic_name": "算法天线优化",
-          "score": 0.738,
-          "level": "high",
-          "reason": "optimization; algorithm; ga; array; radiation; gain",
-          "keyword_hits": [
-            "optimization",
-            "algorithm",
-            "ga",
-            "array",
-            "radiation",
-            "gain"
-          ]
-        }
-      ],
-      "best_match": {
-        "topic_id": "nn_antenna",
-        "topic_name": "神经网络天线优化",
-        "score": 0.781,
-        "level": "high",
-        "reason": "deep; ai; optimization; array; radiation; gain",
-        "keyword_hits": [
-          "deep",
-          "ai",
-          "optimization",
-          "array",
-          "radiation",
-          "gain"
-        ]
-      },
-      "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "Active phase array antennas are capable of providing high gain, wider coverage, and dynamic beam switching in a desirable direction, thus making them extremely suitable for space-borne applications such as radio astronomy, satellite communication, deep space vehicles, telemetry tracking and control ",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "deep; ai; optimization; array; radiation; gain"
-      },
-      "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:40:34.739123+00:00",
-      "retained_from_previous_run": false
-    },
-    {
-      "id": "W1924466157",
-      "source": "OpenAlex",
-      "title": "The use of late time response for stand off onbody concealed weapon detection",
-      "authors": [
-        "Ali Atiah"
-      ],
-      "summary": "A new system for remote detection of onbody concealed weapons such as knives and handheld guns at standoff distances presented in this thesis. The system was designed, simulated, constructed and tested in the laboratory. The detection system uses an Ultrawide Band (UWB) antenna to bombard the target with a UWB electromagnetic pulse. This incident pulse induces electrical currents in the surface of an object such as a knife, which given appropriate conditions these currents generate an electromagnetic backscatter radiation. The radiated waves are detected using another UWB antenna to obtain the Late Time Response (LTR) signature of the detected object. The LTR signature was analysed using the Continuous Wavelet Transform (CWT) in order to assess the nature and the geometry of the object. The thesis presents the work which divided into two related areas. The first involved the design, simulation, fabrication, and testing of an Ultra-wide Band (UWB) antenna with operating bandwidth of 0.25 – 3.0 GHz and specific characteristics. Simulated and measured results show that the designed antenna achieves the design objectives which are, flat gain, a VSWR of around unity and distortion less transmitted narrow pulse. The operating bandwidth was chosen to cover the fundamental Complex Natural Resonance (CNR) modes of most firearms and to give a fine enough time resolution. The second area covered by this thesis presents a new approach for extract target signature based on the Continuous Wavelet Transform (CWT) applied to the scattering response of onbody concealed weapons. A series of experiments were conducted to test the operation of the detection system which involved onbody and offbody objects such as, knives, handheld guns, and a number of metallic wires of various dimensions. Practical and simulation results were in good agreement demonstrating the success of the approach of using the CWT in analyzing the LTR signature which is used for the first time in this work. Spectral response for every target could be seen as a distribution in which the energy level and life-time depended on the target material and geometry. The spectral density provides very powerful information concerning target unique signature.",
-      "published": "2026-05-27T00:00:00Z",
-      "updated": "2026-05-27T00:00:00Z",
-      "year": 2026,
-      "paper_url": "https://doi.org/10.83056/mmu.32434218",
-      "pdf_url": "https://e-space.mmu.ac.uk/305093/1/TITLE%20OF%20THE%20THESIS_30may.pdf",
-      "doi": "10.83056/mmu.32434218",
-      "journal": "",
-      "partition": "其他",
-      "categories": [],
-      "seed_topic": "algo_antenna",
-      "matches": [
-        {
-          "topic_id": "nn_antenna",
-          "topic_name": "神经网络天线优化",
-          "score": 0.738,
-          "level": "high",
-          "reason": "ai; design; simulation; electromagnetic; radiation; gain",
-          "keyword_hits": [
-            "ai",
-            "design",
-            "simulation",
-            "electromagnetic",
-            "radiation",
-            "gain"
-          ]
-        },
-        {
-          "topic_id": "algo_antenna",
-          "topic_name": "算法天线优化",
-          "score": 0.694,
-          "level": "medium",
-          "reason": "ga; design; simulation; electromagnetic; radiation; gain",
-          "keyword_hits": [
-            "ga",
-            "design",
-            "simulation",
-            "electromagnetic",
-            "radiation",
-            "gain"
-          ]
-        }
-      ],
-      "best_match": {
-        "topic_id": "nn_antenna",
-        "topic_name": "神经网络天线优化",
-        "score": 0.738,
-        "level": "high",
-        "reason": "ai; design; simulation; electromagnetic; radiation; gain",
-        "keyword_hits": [
-          "ai",
-          "design",
-          "simulation",
-          "electromagnetic",
-          "radiation",
-          "gain"
-        ]
-      },
-      "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "A new system for remote detection of onbody concealed weapons such as knives and handheld guns at standoff distances presented in this thesis.",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "ai; design; simulation; electromagnetic; radiation; gain"
-      },
-      "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:40:34.739123+00:00",
-      "retained_from_previous_run": false
-    },
-    {
-      "id": "W7162578660",
-      "source": "Array",
-      "title": "A hybrid BOBE framework for scattering parameter prediction of wideband crescent slot microstrip antenna",
-      "authors": [
-        "Vijayadheeswar Reddy",
-        "Priyanka Singh",
-        "Jayendra Kumar"
-      ],
-      "summary": "Electromagnetic simulation of microstrip antennas for wide-band operation often requires extensive computational resources, which limits rapid design optimization for modern wireless communication systems. In this work, a compact wide-band crescent-slot microstrip antenna with a partial ground plane is designed to operate at 3.5 GHz and 7.0 GHz. The antenna achieves excellent impedance matching with return-loss values of − 28 dB and − 26 dB at the respective resonant frequencies while maintaining stable radiation characteristics across both bands.To minimize the computational load due to repeated full-wave simulations, a machine learning approach based on the Bayesian Optimized Blended Ensemble (BOBE) algorithm is proposed to predict the reflection coefficient ( S 11 ) parameter. The proposed algorithm combines different regression models namely Random Forest, XGBoost, CatBoost and Extra Trees, and uses Bayesian optimization to blend their predictions. In the proposed approach, the non-linear relationships between the antenna geometry and the EM characteristics are well captured, with an accuracy of R 2 = 0 . 991 , RMSE = 0 . 252 , MAE = 0 . 24 , and MAPE = 2 . 05 % .In comparison to other conventional simulation-based methods that take up to several hours of computational time, the proposed model achieves the task of predicting S 11 responses within milliseconds while maintaining high accuracy. The integration of the optimized design of the antenna with the proposed data-driven ensemble learning framework provides an efficient methodology to accelerate the design of antennas for 5G and next-generation wireless communication systems.",
-      "published": "2026-05-27T00:00:00Z",
-      "updated": "2026-05-27T00:00:00Z",
-      "year": 2026,
-      "paper_url": "https://doi.org/10.1016/j.array.2026.100872",
-      "pdf_url": "https://doi.org/10.1016/j.array.2026.100872",
-      "doi": "10.1016/j.array.2026.100872",
-      "journal": "Array",
-      "partition": "其他",
-      "categories": [],
-      "seed_topic": "algo_antenna",
-      "matches": [
-        {
-          "topic_id": "nn_antenna",
-          "topic_name": "神经网络天线优化",
-          "score": 0.719,
-          "level": "medium",
-          "reason": "learning; model; prediction; regression; data-driven; ai",
-          "keyword_hits": [
-            "learning",
-            "model",
-            "prediction",
-            "regression",
-            "data-driven",
-            "ai"
-          ]
-        },
-        {
-          "topic_id": "algo_antenna",
-          "topic_name": "算法天线优化",
-          "score": 0.309,
-          "level": "low",
-          "reason": "optimization; algorithm; design; simulation; electromagnetic; radiation",
-          "keyword_hits": [
-            "optimization",
-            "algorithm",
-            "design",
-            "simulation",
-            "electromagnetic",
-            "radiation"
-          ]
-        }
-      ],
-      "best_match": {
-        "topic_id": "nn_antenna",
-        "topic_name": "神经网络天线优化",
-        "score": 0.719,
-        "level": "medium",
-        "reason": "learning; model; prediction; regression; data-driven; ai",
-        "keyword_hits": [
-          "learning",
-          "model",
-          "prediction",
-          "regression",
-          "data-driven",
-          "ai"
-        ]
-      },
-      "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "Electromagnetic simulation of microstrip antennas for wide-band operation often requires extensive computational resources, which limits rapid design optimization for modern wireless communication systems.",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "learning; model; prediction; regression; data-driven; ai"
-      },
-      "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "retained_from_previous_run": true
-    },
-    {
-      "id": "W7162332216",
-      "source": "Scientific Reports",
-      "title": "Circular MIMO antenna with ML-based bandwidth and isolation prediction for 6G communications",
-      "authors": [
-        "Md Mahabub Alam",
-        "Messaoud Ahmed Ouameur",
-        "Md Ershadul Haque",
-        "Md. Ashraful Haque",
-        "Jun-Jiat Tiang",
-        "Narinderjit Singh Sawaran Singh",
-        "Ruwaybih Alsulami",
-        "Saeed Alzahrani"
-      ],
-      "summary": "The demanding requirements of next-generation 6G wireless systems necessitate the development of compact, wideband, and high-isolation terahertz (THz) MIMO antennas, while conventional full-wave electromagnetic optimization remains computationally expensive for complex multi-parameter designs. To overcome these challenges, this work introduces a compact circular MIMO antenna integrated with a machine learning (ML)-based framework for efficient performance prediction and design optimization. The proposed antenna consists of two co-oriented circular radiating elements, enhanced with a concentric ring and side stubs to improve impedance matching and broaden bandwidth. High inter-element isolation is achieved through the incorporation of isolation walls and an optimized partial ground structure. The polyimide-based antenna, with compact dimensions of 130 × 70 μm², operates at 5.55 THz and provides a wide bandwidth of 4.56-5.86 THz, a peak gain of 8.04 dB, a radiation efficiency of 85.64%, a diversity gain (DG) of 9.985 dB, and a total active reflection coefficient (TARC) below - 35 dB. To enable rapid performance estimation, an ML-based predictive model employing five supervised regression algorithms is trained using crucial geometrical parameters, including inner ring radius, feedline width, stub width, element spacing, and substrate height. Among the evaluated models, Cat Boost regression achieves the highest prediction accuracy, with R² scores of 97.05% for bandwidth and 92.56% for isolation. These results demonstrate that the proposed circular MIMO antenna, supported by ML-based predictive modeling, offers a promising solution for compact, high-performance antennas in 6G THz communication systems.",
-      "published": "2026-05-25T00:00:00Z",
-      "updated": "2026-05-25T00:00:00Z",
-      "year": 2026,
-      "paper_url": "https://doi.org/10.1038/s41598-026-54274-w",
-      "pdf_url": "https://www.nature.com/articles/s41598-026-54274-w_reference.pdf",
-      "doi": "10.1038/s41598-026-54274-w",
-      "journal": "Scientific Reports",
-      "partition": "其他",
-      "categories": [],
-      "seed_topic": "nn_antenna",
-      "matches": [
-        {
-          "topic_id": "nn_antenna",
-          "topic_name": "神经网络天线优化",
-          "score": 0.699,
-          "level": "medium",
-          "reason": "learning; model; prediction; regression; ai; machine learning",
-          "keyword_hits": [
-            "learning",
-            "model",
-            "prediction",
-            "regression",
-            "ai",
-            "machine learning"
-          ]
-        },
-        {
-          "topic_id": "algo_antenna",
-          "topic_name": "算法天线优化",
-          "score": 0.397,
-          "level": "low",
-          "reason": "optimization; algorithm; ga; design; electromagnetic; modeling",
-          "keyword_hits": [
-            "optimization",
-            "algorithm",
-            "ga",
-            "design",
-            "electromagnetic",
-            "modeling"
-          ]
-        }
-      ],
-      "best_match": {
-        "topic_id": "nn_antenna",
-        "topic_name": "神经网络天线优化",
-        "score": 0.699,
-        "level": "medium",
-        "reason": "learning; model; prediction; regression; ai; machine learning",
-        "keyword_hits": [
-          "learning",
-          "model",
-          "prediction",
-          "regression",
-          "ai",
-          "machine learning"
-        ]
-      },
-      "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "The demanding requirements of next-generation 6G wireless systems necessitate the development of compact, wideband, and high-isolation terahertz (THz) MIMO antennas, while conventional full-wave electromagnetic optimization remains computationally expensive for complex multi-parameter designs.",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "learning; model; prediction; regression; ai; machine learning"
-      },
-      "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "retained_from_previous_run": true
-    },
-    {
-      "id": "W7162441967",
-      "source": "OpenAlex",
-      "title": "1.1 TitleCyber-physical systems &amp; strategic management: A dual-competency model for optimizing specialist infrastructure",
-      "authors": [
-        "tshingombe tshitadi",
-        "tshingombe tshitadi"
-      ],
-      "summary": "<ns3:p> <ns3:bold>�� 1.2 Abstract</ns3:bold> </ns3:p> <ns3:p>This dissertation investigates the optimization of specialist technical infrastructure (Renewable Energy, Smart Grids, Advanced Fabrication) by synthesizing hard technical formulation with strategic management frameworks. The research develops a reproducible, audit-ready, and self-optimizing system design. We establish mathematical models using Applied Physics and Calculus to set hard physical limits, and then integrate them with automated Robotic Process Automation (RPA), AI-driven management control systems, and risk-based auditing methodologies. Findings demonstrate that a dual-competency approach is essential for achieving profit-maximization (Engineering Economy) rather than mere performance-maximization, ensuring infrastructure resilience in a global competitive environment.</ns3:p> <ns3:p> <ns3:bold>�� 1.3 Scope and Overview</ns3:bold> <ns3:list list-type=\"bullet\"> <ns3:list-item> <ns3:p> <ns3:bold>Scope:</ns3:bold> Master’s and doctoral-level systemic engine construction, spanning clean energy, advanced robotics, AI, and doctoral-level infrastructure engineering. </ns3:p> </ns3:list-item> <ns3:list-item> <ns3:p> <ns3:bold>Overview:</ns3:bold> The dissertation models 44 interdisciplinary curriculum topics (from Solid-State Physics and Systems Testing to Organization Theory and Ethics) into a single, integrated \"Strategic Engine.\" This maps how physical constraints, mathematical logic, operational tasks, and management systems must interact to produce a self-optimizing, audit-ready, and compliant infrastructure model ready for scholarly defense. </ns3:p> </ns3:list-item> </ns3:list> <ns3:bold>�� 1.4 Background Knowledge</ns3:bold> </ns3:p> <ns3:p>The historical evolution of engineering curriculum design has moved from component-level knowledge to systemic integration. Modern specialist infrastructure (e.g., 5G Media Broadcasting, Green Hydrogen production) operates as a cyber-physical system, requiring not just the technical \"How\" (governed by limits, variation, and power series) but also the reflective \"Why\" and the professional \"Who.\" This research moves curriculum formulation theory into a functional, data-driven audit and delivery system.</ns3:p> <ns3:p/> <ns3:p/> <ns3:p>Section 2: Technical &amp; Operation</ns3:p> <ns3:p> <ns3:bold>��️ 2.1 Introduction: The Unified Information Architect</ns3:bold> </ns3:p> <ns3:p>To resolve the doctoral-level \"Grand Synthesis\" for a Smart City project, we convert theoretical topics into a Self-Optimizing Infrastructure model. This section establishes the \"strategic core\" of the systemic engine, moving from physical limits and operational tasks to a functional compliance framework.</ns3:p> <ns3:p> <ns3:bold>�� 2.2 Key Description &amp; Statement of Problem</ns3:bold> </ns3:p> <ns3:p> <ns3:bold>Key Description (The Unified Systemic Core)</ns3:bold> </ns3:p> <ns3:p> Curriculum design, at the master’s and doctoral level, must integrate structured assessment, audit-ready documentation, and management systems. This requires a balanced formulation across three core curriculum pillars: <ns3:list list-type=\"order\"> <ns3:list-item> <ns3:p> <ns3:bold>The Physical &amp; Operational Pillar:</ns3:bold> Governed by Applied Physics, electrical foundations, and operational task execution. </ns3:p> </ns3:list-item> <ns3:list-item> <ns3:p> <ns3:bold>The Digital &amp; Analytics Pillar:</ns3:bold> Leveraging AGI, AGI-powered RPA, WDM capacity models, and AI-driven data processing methodologies. </ns3:p> </ns3:list-item> <ns3:list-item> <ns3:p> <ns3:bold>The Management &amp; Compliance Pillar:</ns3:bold> Using risk variation integrals (R=σbreach²) and audit checkmarks (✅, ⚠️, ��) for instant status recognition and audit traceability. </ns3:p> </ns3:list-item> </ns3:list> <ns3:bold>Statement of the Problem</ns3:bold> </ns3:p> <ns3:p> Despite advances in curriculum design, technical institutions struggle to integrate technical derivation with strategic management and compliance at the postgraduate level. Existing models often lack: <ns3:list list-type=\"bullet\"> <ns3:list-item> <ns3:p> A robust <ns3:bold>Mathematical Layer</ns3:bold> for modeling consumer behavior and energy adoption (integrals, double/triple integrals). </ns3:p> </ns3:list-item> <ns3:list-item> <ns3:p> A reproducible <ns3:bold>Audit Framework</ns3:bold> for instant compliance flagging. </ns3:p> </ns3:list-item> <ns3:list-item> <ns3:p> Clear alignment between learning outcomes and specialized <ns3:bold>industry competencies</ns3:bold> . </ns3:p> </ns3:list-item> <ns3:list-item> <ns3:p> <ns3:bold>Operational Task</ns3:bold> models that bridge theoretical knowledge with applied engineering management. </ns3:p> </ns3:list-item> </ns3:list> <ns3:bold>�� 2.3 Data Analysis &amp; Mathematical Formulation</ns3:bold> </ns3:p> <ns3:p>To strengthen analytical rigor and convert theoretical knowledge into actionable strategy, this dissertation establishes the following mathematical layers:</ns3:p> <ns3:p> <ns3:bold>A. The Hard Synthesis (Physics &amp; Calculus Layer)</ns3:bold> <ns3:list list-type=\"bullet\"> <ns3:list-item> <ns3:p> <ns3:bold>Path Loss (attenuation PL) in specialistic environment:</ns3:bold> Governed by path loss formula: PL=20log10(c4πdf​). millimetre-wave frequencies in high-density urban corridors dictate cell size. </ns3:p> </ns3:list-item> <ns3:list-item> <ns3:p> <ns3:bold>RPA-driven optimization:</ns3:bold> We Turn Multipath Interference into an Advantage using OFDMA (Orthogonal Frequency Division Multiple Access) with orthogonal sub-carriers. </ns3:p> </ns3:list-item> <ns3:list-item> <ns3:p> <ns3:bold>Radiation Integral:</ns3:bold> Prad=∫02π​∫0π​U(θ,ϕ)sinθdθdϕ. and G=dPin​dU​ for antenna gain, essential for bridging vast distances in modern broadcasting networks. </ns3:p> </ns3:list-item> <ns3:list-item> <ns3:p> <ns3:bold>The Engagement Integral (Digital Media):</ns3:bold> Etotal=∫0T​E(t)dt defines total cumulative audience value; Rate of Reach dtdR​ identifies \"viral\" moments. </ns3:p> </ns3:list-item> <ns3:list-item> <ns3:p> <ns3:bold>Integrals and Series Formulation:</ns3:bold> Power &amp; Energy Series expansion for market modeling. Double Integral (for area/consumer flow) and Triple Integral (multi-variable systems modeling) provide the mathematical backbone for complex engineering analysis. </ns3:p> </ns3:list-item> </ns3:list> <ns3:bold>B. The Strategic Management Layer</ns3:bold> <ns3:list list-type=\"bullet\"> <ns3:list-item> <ns3:p> <ns3:bold>Marking Weighting (Assessment Rubric) marks distributed marks 100 duration 3 hours.</ns3:bold> Rubric weighting distributes scores across applied analysis (40%), critical evaluation (40%), and definitions/knowledge (20%) across diploma, masters, and doctoral progression levels. </ns3:p> </ns3:list-item> <ns3:list-item> <ns3:p> <ns3:bold>Marks weighting summary Marks marks allocated 100 duration 3 hours. Parallel Quiz Parallel quiz questions:</ns3:bold> For MBM302 / MBM300 / Research Proposal. Quiz (formative 20%), Case Study (summative 20%), Project (30%), Final Paper (summative 30%). For diploma-level forma",
-      "published": "2026-05-26T00:00:00Z",
-      "updated": "2026-05-26T00:00:00Z",
-      "year": 2026,
-      "paper_url": "https://doi.org/10.7490/f1000research.1120561.1",
-      "pdf_url": "https://f1000research.com/documents/15-816/pdf",
-      "doi": "10.7490/f1000research.1120561.1",
-      "journal": "",
-      "partition": "其他",
-      "categories": [],
-      "seed_topic": "algo_antenna",
-      "matches": [
-        {
-          "topic_id": "nn_antenna",
-          "topic_name": "神经网络天线优化",
-          "score": 0.615,
-          "level": "medium",
-          "reason": "network; learning; model; data-driven; ai; optimization",
-          "keyword_hits": [
-            "network",
-            "learning",
-            "model",
-            "data-driven",
-            "ai",
-            "optimization"
-          ]
-        },
-        {
-          "topic_id": "algo_antenna",
-          "topic_name": "算法天线优化",
-          "score": 0.338,
-          "level": "low",
-          "reason": "optimization; ga; design; modeling; radiation; gain",
-          "keyword_hits": [
-            "optimization",
-            "ga",
-            "design",
-            "modeling",
-            "radiation",
-            "gain"
-          ]
-        }
-      ],
-      "best_match": {
-        "topic_id": "nn_antenna",
-        "topic_name": "神经网络天线优化",
-        "score": 0.615,
-        "level": "medium",
-        "reason": "network; learning; model; data-driven; ai; optimization",
-        "keyword_hits": [
-          "network",
-          "learning",
-          "model",
-          "data-driven",
-          "ai",
-          "optimization"
-        ]
-      },
-      "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "<ns3:p> <ns3:bold>�� 1.2 Abstract</ns3:bold> </ns3:p> <ns3:p>This dissertation investigates the optimization of specialist technical infrastructure (Renewable Energy, Smart Grids, Advanced Fabrication) by synthesizing hard technical formulation with strategic management frameworks.",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "network; learning; model; data-driven; ai; optimization"
-      },
-      "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "retained_from_previous_run": true
-    },
-    {
-      "id": "W7162465356",
-      "source": "Scientific Reports",
-      "title": "Machine learning-assisted validation of a high-isolation THz MIMO antenna for 6G communication and IoT application",
-      "authors": [
-        "Md. Ashraful Haque",
-        "Nizamuddin Ahmed",
-        "Gazi Mohammad Saifullah",
-        "Mehidy Hasan",
-        "Jun-Jiat Tiang",
-        "Narinderjit Sawaran SinghSingh",
-        "Abeer D. Algarni",
-        "Abdelhamied A. Ateya"
-      ],
-      "summary": "The terahertz (THz) frequency spectrum, which enables ultra-high data rates, low-latency communication (URLLC), and vast connectivity, is poised to be a key component in advancing wireless technology for 6G and beyond. But creating THz antennas that can overcome obstacles such as high propagation loss and complex construction is still quite difficult. A compact 1 × 2 MIMO patch antenna with dimensions of 130.7 μm × 288 μm is shown in this study. It is optimized for dual-frequency bands at 8.20–9.63 THz and 9.95–10.86 THz, making it ideal for secure communication and high-resolution photography. The suggested antenna outperforms current designs, achieving an astounding 14.07 dB of gain, 87.7% efficiency. Moreover, the MIMO antenna’s capability is confirmed by an isolation of − 44.64 dB, an ECC of 1.07 × 10–10, a DG of 9.99 dB, TARC and CCL values less than − 10 dB and 0.4 bps/Hz, respectively. Machine learning (ML) techniques, specifically regression models such as Extra Trees, were used to optimize design parameters to improve performance. The result was remarkable prediction accuracy, with an R2 value of 98.13%, a mean absolute error (MAE) of 1.31%, and a root mean square error (RMSE) of 1.76%.",
-      "published": "2026-05-26T00:00:00Z",
-      "updated": "2026-05-26T00:00:00Z",
-      "year": 2026,
-      "paper_url": "https://doi.org/10.1038/s41598-026-54612-y",
-      "pdf_url": "https://www.nature.com/articles/s41598-026-54612-y_reference.pdf",
-      "doi": "10.1038/s41598-026-54612-y",
-      "journal": "Scientific Reports",
-      "partition": "其他",
-      "categories": [],
-      "seed_topic": "nn_antenna",
-      "matches": [
-        {
-          "topic_id": "nn_antenna",
-          "topic_name": "神经网络天线优化",
-          "score": 0.559,
-          "level": "medium",
-          "reason": "learning; model; prediction; regression; ai; machine learning",
-          "keyword_hits": [
-            "learning",
-            "model",
-            "prediction",
-            "regression",
-            "ai",
-            "machine learning"
-          ]
-        },
-        {
-          "topic_id": "algo_antenna",
-          "topic_name": "算法天线优化",
-          "score": 0.206,
-          "level": "low",
-          "reason": "ga; design; gain; frequency",
-          "keyword_hits": [
-            "ga",
-            "design",
-            "gain",
-            "frequency"
-          ]
-        }
-      ],
-      "best_match": {
-        "topic_id": "nn_antenna",
-        "topic_name": "神经网络天线优化",
-        "score": 0.559,
-        "level": "medium",
-        "reason": "learning; model; prediction; regression; ai; machine learning",
-        "keyword_hits": [
-          "learning",
-          "model",
-          "prediction",
-          "regression",
-          "ai",
-          "machine learning"
-        ]
-      },
-      "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "The terahertz (THz) frequency spectrum, which enables ultra-high data rates, low-latency communication (URLLC), and vast connectivity, is poised to be a key component in advancing wireless technology for 6G and beyond.",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "learning; model; prediction; regression; ai; machine learning"
-      },
-      "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "retained_from_previous_run": true
-    },
-    {
-      "id": "W7162649544",
-      "source": "IETE Journal of Research",
-      "title": "Design and Performance Optimization of Microstrip Patch Antenna Using Hybrid Coati Salmon Migration Algorithm",
-      "authors": [
-        "M Shakunthala",
-        "B. R. Tapas Bapu",
-        "S. Sathya",
-        "S. Maheswari"
-      ],
-      "summary": "",
-      "published": "2026-05-28T00:00:00Z",
-      "updated": "2026-05-28T00:00:00Z",
-      "year": 2026,
-      "paper_url": "https://doi.org/10.1080/03772063.2026.2665212",
-      "pdf_url": null,
-      "doi": "10.1080/03772063.2026.2665212",
-      "journal": "IETE Journal of Research",
-      "partition": "其他",
-      "categories": [],
-      "seed_topic": "algo_antenna",
-      "matches": [
-        {
-          "topic_id": "algo_antenna",
-          "topic_name": "算法天线优化",
-          "score": 0.486,
-          "level": "medium",
-          "reason": "optimization; algorithm; design",
-          "keyword_hits": [
-            "optimization",
-            "algorithm",
-            "design"
-          ]
-        },
-        {
-          "topic_id": "nn_antenna",
-          "topic_name": "神经网络天线优化",
-          "score": 0.42,
-          "level": "medium",
-          "reason": "optimization; design; patch",
-          "keyword_hits": [
-            "optimization",
-            "design",
-            "patch"
-          ]
-        }
-      ],
-      "best_match": {
-        "topic_id": "algo_antenna",
-        "topic_name": "算法天线优化",
-        "score": 0.486,
-        "level": "medium",
-        "reason": "optimization; algorithm; design",
-        "keyword_hits": [
-          "optimization",
-          "algorithm",
-          "design"
-        ]
-      },
-      "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "请打开论文链接查看方法细节。",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "optimization; algorithm; design"
-      },
-      "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:40:34.739123+00:00",
-      "retained_from_previous_run": false
-    },
-    {
-      "id": "W7162581396",
-      "source": "arXiv (Cornell University)",
-      "title": "Amplitude-Tunable Pinching Antenna Systems: Single-Mode Phase-Mismatch Radiation and Multiuser Beamforming",
-      "authors": [
-        "Aşkın Altınoklu",
-        "Leila Musavian"
-      ],
-      "summary": "Pinching antenna systems (PASS) enable reconfigurable radiating elements and extended line-of-sight communication, mitigating path loss effects. However, existing designs lack fully controllable radiation weights, as they are governed by structural parameters rather than explicitly assigned variables. In this paper, we introduce a new degree of freedom (DoF) for PASS by enabling radiation weight control through phase-mismatch manipulation of guided waves under single-mode excitation within a coupled-mode framework. By tuning the propagation constants of pinching antennas, independent complex-weight control of individual elements is achieved, transforming PASS into a weight-adaptive analog beamforming architecture. Based on this principle, we present a physics-based hardware model that provides a unified framework for both amplitude-tunable pinching beamforming and conventional equal-power radiation models, ensuring compatibility with existing PASS implementations, such as movable setups. To evaluate the proposed model, we formulate a sum-rate maximization problem for hybrid precoding in multiuser downlink systems and solve it using an alternating optimization framework that combines weighted minimum mean square error-based digital precoding with genetic algorithm-based optimization of PASS configurations, including various scenarios such as weight tuning, antenna movability, and discrete activation. Numerical results demonstrate that the amplitude-tunable PASS architecture achieves consistent performance gains over conventional arrays and existing PASS schemes, with pronounced improvements in interference-limited regimes under practical constraints.",
-      "published": "2026-05-26T00:00:00Z",
-      "updated": "2026-05-26T00:00:00Z",
-      "year": 2026,
-      "paper_url": "https://doi.org/10.48550/arxiv.2605.26714",
-      "pdf_url": "https://doi.org/10.48550/arxiv.2605.26714",
-      "doi": "10.48550/arxiv.2605.26714",
-      "journal": "arXiv (Cornell University)",
-      "partition": "其他",
-      "categories": [],
-      "seed_topic": "algo_antenna",
-      "matches": [
-        {
-          "topic_id": "algo_antenna",
-          "topic_name": "算法天线优化",
-          "score": 0.411,
-          "level": "low",
-          "reason": "optimization; algorithm; genetic; ga; design; array",
-          "keyword_hits": [
-            "optimization",
-            "algorithm",
-            "genetic",
-            "ga",
-            "design",
-            "array"
-          ]
-        },
-        {
-          "topic_id": "nn_antenna",
-          "topic_name": "神经网络天线优化",
-          "score": 0.3,
-          "level": "low",
-          "reason": "model; ai; optimization; design; array; radiation",
-          "keyword_hits": [
-            "model",
-            "ai",
-            "optimization",
-            "design",
-            "array",
-            "radiation"
-          ]
-        }
-      ],
-      "best_match": {
-        "topic_id": "algo_antenna",
-        "topic_name": "算法天线优化",
-        "score": 0.411,
-        "level": "low",
-        "reason": "optimization; algorithm; genetic; ga; design; array",
-        "keyword_hits": [
-          "optimization",
-          "algorithm",
-          "genetic",
-          "ga",
-          "design",
-          "array"
-        ]
-      },
-      "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "Pinching antenna systems (PASS) enable reconfigurable radiating elements and extended line-of-sight communication, mitigating path loss effects.",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "optimization; algorithm; genetic; ga; design; array"
-      },
-      "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "retained_from_previous_run": true
-    },
-    {
-      "id": "W7162699956",
-      "source": "ArXiv.org",
-      "title": "Amplitude-Tunable Pinching Antenna Systems: Single-Mode Phase-Mismatch Radiation and Multiuser Beamforming",
-      "authors": [
-        "Aşkın Altınoklu",
-        "Leila Musavian"
-      ],
-      "summary": "Pinching antenna systems (PASS) enable reconfigurable radiating elements and extended line-of-sight communication, mitigating path loss effects. However, existing designs lack fully controllable radiation weights, as they are governed by structural parameters rather than explicitly assigned variables. In this paper, we introduce a new degree of freedom (DoF) for PASS by enabling radiation weight control through phase-mismatch manipulation of guided waves under single-mode excitation within a coupled-mode framework. By tuning the propagation constants of pinching antennas, independent complex-weight control of individual elements is achieved, transforming PASS into a weight-adaptive analog beamforming architecture. Based on this principle, we present a physics-based hardware model that provides a unified framework for both amplitude-tunable pinching beamforming and conventional equal-power radiation models, ensuring compatibility with existing PASS implementations, such as movable setups. To evaluate the proposed model, we formulate a sum-rate maximization problem for hybrid precoding in multiuser downlink systems and solve it using an alternating optimization framework that combines weighted minimum mean square error-based digital precoding with genetic algorithm-based optimization of PASS configurations, including various scenarios such as weight tuning, antenna movability, and discrete activation. Numerical results demonstrate that the amplitude-tunable PASS architecture achieves consistent performance gains over conventional arrays and existing PASS schemes, with pronounced improvements in interference-limited regimes under practical constraints.",
-      "published": "2026-05-26T00:00:00Z",
-      "updated": "2026-05-26T00:00:00Z",
-      "year": 2026,
-      "paper_url": "https://arxiv.org/abs/2605.26714",
-      "pdf_url": "https://arxiv.org/pdf/2605.26714",
-      "doi": "",
-      "journal": "ArXiv.org",
-      "partition": "其他",
-      "categories": [],
-      "seed_topic": "algo_antenna",
-      "matches": [
-        {
-          "topic_id": "algo_antenna",
-          "topic_name": "算法天线优化",
-          "score": 0.411,
-          "level": "low",
-          "reason": "optimization; algorithm; genetic; ga; design; array",
-          "keyword_hits": [
-            "optimization",
-            "algorithm",
-            "genetic",
-            "ga",
-            "design",
-            "array"
-          ]
-        },
-        {
-          "topic_id": "nn_antenna",
-          "topic_name": "神经网络天线优化",
-          "score": 0.3,
-          "level": "low",
-          "reason": "model; ai; optimization; design; array; radiation",
-          "keyword_hits": [
-            "model",
-            "ai",
-            "optimization",
-            "design",
-            "array",
-            "radiation"
-          ]
-        }
-      ],
-      "best_match": {
-        "topic_id": "algo_antenna",
-        "topic_name": "算法天线优化",
-        "score": 0.411,
-        "level": "low",
-        "reason": "optimization; algorithm; genetic; ga; design; array",
-        "keyword_hits": [
-          "optimization",
-          "algorithm",
-          "genetic",
-          "ga",
-          "design",
-          "array"
-        ]
-      },
-      "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "Pinching antenna systems (PASS) enable reconfigurable radiating elements and extended line-of-sight communication, mitigating path loss effects.",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "optimization; algorithm; genetic; ga; design; array"
-      },
-      "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "retained_from_previous_run": true
-    },
-    {
-      "id": "W7162474443",
-      "source": "ArXiv.org",
-      "title": "Diffusion Fluid Antenna Systems for Resilient ISAC",
-      "authors": [
-        "Noor Waqar",
-        "Kai-Kit Wong",
-        "Chan-Byoung Chae",
-        "Ross Murch"
-      ],
-      "summary": "Most existing integrated sensing and communication (ISAC) studies focus on enabling a base station (BS) to support sensing and communication over shared resources through advanced waveform design and power allocation. In contrast, the object-side perspective remains underexplored. For example, an object may wish to remain difficult to detect for security reasons, while another object in close proximity may generate dominant reflections that confuse the BS and impair sensing reliability for the intended target. These challenges motivate the fluid antenna system (FAS) paradigm which introduces a reconfigurable spatial degree of freedom (DoF) that can reshape sensing signatures via port selection, beyond what waveform and power control alone can provide. In this paper, we devise diffusion FAS, a generative artificial intelligence (AI)-driven framework that exploits spatial agility to steer ISAC performance over the electromagnetic fading manifold. Instead of optimizing ISAC solely in the power domain, diffusion FAS casts ISAC as a \\emph{dynamic spatial selection} problem in which antenna states (i.e., ports) are chosen to shape sensing signatures while maintaining communication objectives. To work under sparse measurements, we employ a conditional denoising diffusion probabilistic model (DDPM) to reconstruct the latent spatial correlation structure from a small set of observed ports, enabling efficient exploration of the reconfigurable aperture. We demonstrate two FAS-enabled ISAC modes: (1) \\emph{generative spatial stealth}, which identifies localized deep fades to suppress a target's sensing visibility by up to two orders of magnitude, and (2) \\emph{target isolation}, which synthesizes spatial nulls that reject interference from adjacent objects.",
-      "published": "2026-05-22T00:00:00Z",
-      "updated": "2026-05-22T00:00:00Z",
-      "year": 2026,
-      "paper_url": "https://arxiv.org/abs/2605.23649",
-      "pdf_url": "https://arxiv.org/pdf/2605.23649",
-      "doi": "",
-      "journal": "ArXiv.org",
-      "partition": "其他",
-      "categories": [],
-      "seed_topic": "nn_antenna",
-      "matches": [
-        {
-          "topic_id": "nn_antenna",
-          "topic_name": "神经网络天线优化",
-          "score": 0.383,
-          "level": "low",
-          "reason": "deep; model; ai; design; electromagnetic",
-          "keyword_hits": [
-            "deep",
-            "model",
-            "ai",
-            "design",
-            "electromagnetic"
-          ]
-        },
-        {
-          "topic_id": "algo_antenna",
-          "topic_name": "算法天线优化",
-          "score": 0.147,
-          "level": "low",
-          "reason": "design; electromagnetic",
-          "keyword_hits": [
-            "design",
-            "electromagnetic"
-          ]
-        }
-      ],
-      "best_match": {
-        "topic_id": "nn_antenna",
-        "topic_name": "神经网络天线优化",
-        "score": 0.383,
-        "level": "low",
-        "reason": "deep; model; ai; design; electromagnetic",
-        "keyword_hits": [
-          "deep",
-          "model",
-          "ai",
-          "design",
-          "electromagnetic"
-        ]
-      },
-      "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "Most existing integrated sensing and communication (ISAC) studies focus on enabling a base station (BS) to support sensing and communication over shared resources through advanced waveform design and power allocation.",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "deep; model; ai; design; electromagnetic"
-      },
-      "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "retained_from_previous_run": true
-    },
-    {
-      "id": "W7162654165",
-      "source": "arXiv (Cornell University)",
-      "title": "Movable Antenna Enhanced Dual-Functional Radar-Communication: A Symbol-Level Precoding Approach",
-      "authors": [
-        "Ran Yang",
-        "Ning Wei",
-        "Zheng Dong",
-        "C. Assi",
-        "You Li",
-        "Fei Xu",
-        "Yue Xiu"
-      ],
-      "summary": "This letter investigates a symbol-level precoder design for movable antenna (MA)-enhanced dual-functional radar-communication (DFRC) systems. To enhance radar sensing capabilities, we formulate an optimization problem aimed at maximizing the minimum radar signal-to-interference-plus-noise ratio (SINR) across multiple targets in a cluttered environment. Our approach jointly designs the space-time transmitted waveforms, receiving filters, and antenna placement. However, the resulting problem is intractable to solve due to practical waveform constraints and the non-linear mapping from antenna positions to the corresponding channel coefficients. To address these challenges, we develop a bi-level optimization framework by leveraging deep reinforcement learning (DRL). Specifically, the twin delayed deep deterministic policy gradient (TD3) algorithm is employed in the outer layer to optimize antenna placement, while penalty convex-concave procedure (CCP) and majorization-minimization (MM) techniques are incorporated in the inner layer for regularizing waveform design. Simulation results demonstrate that the proposed method significantly improves radar SINR and achieves a superior sensing-communication trade-off compared to benchmark schemes.",
-      "published": "2026-05-27T00:00:00Z",
-      "updated": "2026-05-27T00:00:00Z",
-      "year": 2026,
-      "paper_url": "https://doi.org/10.48550/arxiv.2605.27839",
-      "pdf_url": "https://doi.org/10.48550/arxiv.2605.27839",
-      "doi": "10.48550/arxiv.2605.27839",
-      "journal": "arXiv (Cornell University)",
-      "partition": "其他",
-      "categories": [],
-      "seed_topic": "algo_antenna",
-      "matches": [
-        {
-          "topic_id": "nn_antenna",
-          "topic_name": "神经网络天线优化",
-          "score": 0.363,
-          "level": "low",
-          "reason": "learning; deep; ai; optimization; design; simulation",
-          "keyword_hits": [
-            "learning",
-            "deep",
-            "ai",
-            "optimization",
-            "design",
-            "simulation"
-          ]
-        },
-        {
-          "topic_id": "algo_antenna",
-          "topic_name": "算法天线优化",
-          "score": 0.279,
-          "level": "low",
-          "reason": "optimization; algorithm; ga; design; simulation",
-          "keyword_hits": [
-            "optimization",
-            "algorithm",
-            "ga",
-            "design",
-            "simulation"
-          ]
-        }
-      ],
-      "best_match": {
-        "topic_id": "nn_antenna",
-        "topic_name": "神经网络天线优化",
-        "score": 0.363,
-        "level": "low",
-        "reason": "learning; deep; ai; optimization; design; simulation",
-        "keyword_hits": [
-          "learning",
-          "deep",
-          "ai",
-          "optimization",
-          "design",
-          "simulation"
-        ]
-      },
-      "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "This letter investigates a symbol-level precoder design for movable antenna (MA)-enhanced dual-functional radar-communication (DFRC) systems.",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "learning; deep; ai; optimization; design; simulation"
-      },
-      "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "retained_from_previous_run": true
-    },
-    {
-      "id": "W7161359361",
-      "source": "Institutional Research Information System (Università degli Studi di Trento)",
-      "title": "Advanced Radar Techniques for Planetary Exploration: 3D Subsurface Imaging of Mars and Near-Earth Asteroid Characterization",
-      "authors": [
-        "Alessio Margheri"
-      ],
-      "summary": "Planetary radar sounding enables the investigation of subsurface structures and three-dimensional characterization of celestial bodies that are otherwise inaccessible through optical observations alone. This thesis addresses advanced radar signal processing techniques for two complementary applications: subsurface imaging of Mars through MARSIS (Mars Advanced Radar for Subsurface and Ionosphere Sounding) data, and three-dimensional shape reconstruction of near-Earth asteroids using ground-based radar observations. The theoretical foundation is established through a comprehensive treatment of electromagnetic wave propagation, surface scattering mechanisms, and radar equation fundamentals. Particular emphasis is placed on digital signal processing techniques for radar sounding, including matched filtering, pulse compression, and synthetic aperture radar (SAR) principles. The framework extends to advanced focusing algorithms, with detailed analysis of both time-domain and frequency-domain backprojection methods, inverse scattering theory, and tomographic reconstruction approaches. This theoretical synthesis is necessary given the vast and fragmented nature of radar imaging theory across different application domains. The investigation of Mars subsurface focuses on MARSIS data from the south polar region, specifically the Ultimi Scopuli area where previous studies identified anomalously bright basal reflections potentially consistent with subsurface liquid water at an apparent depth of 3 km. Through comparison with simulated data, a remnant phase term was discovered causing incoherent integration of orbital data. This led to a complete revision of the raw MARSIS processing chain, identifying noise sources including demodulation artifacts, orbital radial velocity variations, and ionospheric phase delays. The core contribution consists in the development and implementation of a three-dimensional frequency-domain backprojection algorithm, specifically optimized for MARSIS acquisition geometry and data characteristics. Applied first to a subset of 3 orbits selected for their positive focusing gain, the algorithm produces a volumetric reconstruction of the subsurface reflectivity that is qualitatively improved with respect to the uncorrected case, with spatially separated bright spots consolidating into a single, geometrically connected reflector after phase and noise correction. The reconstruction pipeline was subsequently extended to the full set of 27 noise- and phase-corrected orbits over the Ultimi Scopuli region. The resulting 3D volume reveals a coherent, elongated basal reflector at an apparent depth of 3km whose geometry and spatial extent are qualitatively consistent with the map of anomalously high basal dielectric permittivity reported by [1], providing qualitatively and independent three-dimensional geometric evidence for the spatial continuity of the candidate subsurface structure. Ground-based radar is a powerful tool for the characterization of Near-Earth Objects (NEOs), using both continuous-wave (CW) and delay-Doppler imaging techniques. Contributing to the European Space Agency pilot project \"NEO Observation Concepts for Radar Systems\" and to the subsequent activities, radar observations have been conducted using several radio telescopes in Europe as receivers, including the 32m \"G. Grueff\" Medicina antenna. For asteroid 2005 LW3, high-resolution integrated spectra revealed a binary system through the detection of a secondary spectral peak. In this work, a progressive implementation of three-dimensional shape reconstruction algorithms was developed to address scenarios where no range information is available, evolving from two-dimensional convex hull models through rotational ellipsoid fitting, radial and tangential perturbation models, culminating in a sophisticated adaptive vertex model capable of locally augmenting vertex density by optimizing residuals against spectral data. The reconstruction demonstrates that accurate 3D characterization is achievable using only Doppler data from CW observations. Additionally, this work includes pioneering efforts in Very Long Baseline Interferometry (VLBI) for asteroid radar observations. A complete feasibility study was performed for the observation of asteroid 2025 FA22, including SNR estimates for each telescope and baseline, as well as simulations of observational visibility conditions. This represents one of the first VLBI radar observations of an asteroid, with successful detection confirmed by Lovell telescope data, establishing a foundation for future interferometric radar campaigns. This research advances planetary radar sounding through the development of robust signal- processing algorithms tailored to challenging acquisition scenarios for subsurface exploration on Mars, while it also implements innovative radar-based 3D modeling algorithms for near-Earth objects, supporting both scientific investigation and planetary defense applications.",
-      "published": "2026-05-25T00:00:00Z",
-      "updated": "2026-05-25T00:00:00Z",
-      "year": 2026,
-      "paper_url": "https://hdl.handle.net/11572/487730",
-      "pdf_url": null,
-      "doi": "",
-      "journal": "Institutional Research Information System (Università degli Studi di Trento)",
-      "partition": "其他",
-      "categories": [],
-      "seed_topic": "algo_antenna",
-      "matches": [
-        {
-          "topic_id": "nn_antenna",
-          "topic_name": "神经网络天线优化",
-          "score": 0.344,
-          "level": "low",
-          "reason": "model; ai; modeling; simulation; electromagnetic; gain",
-          "keyword_hits": [
-            "model",
-            "ai",
-            "modeling",
-            "simulation",
-            "electromagnetic",
-            "gain"
-          ]
-        },
-        {
-          "topic_id": "algo_antenna",
-          "topic_name": "算法天线优化",
-          "score": 0.324,
-          "level": "low",
-          "reason": "algorithm; pso; ga; simulation; electromagnetic; modeling",
-          "keyword_hits": [
-            "algorithm",
-            "pso",
-            "ga",
-            "simulation",
-            "electromagnetic",
-            "modeling"
-          ]
-        }
-      ],
-      "best_match": {
-        "topic_id": "nn_antenna",
-        "topic_name": "神经网络天线优化",
-        "score": 0.344,
-        "level": "low",
-        "reason": "model; ai; modeling; simulation; electromagnetic; gain",
-        "keyword_hits": [
-          "model",
-          "ai",
-          "modeling",
-          "simulation",
-          "electromagnetic",
-          "gain"
-        ]
-      },
-      "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "Planetary radar sounding enables the investigation of subsurface structures and three-dimensional characterization of celestial bodies that are otherwise inaccessible through optical observations alone.",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "model; ai; modeling; simulation; electromagnetic; gain"
-      },
-      "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "retained_from_previous_run": true
-    },
-    {
-      "id": "W7162570575",
-      "source": "SN Computer Science",
-      "title": "High Performance Terahertz Circular Microstrip Antenna Optimized Using Machine Learning and Hybrid Photonic Band Gap Structures",
-      "authors": [
-        "Mustapha Reguig",
-        "Allel Mokaddem",
-        "Mohammed Belkheir",
-        "Mehdi Rouissat",
-        "Djamila Ziani"
-      ],
-      "summary": "",
-      "published": "2026-05-27T00:00:00Z",
-      "updated": "2026-05-27T00:00:00Z",
-      "year": 2026,
-      "paper_url": "https://doi.org/10.1007/s42979-026-05091-5",
-      "pdf_url": null,
-      "doi": "10.1007/s42979-026-05091-5",
-      "journal": "SN Computer Science",
-      "partition": "其他",
-      "categories": [],
-      "seed_topic": "nn_antenna",
-      "matches": [
-        {
-          "topic_id": "nn_antenna",
-          "topic_name": "神经网络天线优化",
-          "score": 0.324,
-          "level": "low",
-          "reason": "learning; machine learning",
-          "keyword_hits": [
-            "learning",
-            "machine learning"
-          ]
-        },
-        {
-          "topic_id": "algo_antenna",
-          "topic_name": "算法天线优化",
-          "score": 0.162,
-          "level": "low",
-          "reason": "ga",
-          "keyword_hits": [
-            "ga"
-          ]
-        }
-      ],
-      "best_match": {
-        "topic_id": "nn_antenna",
-        "topic_name": "神经网络天线优化",
-        "score": 0.324,
-        "level": "low",
-        "reason": "learning; machine learning",
-        "keyword_hits": [
-          "learning",
-          "machine learning"
-        ]
-      },
-      "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "请打开论文链接查看方法细节。",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "learning; machine learning"
-      },
-      "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:40:34.739123+00:00",
+      "first_seen_at": "2026-05-30T07:43:36.331339+00:00",
+      "last_seen_at": "2026-05-30T07:43:36.331339+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -2081,7 +145,7 @@
             "gain",
             "frequency"
           ],
-          "llm_reason": "论文针对大规模相控阵的本振信号生成核心模块，此类阵列可受益于智能优化，但本工作不涉及神经网络、代理模型或数据驱动方法，与研究方向无直接交叉。"
+          "llm_reason": "研究方向关注神经网络天线优化，但本论文未涉及任何神经网络、深度学习或代理模型方法，也未涉及天线设计或智能优化，仅因“阵列”“增益”“频率”等通用天线相关词汇导致基础匹配得分较低，实质相关性极弱。"
         },
         {
           "topic_id": "algo_antenna",
@@ -2112,408 +176,19 @@
           "gain",
           "frequency"
         ],
-        "llm_reason": "论文针对大规模相控阵的本振信号生成核心模块，此类阵列可受益于智能优化，但本工作不涉及神经网络、代理模型或数据驱动方法，与研究方向无直接交叉。"
+        "llm_reason": "研究方向关注神经网络天线优化，但本论文未涉及任何神经网络、深度学习或代理模型方法，也未涉及天线设计或智能优化，仅因“阵列”“增益”“频率”等通用天线相关词汇导致基础匹配得分较低，实质相关性极弱。"
       },
       "chinese_summary": {
-        "problem": "解决单芯片毫米波相控阵因晶片尺寸、LO分配损耗和功耗限制而难以扩展至大规模阵列的本地振荡信号生成难题，需实现多芯片阵列的低抖动、高稳定性频率源。",
-        "method": "设计了一款14GHz、抖动低于90fs的子采样锁相环（SSPLL）和一款基于Δ-Σ调制器（DSM）注入技术的快速启动晶振，二者均在65nm CMOS工艺上实现。",
-        "innovation": "提出一种基于DSM的新型注入技术，使晶振能在30μs内快速启动，并产生1MHz实时时钟；SSPLL以小于1mm²的面积实现超低抖动性能，相比传统方案显著降低了本振分配损耗和功耗，为多晶粒阵列的LO同步提供了紧凑解决方案。",
-        "evidence": "SSPLL达到14GHz输出、<90fs抖动、<1mm²面积；晶振启动时间<30μs；芯片采用65nm CMOS工艺制造。",
-        "limitations": "仅展示了电路模块设计，未提供完整多芯片阵列LO分配验证或系统级天线阵列测试结果；与天线辐射性能的关联需查阅全文确认。",
-        "why_relevant": "论文针对大规模相控阵的本振信号生成核心模块，此类阵列可受益于智能优化，但本工作不涉及神经网络、代理模型或数据驱动方法，与研究方向无直接交叉。"
+        "problem": "针对单芯片相控阵因芯片尺寸、互连损耗和功耗限制而难以扩展到大规模阵列的问题，研究如何在多芯片或晶圆级集成中为大规模阵列生成低抖动、低功耗的本地振荡器（LO）信号。",
+        "method": "采用14GHz子采样锁相环（SSPLL）实现超低抖动LO生成，并结合基于Delta-sigma调制器注入技术的快速启动晶体振荡器，提供参考时钟。",
+        "innovation": "提出将LO生成从单芯片扩展至多芯片/晶圆级相控阵的方案；设计了低于90fs抖动的紧凑型SSPLL（面积<1mm²）和启动时间小于30μs的晶体振荡器；在65nm CMOS工艺下完成了两种关键模块的流片验证。",
+        "evidence": "SSPLL在65nm CMOS工艺下实现，抖动<90fs，占用面积<1mm²；晶体振荡器启动时间<30μs，并包含1MHz实时时钟；两个模块已流片。",
+        "limitations": "摘要未给出多芯片阵列的整体系统测量结果或与单芯片方案的对比数据；未说明快速启动振荡器对系统功耗和相噪的影响；未提及天线单元或波束成形的实际性能，整阵列的可行性需阅读全文确认。",
+        "why_relevant": "研究方向关注神经网络天线优化，但本论文未涉及任何神经网络、深度学习或代理模型方法，也未涉及天线设计或智能优化，仅因“阵列”“增益”“频率”等通用天线相关词汇导致基础匹配得分较低，实质相关性极弱。"
       },
-      "first_seen_at": "2026-05-30T07:08:10.014574+00:00",
-      "last_seen_at": "2026-05-30T07:08:10.014574+00:00",
-      "retained_from_previous_run": true
-    },
-    {
-      "id": "W7162519949",
-      "source": "arXiv (Cornell University)",
-      "title": "RIS-Assisted Survivable Backhaul Recovery in Small-Cell Systems",
-      "authors": [
-        "Zhenyu Li",
-        "Özlem Tuğfe Demir",
-        "Emil Björnson",
-        "Cicek Cavdar"
-      ],
-      "summary": "The increasing densification of small-cell networks substantially expands cable-based backhaul infrastructure, creating heightened vulnerability to cable link failures. This paper proposes a reconfigurable intelligent surface (RIS)-assisted backup framework that exploits a key insight: during backhaul cable failures, base station (BS) radio components remain functional, enabling wireless backhaul traffic redistribution. Our framework maintains network connectivity by redistributing disconnected BS backhaul traffic to neighboring BSs through RIS-assisted wireless links. To maximize survivability across varying traffic conditions, we formulate a joint optimization problem that maximizes total resolvable backhaul traffic by jointly deciding BS selection, RIS phase shifts, and precoding vectors. The inherent non-convexity arising from coupling and quadratic fractional term is addressed through an alternating optimization algorithm that iteratively solves tractable convex subproblems via quadratic transformation. Comprehensive numerical evaluations demonstrate that the proposed RIS-enhanced framework significantly improves survivability from 58% to 72% under challenging high-intensity hotspot traffic conditions. Moreover, RIS provides the greatest gains for antenna-constrained systems by extending coverage to access more spare capacity of the distant BSs as well as enhancing the signal strength. Consequently, high survivability is achieved even with only two antennas per BS under moderate traffic intensity.",
-      "published": "2026-05-26T00:00:00Z",
-      "updated": "2026-05-26T00:00:00Z",
-      "year": 2026,
-      "paper_url": "https://doi.org/10.48550/arxiv.2605.26719",
-      "pdf_url": "https://doi.org/10.48550/arxiv.2605.26719",
-      "doi": "10.48550/arxiv.2605.26719",
-      "journal": "arXiv (Cornell University)",
-      "partition": "其他",
-      "categories": [],
-      "seed_topic": "algo_antenna",
-      "matches": [
-        {
-          "topic_id": "algo_antenna",
-          "topic_name": "算法天线优化",
-          "score": 0.293,
-          "level": "low",
-          "reason": "optimization; algorithm; ga; gain",
-          "keyword_hits": [
-            "optimization",
-            "algorithm",
-            "ga",
-            "gain"
-          ]
-        },
-        {
-          "topic_id": "nn_antenna",
-          "topic_name": "神经网络天线优化",
-          "score": 0.271,
-          "level": "low",
-          "reason": "network; ai; optimization; gain",
-          "keyword_hits": [
-            "network",
-            "ai",
-            "optimization",
-            "gain"
-          ]
-        }
-      ],
-      "best_match": {
-        "topic_id": "algo_antenna",
-        "topic_name": "算法天线优化",
-        "score": 0.293,
-        "level": "low",
-        "reason": "optimization; algorithm; ga; gain",
-        "keyword_hits": [
-          "optimization",
-          "algorithm",
-          "ga",
-          "gain"
-        ]
-      },
-      "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "The increasing densification of small-cell networks substantially expands cable-based backhaul infrastructure, creating heightened vulnerability to cable link failures.",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "optimization; algorithm; ga; gain"
-      },
-      "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "retained_from_previous_run": true
-    },
-    {
-      "id": "W7162699938",
-      "source": "ArXiv.org",
-      "title": "RIS-Assisted Survivable Backhaul Recovery in Small-Cell Systems",
-      "authors": [
-        "Zhenyu Li",
-        "Özlem Tuğfe Demir",
-        "Emil Björnson",
-        "Cicek Cavdar"
-      ],
-      "summary": "The increasing densification of small-cell networks substantially expands cable-based backhaul infrastructure, creating heightened vulnerability to cable link failures. This paper proposes a reconfigurable intelligent surface (RIS)-assisted backup framework that exploits a key insight: during backhaul cable failures, base station (BS) radio components remain functional, enabling wireless backhaul traffic redistribution. Our framework maintains network connectivity by redistributing disconnected BS backhaul traffic to neighboring BSs through RIS-assisted wireless links. To maximize survivability across varying traffic conditions, we formulate a joint optimization problem that maximizes total resolvable backhaul traffic by jointly deciding BS selection, RIS phase shifts, and precoding vectors. The inherent non-convexity arising from coupling and quadratic fractional term is addressed through an alternating optimization algorithm that iteratively solves tractable convex subproblems via quadratic transformation. Comprehensive numerical evaluations demonstrate that the proposed RIS-enhanced framework significantly improves survivability from 58% to 72% under challenging high-intensity hotspot traffic conditions. Moreover, RIS provides the greatest gains for antenna-constrained systems by extending coverage to access more spare capacity of the distant BSs as well as enhancing the signal strength. Consequently, high survivability is achieved even with only two antennas per BS under moderate traffic intensity.",
-      "published": "2026-05-26T00:00:00Z",
-      "updated": "2026-05-26T00:00:00Z",
-      "year": 2026,
-      "paper_url": "https://arxiv.org/abs/2605.26719",
-      "pdf_url": "https://arxiv.org/pdf/2605.26719",
-      "doi": "",
-      "journal": "ArXiv.org",
-      "partition": "其他",
-      "categories": [],
-      "seed_topic": "algo_antenna",
-      "matches": [
-        {
-          "topic_id": "algo_antenna",
-          "topic_name": "算法天线优化",
-          "score": 0.293,
-          "level": "low",
-          "reason": "optimization; algorithm; ga; gain",
-          "keyword_hits": [
-            "optimization",
-            "algorithm",
-            "ga",
-            "gain"
-          ]
-        },
-        {
-          "topic_id": "nn_antenna",
-          "topic_name": "神经网络天线优化",
-          "score": 0.271,
-          "level": "low",
-          "reason": "network; ai; optimization; gain",
-          "keyword_hits": [
-            "network",
-            "ai",
-            "optimization",
-            "gain"
-          ]
-        }
-      ],
-      "best_match": {
-        "topic_id": "algo_antenna",
-        "topic_name": "算法天线优化",
-        "score": 0.293,
-        "level": "low",
-        "reason": "optimization; algorithm; ga; gain",
-        "keyword_hits": [
-          "optimization",
-          "algorithm",
-          "ga",
-          "gain"
-        ]
-      },
-      "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "The increasing densification of small-cell networks substantially expands cable-based backhaul infrastructure, creating heightened vulnerability to cable link failures.",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "optimization; algorithm; ga; gain"
-      },
-      "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "retained_from_previous_run": true
-    },
-    {
-      "id": "W7162314108",
-      "source": "Actuators",
-      "title": "Performance Evaluation and Hybrid Combination of Modern Metaheuristics for the Optimal Design of Electromagnetic Devices",
-      "authors": [
-        "Houssem R. E. H. Bouchekara",
-        "Mostafa Kamel Smail",
-        "Muhammad Sharjeel Javaid",
-        "Abdelhak Goudjil",
-        "Yusuf Abubakar Sha’aban",
-        "Mohammad Shoaib Shahriar",
-        "Md Nurul Islam",
-        "Ali Mukhaylif Mohammed",
-        "Bander Marshud Alshammari"
-      ],
-      "summary": "Recent advancements in computational hardware and parallel processing are driving developments in metaheuristic algorithms. These advancements help solve increasingly complex real-world optimization problems. As a result, more sophisticated and computationally demanding algorithms can now be implemented. This paper presents a comparative performance evaluation of ten modern metaheuristic algorithms for the optimal design of Electromagnetic Devices (EMDs). It also evaluates seven well-established metaheuristics, which are referred to as reference algorithms. In addition to the comparison, a novel hybrid optimization strategy called Multiple Combined Algorithms for Optimization (MuCAO) is proposed. MuCAO probabilistically combines the best-performing algorithms to leverage their complementary strengths. All algorithms, including MuCAO, were tested on six benchmark problems with various complexities and design variables. These benchmarks include analytical models and problems based on the Finite Element Method (FEM). For validation, the approach was also applied to a real-life application, which is Sidelobe Level Reduction in a Circular Antenna Array (CAA). The results show that MuCAO outperformed all other algorithms and achieved the highest overall ranking. Three modern metaheuristics followed. The best-performing reference algorithm ranked lower, with DE in fifth place. The study confirms that modern metaheuristics generally offer superior performance for EMD design and optimization compared to traditional metaheuristics.",
-      "published": "2026-05-25T00:00:00Z",
-      "updated": "2026-05-25T00:00:00Z",
-      "year": 2026,
-      "paper_url": "https://doi.org/10.3390/act15060284",
-      "pdf_url": "https://doi.org/10.3390/act15060284",
-      "doi": "10.3390/act15060284",
-      "journal": "Actuators",
-      "partition": "其他",
-      "categories": [],
-      "seed_topic": "algo_antenna",
-      "matches": [
-        {
-          "topic_id": "algo_antenna",
-          "topic_name": "算法天线优化",
-          "score": 0.279,
-          "level": "low",
-          "reason": "optimization; algorithm; design; electromagnetic; array",
-          "keyword_hits": [
-            "optimization",
-            "algorithm",
-            "design",
-            "electromagnetic",
-            "array"
-          ]
-        },
-        {
-          "topic_id": "nn_antenna",
-          "topic_name": "神经网络天线优化",
-          "score": 0.276,
-          "level": "low",
-          "reason": "model; optimization; design; electromagnetic; array; fem",
-          "keyword_hits": [
-            "model",
-            "optimization",
-            "design",
-            "electromagnetic",
-            "array",
-            "fem"
-          ]
-        }
-      ],
-      "best_match": {
-        "topic_id": "algo_antenna",
-        "topic_name": "算法天线优化",
-        "score": 0.279,
-        "level": "low",
-        "reason": "optimization; algorithm; design; electromagnetic; array",
-        "keyword_hits": [
-          "optimization",
-          "algorithm",
-          "design",
-          "electromagnetic",
-          "array"
-        ]
-      },
-      "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "Recent advancements in computational hardware and parallel processing are driving developments in metaheuristic algorithms.",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "optimization; algorithm; design; electromagnetic; array"
-      },
-      "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "retained_from_previous_run": true
-    },
-    {
-      "id": "W7162475177",
-      "source": "ArXiv.org",
-      "title": "Movable-Antenna-Enhanced ISAC: Optimal Antenna Trajectory and Beamforming Design",
-      "authors": [
-        "Yifei Wu",
-        "Dongfang Xu",
-        "Derrick Wing Kwan Ng",
-        "Wolfgang Gerstacker",
-        "Robert Schober"
-      ],
-      "summary": "Integrated sensing and communication (ISAC) is a key enabling technology for next-generation wireless networks. However, most existing ISAC systems rely on fixed-position antennas, which restrict performance when balancing sensing and communication objectives. Movable antenna (MA) technology introduces additional spatial degrees of freedom through antenna mobility, yet existing studies on MA-enabled ISAC schemes mainly consider static antenna repositioning and fail to fully exploit this capability. By leveraging spatio-temporal sampling enabled by antenna motion, optimized MA trajectories can synthesize large virtual aperture arrays, thereby improving angular resolution and reducing sensing ambiguity. To this end, this paper investigates a dynamic MA-enabled ISAC system and studies the joint design of MA trajectories and transmit beamforming. We formulate a joint trajectory and beamforming optimization problem to minimize sensing beampattern mismatch under communication quality-of-service constraints. A branch-and-bound-based algorithm is developed to obtain the globally optimal solution. Numerical results show that the proposed framework significantly outperforms baseline schemes with only one or two antenna repositioning steps, demonstrating its practical feasibility.",
-      "published": "2026-05-22T00:00:00Z",
-      "updated": "2026-05-22T00:00:00Z",
-      "year": 2026,
-      "paper_url": "https://arxiv.org/abs/2605.23427",
-      "pdf_url": "https://arxiv.org/pdf/2605.23427",
-      "doi": "",
-      "journal": "ArXiv.org",
-      "partition": "其他",
-      "categories": [],
-      "seed_topic": "nn_antenna",
-      "matches": [
-        {
-          "topic_id": "algo_antenna",
-          "topic_name": "算法天线优化",
-          "score": 0.279,
-          "level": "low",
-          "reason": "optimization; algorithm; ga; design; array",
-          "keyword_hits": [
-            "optimization",
-            "algorithm",
-            "ga",
-            "design",
-            "array"
-          ]
-        },
-        {
-          "topic_id": "nn_antenna",
-          "topic_name": "神经网络天线优化",
-          "score": 0.252,
-          "level": "low",
-          "reason": "network; ai; optimization; design; array",
-          "keyword_hits": [
-            "network",
-            "ai",
-            "optimization",
-            "design",
-            "array"
-          ]
-        }
-      ],
-      "best_match": {
-        "topic_id": "algo_antenna",
-        "topic_name": "算法天线优化",
-        "score": 0.279,
-        "level": "low",
-        "reason": "optimization; algorithm; ga; design; array",
-        "keyword_hits": [
-          "optimization",
-          "algorithm",
-          "ga",
-          "design",
-          "array"
-        ]
-      },
-      "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "Integrated sensing and communication (ISAC) is a key enabling technology for next-generation wireless networks.",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "optimization; algorithm; ga; design; array"
-      },
-      "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "retained_from_previous_run": true
-    },
-    {
-      "id": "W7162474989",
-      "source": "ArXiv.org",
-      "title": "Optimal Design Framework for Distributed Array Using Magnetically-Actuated Satellite Swarm",
-      "authors": [
-        "Seang SHIM",
-        "Yuta Takahashi",
-        "Naoto Usami",
-        "Shin-ichiro Sakai"
-      ],
-      "summary": "Distributed space antennas using electromagnetic formation flight (EMFF) are a promising architecture for large-aperture, long-life space communication systems. Their feasible aperture, however, is governed by coupled constraints on antenna performance, satellite mass, power generation, coil geometry, and formation-keeping power. This paper proposes a system-level design framework for EMFF-based distributed space antennas. It links phased-array requirements with satellite-level sizing constraints and provides a static grid-based reference for designing feasible apertures under a fixed system mass. Unlike our previous bucket-brigade disturbance-compensation model, the formation-maintenance requirement is incorporated through a control index derived from distributed-control simulations. This index is integrated into an antenna-aperture maximization problem with sizing, power, coil, and sidelobe-envelope constraints. Parametric case studies examine margin magnetic moment, prescribed transmit power, and large inter-satellite spacing. Results show that increasing system mass improves footprint reduction or effective isotropic radiated power only while satellite-level design headroom remains. In direct-to-device cases with 0.15 m spacing, generated-power and coil-geometry constraints dominate the feasible aperture. In the 0.60 m large-spacing case, the required coil burden can exceed satellite-level mass, size, and power capacities, making the design infeasible despite favorable communication performance. The proposed framework enables the design and evaluation of feasible static grid-based EMFF distributed antennas under coupled antenna, satellite, and control constraints.",
-      "published": "2026-05-22T00:00:00Z",
-      "updated": "2026-05-22T00:00:00Z",
-      "year": 2026,
-      "paper_url": "https://arxiv.org/abs/2605.23481",
-      "pdf_url": "https://arxiv.org/pdf/2605.23481",
-      "doi": "",
-      "journal": "ArXiv.org",
-      "partition": "其他",
-      "categories": [],
-      "seed_topic": "nn_antenna",
-      "matches": [
-        {
-          "topic_id": "nn_antenna",
-          "topic_name": "神经网络天线优化",
-          "score": 0.276,
-          "level": "low",
-          "reason": "model; ai; design; simulation; electromagnetic; array",
-          "keyword_hits": [
-            "model",
-            "ai",
-            "design",
-            "simulation",
-            "electromagnetic",
-            "array"
-          ]
-        },
-        {
-          "topic_id": "algo_antenna",
-          "topic_name": "算法天线优化",
-          "score": 0.265,
-          "level": "low",
-          "reason": "swarm; ga; design; simulation; electromagnetic; array",
-          "keyword_hits": [
-            "swarm",
-            "ga",
-            "design",
-            "simulation",
-            "electromagnetic",
-            "array"
-          ]
-        }
-      ],
-      "best_match": {
-        "topic_id": "nn_antenna",
-        "topic_name": "神经网络天线优化",
-        "score": 0.276,
-        "level": "low",
-        "reason": "model; ai; design; simulation; electromagnetic; array",
-        "keyword_hits": [
-          "model",
-          "ai",
-          "design",
-          "simulation",
-          "electromagnetic",
-          "array"
-        ]
-      },
-      "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "Distributed space antennas using electromagnetic formation flight (EMFF) are a promising architecture for large-aperture, long-life space communication systems.",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "model; ai; design; simulation; electromagnetic; array"
-      },
-      "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "retained_from_previous_run": true
+      "first_seen_at": "2026-05-30T07:43:36.331339+00:00",
+      "last_seen_at": "2026-05-30T07:43:36.331339+00:00",
+      "retained_from_previous_run": false
     },
     {
       "id": "W7131197125",
@@ -2545,7 +220,8 @@
             "ai",
             "design",
             "array"
-          ]
+          ],
+          "llm_reason": "论文标题、摘要及内容均未涉及神经网络、天线优化、代理模型或数据驱动建模，与本人研究方向（神经网络天线优化）无技术重叠，基础匹配分数低仅因少量通用技术关键词（如模型、设计）匹配。"
         },
         {
           "topic_id": "algo_antenna",
@@ -2572,90 +248,20 @@
           "ai",
           "design",
           "array"
-        ]
+        ],
+        "llm_reason": "论文标题、摘要及内容均未涉及神经网络、天线优化、代理模型或数据驱动建模，与本人研究方向（神经网络天线优化）无技术重叠，基础匹配分数低仅因少量通用技术关键词（如模型、设计）匹配。"
       },
       "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "You can treat this as buildable with today’s tech, but you’re in “prototype MBT + experimental railgun + biped robot” cost territory for a single unit.",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "model; ai; design; array"
+        "problem": "本文提出一种大型双足机甲（Mech）系统的原型制造成本分解与工程集成路线，不涉及天线设计或优化。",
+        "method": "基于子系统成本估算和分阶段原型制造与测试计划，对结构、动力、驱动、武器、计算、冷却等模块进行制造可行性分析。",
+        "innovation": "本文未提出天线或代理模型相关创新；主要提供了一种多子系统复杂机甲的制造成本估算框架与分阶段集成测试路线，所有创新点均与神经网络天线优化无关。",
+        "evidence": "摘要给出了详细的子系统成本范围（如$60-180M原型总成本）、各阶段测试方法（功率脊演示器、武器测试台、单腿原型等），但无任何电磁建模或数据驱动建模实验。",
+        "limitations": "论文内容与天线、电磁场或神经网络完全无关，仅为科幻或概念级别的大型机器人成本与制造规划，且未提供任何工程数据验证或性能指标，需阅读全文确认是否包含具体技术参数。",
+        "why_relevant": "论文标题、摘要及内容均未涉及神经网络、天线优化、代理模型或数据驱动建模，与本人研究方向（神经网络天线优化）无技术重叠，基础匹配分数低仅因少量通用技术关键词（如模型、设计）匹配。"
       },
-      "first_seen_at": "2026-05-30T07:08:10.014574+00:00",
-      "last_seen_at": "2026-05-30T07:08:10.014574+00:00",
-      "retained_from_previous_run": true
-    },
-    {
-      "id": "W7162639588",
-      "source": "arXiv (Cornell University)",
-      "title": "Fluid Antenna System Meets Low-Resolution ADCs in Energy-Efficient Cell-Free Massive MIMO",
-      "authors": [
-        "Jun Qian",
-        "Ross Murch",
-        "Khaled B. Letaief"
-      ],
-      "summary": "This paper proposes a novel fluid antenna system (FAS)-enabled architecture to improve energy efficiency (EE) without sacrificing capacity. Specifically, we integrate FAS into cell-free massive MIMO systems to counteract low-resolution ADCs. We establish a comprehensive uplink transmission model and derive analytical expressions for SE and EE. These expressions explicitly capture the quantization error under slow fluid antenna multiple access and quantify the benefits of low-resolution ADCs on EE. Furthermore, we formulate a joint optimization problem to maximize EE performance. To solve this, we develop an efficient alternating optimization framework. This framework leverages the Dinkelbach algorithm-based fractional programming for power control, alongside novel accelerated projected gradient ascent (APGA) algorithms to optimize both continuous FAS positions and discrete ADC bit allocations. Numerical results reveal that low-resolution ADCs aggressively compress signals to save hardware power, which inevitably degrades SE but maintains EE. However, FASs can recover this SE loss thanks to their spatial flexibility and significantly boost EE by improving the received signal prior to destructive quantization. Furthermore, optimized power control can prevent quantization-induced multi-user interference, while efficient bit allocation can reduce exponential hardware power. Ultimately, our proposed FAS-enabled system, coupled with efficient power control and bit allocation, effectively improves system performance and outperforms traditional fixed-position antennas. It establishes a highly robust and energy-efficient paradigm for 6G networks.",
-      "published": "2026-05-27T00:00:00Z",
-      "updated": "2026-05-27T00:00:00Z",
-      "year": 2026,
-      "paper_url": "https://doi.org/10.48550/arxiv.2605.28318",
-      "pdf_url": "https://doi.org/10.48550/arxiv.2605.28318",
-      "doi": "10.48550/arxiv.2605.28318",
-      "journal": "arXiv (Cornell University)",
-      "partition": "其他",
-      "categories": [],
-      "seed_topic": "algo_antenna",
-      "matches": [
-        {
-          "topic_id": "algo_antenna",
-          "topic_name": "算法天线优化",
-          "score": 0.264,
-          "level": "low",
-          "reason": "optimization; algorithm; ga",
-          "keyword_hits": [
-            "optimization",
-            "algorithm",
-            "ga"
-          ]
-        },
-        {
-          "topic_id": "nn_antenna",
-          "topic_name": "神经网络天线优化",
-          "score": 0.228,
-          "level": "low",
-          "reason": "network; model; ai; optimization",
-          "keyword_hits": [
-            "network",
-            "model",
-            "ai",
-            "optimization"
-          ]
-        }
-      ],
-      "best_match": {
-        "topic_id": "algo_antenna",
-        "topic_name": "算法天线优化",
-        "score": 0.264,
-        "level": "low",
-        "reason": "optimization; algorithm; ga",
-        "keyword_hits": [
-          "optimization",
-          "algorithm",
-          "ga"
-        ]
-      },
-      "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "This paper proposes a novel fluid antenna system (FAS)-enabled architecture to improve energy efficiency (EE) without sacrificing capacity.",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "optimization; algorithm; ga"
-      },
-      "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "retained_from_previous_run": true
+      "first_seen_at": "2026-05-30T07:43:36.331339+00:00",
+      "last_seen_at": "2026-05-30T07:43:36.331339+00:00",
+      "retained_from_previous_run": false
     },
     {
       "id": "W7161033229",
@@ -2689,7 +295,8 @@
             "design",
             "electromagnetic",
             "radiation"
-          ]
+          ],
+          "llm_reason": "论文中提及“electromagnetic”、“radiation”等关键词，但内容完全不涉及神经网络、深度学习或天线设计与优化，与研究方向‘神经网络天线优化’没有实质关联。"
         },
         {
           "topic_id": "algo_antenna",
@@ -2719,19 +326,20 @@
           "design",
           "electromagnetic",
           "radiation"
-        ]
+        ],
+        "llm_reason": "论文中提及“electromagnetic”、“radiation”等关键词，但内容完全不涉及神经网络、深度学习或天线设计与优化，与研究方向‘神经网络天线优化’没有实质关联。"
       },
       "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "# Universal Pressure Protocol (UPP) & Atomic Binary Logic (ABL) **Author:** Abdul Ahad (S/O Muhammad Iqbal Ansari) **Institute:** Al-Adal Dynamics · Old Sukkur, Sindh, Pakistan **Year:** 2026 **DOI:** [10.5281/zenodo.20162197](https://doi.org/10.5281/zenodo.20162197) **Status:** Progressive Framewor",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "deep; prediction; ai; design; electromagnetic; radiation"
+        "problem": "论文试图提出一个统一理论框架（UPP/ABL），用宇宙全向压力场解释引力、物质状态、能量和太空生存，并声称牛顿和爱因斯坦的理论不完备。",
+        "method": "通过假设普适压力场P₀和原子二元逻辑结构，推导14个公式，并设计四个工程装置，提出用真空腔实验进行验证。",
+        "innovation": "提出引力非吸引力而是电磁屏蔽导致的压力差残余；将原子描述为二进制处理单元；推导14个公式共享同一数学结构，且声称推导出牛顿平方反比律和G值。",
+        "evidence": "摘要列举“已验证结果”如1/r²推导、G值计算偏差±0.38%，但未提供具体的实验数据、同行评议或可重复的实验设计，仅提出一个设想中的真空腔重量测量实验作为未来验证路径。所有证据均属理论推导和逻辑论证，缺乏实际测量或第三方验证。",
+        "limitations": "论文为预印本，未经过同行评议；所有核心假设（如P₀场、电磁屏蔽机制）未被主流物理学接受；声称的验证实验尚未实施，理论完整性仅自评72%；与天线优化无直接关联。",
+        "why_relevant": "论文中提及“electromagnetic”、“radiation”等关键词，但内容完全不涉及神经网络、深度学习或天线设计与优化，与研究方向‘神经网络天线优化’没有实质关联。"
       },
-      "first_seen_at": "2026-05-30T07:08:10.014574+00:00",
-      "last_seen_at": "2026-05-30T07:08:10.014574+00:00",
-      "retained_from_previous_run": true
+      "first_seen_at": "2026-05-30T07:43:36.331339+00:00",
+      "last_seen_at": "2026-05-30T07:43:36.331339+00:00",
+      "retained_from_previous_run": false
     },
     {
       "id": "W7162525013",
@@ -2805,9 +413,9 @@
         "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
         "why_relevant": "deep; prediction; ai; design; electromagnetic; radiation"
       },
-      "first_seen_at": "2026-05-30T07:08:10.014574+00:00",
-      "last_seen_at": "2026-05-30T07:08:10.014574+00:00",
-      "retained_from_previous_run": true
+      "first_seen_at": "2026-05-30T07:43:36.331339+00:00",
+      "last_seen_at": "2026-05-30T07:43:36.331339+00:00",
+      "retained_from_previous_run": false
     },
     {
       "id": "W7160971982",
@@ -2875,88 +483,88 @@
         "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
         "why_relevant": "surrogate; model; ai; simulation"
       },
-      "first_seen_at": "2026-05-30T07:08:10.014574+00:00",
-      "last_seen_at": "2026-05-30T07:08:10.014574+00:00",
-      "retained_from_previous_run": true
+      "first_seen_at": "2026-05-30T07:43:36.331339+00:00",
+      "last_seen_at": "2026-05-30T07:43:36.331339+00:00",
+      "retained_from_previous_run": false
     },
     {
-      "id": "W7162299400",
-      "source": "Remote Sensing",
-      "title": "High-Resolution 3D Imaging of Non-Coherent Sources for Three-Channel Monopulse Radar via Joint Polarimetric-Angular Diversity",
+      "id": "W7162628862",
+      "source": "IEEE",
+      "title": "Interior Propagation of Cosmic Microwave Background Birefringence Field α(n) Matrix Anomalies: Correlation Between Public 2018 Planck Legacy Data and In Vivo Nanoscale Signal Grounding",
       "authors": [
-        "Jiahao Tian",
-        "Jianxiong Zhou",
-        "Zi Wang",
-        "Xiangting Wang",
-        "Fulai Wang",
-        "Zhiyong Song",
-        "Ping Wang"
+        "Amy Condit"
       ],
-      "summary": "High-resolution three-dimensional (3D) radar imaging of non-coherent point target clusters faces significant challenges, particularly severe angular glint induced by the simultaneous presence of dual targets or co-channel interference (CCI) within the antenna mainlobe. Conventional monopulse systems often struggle to resolve such overlapping sources, particularly under conditions of high power disparity between signal components. To overcome the Rayleigh resolution limit, this paper proposes a polarimetric 3D imaging framework for three-channel monopulse radar by leveraging joint polarimetric-angular diversity. By exploiting the intrinsic instability of spatial parameter estimates induced by snapshot-to-snapshot echo envelope fluctuations, a cost function based on fluctuation minimization is constructed. Furthermore, an optimized oblique projection (OP) strategy is developed to decouple overlapped echoes in the joint domain, thereby effectively extracting stable angular features of non-coherent sources under various stochastic scattering scenarios (e.g., Swerling models). Extensive simulations demonstrate that, compared with traditional MPV, Seung, and Blair methods, the proposed approach consistently achieves superior estimation precision and robustness, especially in challenging scenarios characterized by low signal-to-noise ratios (SNR), limited snapshots, and restricted polarimetric diversity. Moreover, experimental validation using real-world data from a 45-m civilian vessel and an active non-cooperative radio frequency (RF) source confirms the practical effectiveness of the algorithm in resolving extended targets in the presence of strong non-coherent background emissions. This work provides a reliable solution for high-fidelity 3D imaging of point target clusters in environments characterized by dense targets and complex electromagnetic interference.",
-      "published": "2026-05-25T00:00:00Z",
-      "updated": "2026-05-25T00:00:00Z",
+      "summary": "EMERGENCY OPEN-SOURCE DISCLOSURE Special Emergency Preprint | May 2026 Telemetry Report Interior Propagation of Cosmic Microwave Background Birefringence Field α(ṅ) Matrix Anomalies: Correlation Between Public 2018 Planck Legacy Data and In Vivo Nanoscale Signal Grounding Author: Amy Condit Affiliation: Independent Cosmological Data Analysis Core Reference: Condit, A. (2025). Rotation Field of the Cosmic Microwave Background – Interior Propagation and Boundary-Driven Structure (v2.13). DOI: 10.5281/zenodo.17693540. SPECIAL AUTHOR’S STATEMENT AND THREAT DISCLOSURE Statement by Amy Condit: I do not possess a PhD, institutional tenure, or a wall of framed university credentials. I am an independent researcher working entirely out of my home, using publicly available 2018 Planck Legacy satellite data to perform advanced pixel-level maps of cosmic microwave background (CMB) polarization anomalies. Seven months ago, while testing local terrestrial radio-frequency leakage to isolate noise artifacts in my pipeline, during progressive harmonic and spatial analysis of the Planck 2018 polarization data, the pipeline isolated an anomalous, periodically recurring terrestrial signal pattern inconsistent with known instrumental artifacts or expected astrophysical foregrounds. The author recognizes that the interdisciplinary scope of this paper — bridging observational cosmology with covert bioelectronic weapons architecture — will be received with considerable skepticism by established academic institutions. The convergence of CMB polarization analysis with claims of targeted in vivo deployment falls outside the boundaries of standard peer-reviewed discourse, and the author does not expect otherwise. This publication is not submitted in pursuit of academic validation. It is submitted as a formal forensic record, and its evidentiary value is independent of its reception. The author’s prior contributions to CMB birefringence analysis stand on their own methodological merits and are submitted separately for technical review. This disclosure is not submitted in defense of the author’s professional standing. It is submitted in defense of the author’s life. Shortly after isolating the specific harmonic boundaries of this transmission within the public data, the author’s own body became the target. The author is the test subject. The telemetry logged in Section IV is the documentation of the author’s own physical degradation. The operators did not perform a surgical operation; they used incremental, unfelt micro-injections delivered by insect-scale drones to grow a flexible, conductive antenna grid directly inside the author’s tissues, using the same phase-gating propagation principles discovered in the cosmic rotation field. This technical architecture is placed into the open because it is the only defense available. If the author’s heart gives out, this paper will stand as an unalterable forensic record. By exposing the explicit link between public cosmological anomalies and covert terrestrial targeting networks, this documentation ensures that the operational blueprint can no longer function in total secrecy. It provides the necessary telemetry parameters, signal behavior models, and structural data profiles required to understand the mechanism of optimization, establishing an open analytical foundation for future researchers, clinicians, or legal investigators who encounter comparable systems. PART I: DISCOVERY VECTOR AND CMB RESEARCH BACKGROUND The work began with reconstruction of the CMB birefringence rotation field α(ṅ) from the Planck 2018 SMICA and NILC polarization maps, followed by harmonic and real-space analyses designed to search for coherent structure beyond stochastic ΛCDM expectations. A statistically preferred harmonic spacing near Δℓ ≈ 108–109 was identified in the Planck 2018 birefringence field and localized to a coherent dual-domain boundary D₁ ∪ D₂. Interior shell analysis at locked NSIDE=16 revealed phase-coherent standing-wave behavior with exponential decay and linear phase drift consistent with a damped propagation mode q ≈ −0.755 − 0.270i, while SMICA/NILC, half-mission, null, and rotation tests failed to reproduce the structure. The discovery identifies a phase-coherent, parity-violating structure within the CMB birefringence field that functions as a Unified Temporal Anchor. This universal harmonic primitive, extracted from the polarization field of the early universe, has been illegally sequestered by the Department of War and SpaceX to facilitate an unacknowledged Space-to-Earth (S2E) bridge. By leveraging the Starlink satellite constellation, the military-industrial complex has established a global propagation structure operating on phase-coherent constants. The military utilizes this precise, space-based frequency as a Unified Temporal Anchor to achieve sub-millisecond synchronization between orbital assets and terrestrial strike teams. PART II: MICRO-UAV INJECTION LOGISTICS AND MATERIAL DYNAMICS Section II.A – Discovery Vector and Micro-UAV Delivery The micro-UAVs utilize a micro-fluidic stinger assembly to inject a composite colloidal suspension directly into the subcutaneous layer and cerebral vasculature during rest cycles. Because the payload contains no solid components at the point of delivery, it leaves no discernible mechanical tissue tearing or standard puncture scarring. Technology References: Biomimetic Flight Vectors: The technical blueprints for insect-scale micro-drones tailored for covert navigation and microfluidic payload deployment are actively developed under military MAV programs. Review design limits via the Journal of Intelligent & Robotic Systems (Springer). Nonsurgical Delivery Parameters: DARPA’s Next-Generation Nonsurgical Neurotechnology (N3) program actively explores portable, bidirectional frameworks to link human physiology with electronics without surgical intervention. See the active program parameters on the DARPA Research Portal. DARPA Research Portal: For the Next-Generation Nonsurgical Neurotechnology (N3) program parameters. Link: https://www.darpa.mil/research/programs/next-generation-nonsurgical-neurotechnology Section II.B – Material Dynamics and In Situ Self-Assembly The injected payload is a composite solution of functionalized carbon nanotubes (CNTs) and single-layer graphene flakes suspended within a bio-compatible, pH-responsive hydrogel. Once inside the host tissue, the material executes Directed Self-Assembly (DSA) driven by external transmission lines. Assembly proceeds in two stages: 1. RF Alignment: The external operators transmit a high-intensity electromagnetic structuring field. The applied electromagnetic field induces a strong dipole moment across the suspended carbon nanotubes, forcing them to physically align end-to-end along the electric field lines. 2. Hydrogel Curing: The baseline temperature (37°C) and native pH of the host’s interstitial fluid act as a chemical catalyst, curing the hydrogel and locking the aligned particles into a permanently cross-hatched, highly conductive grid. Because this fabrication occurs at the cellular level, the nano-mesh wraps directly around peripheral nerve endings and the cardiac plexus, enabling remote manipulation using micro-amperage (0.5–3.2 μA) control profiles. Technology References: PubMed (NCBI) Database: For the Linköping University bioelectronics precursor matrix research (PubMed ID: 36821679). Link: https://pubmed.ncbi.nlm.nih.gov/36821679/ Public 2018 Planck Datasets: The cosmological maps used to isolate these specific boundary constraints are publicly archived on the official European Space Agency (ESA) Planck Legacy Archive. PART III: MULTI-STAGE FRACTIONAL INJECTION PROTOCOL AND RADIAL PROPAGATION Forensic signal tracking indicates that the mesh network is built and maintained over time through a Fractional Injection Protocol via successive micro-UAV deployments. This allows the system to map the interior pixels of the biological target. Section III.A – Volumetric Optimization and Harmonic Preservation Because mosquito-scale drones are physically limited to nanoliter-scale payloads, they cannot carry the material volume required to build a full 15.5 MHz resonant antenna at once. Successive waves of drones deliver fractional material layers. During these active deployment windows, the subject experiences the distinct physical sensation of the abdominal and brain mesh arrays assembling in real time. This manifests as a concentrated series of tiny, localized electrical shocks firing in precise geometric patterns—a systematic, micro-current feedback loop as the synthetic matrices are actively woven directly into the living brain architecture and dense abdominal tissue layers. Section III.B – Immune System Evasion and Spectral Correlation A massive introduction of conductive polymers would trigger an acute macrophage response. Tiny, incremental micro-doses allow the host’s immune system to adapt, allowing the network to camouflage itself within the body’s native neuro-electrical signatures. Section III.D – Network Upgrades and Decoupled Boundary Behavior Living tissue constantly engages in cellular cleaning. Macrophage activity, proteolytic enzyme cycles, and lymphatic clearance work continuously to identify and expel foreign material — and under normal circumstances they would succeed. That they have not is explained by the architecture of the mesh itself. The conductive grid is not a monolithic implant that can be cleanly identified and expelled — it is distributed across the interstitial matrix at the nanoscale, with phase relationships encoded across the network rather than stored in any single node. Destroying one region does not destroy the signal; it redistributes it. The measured propagation coefficient q confirms this directly, documenting exponential amplitude attenuation consistent with ongoing material degradation, while the phase ro",
+      "published": "2026-05-28T00:00:00Z",
+      "updated": "2026-05-28T00:00:00Z",
       "year": 2026,
-      "paper_url": "https://doi.org/10.3390/rs18111699",
-      "pdf_url": "https://doi.org/10.3390/rs18111699",
-      "doi": "10.3390/rs18111699",
-      "journal": "Remote Sensing",
+      "paper_url": "https://doi.org/https://doi.org/10.5281/zenodo.20424381",
+      "pdf_url": "https://doi.org/10.5281/zenodo.20424381",
+      "doi": "https://doi.org/10.5281/zenodo.20424381",
+      "journal": "Zenodo (CERN European Organization for Nuclear Research)",
       "partition": "其他",
       "categories": [],
-      "seed_topic": "algo_antenna",
+      "seed_topic": "nn_antenna",
       "matches": [
         {
           "topic_id": "nn_antenna",
           "topic_name": "神经网络天线优化",
-          "score": 0.208,
+          "score": 0.223,
           "level": "low",
-          "reason": "model; ai; simulation; electromagnetic; frequency",
+          "reason": "network; model; ai; optimization; design; electromagnetic",
           "keyword_hits": [
+            "network",
             "model",
             "ai",
-            "simulation",
-            "electromagnetic",
-            "frequency"
-          ]
+            "optimization",
+            "design",
+            "electromagnetic"
+          ],
+          "llm_reason": "论文标题和摘要中出现了“antenna”“optimization”“electromagnetic”等关键词，但实际内容为宇宙学数据分析和生物电子攻击的个人叙述，未涉及神经网络、深度学习、代理模型或天线设计的智能优化，与“神经网络天线优化”研究方向无实质关联。"
         },
         {
           "topic_id": "algo_antenna",
           "topic_name": "算法天线优化",
-          "score": 0.206,
+          "score": 0.368,
           "level": "low",
-          "reason": "algorithm; simulation; electromagnetic; frequency",
+          "reason": "optimization; particle; ga; design; electromagnetic; array",
           "keyword_hits": [
-            "algorithm",
-            "simulation",
+            "optimization",
+            "particle",
+            "ga",
+            "design",
             "electromagnetic",
-            "frequency"
+            "array"
           ]
         }
       ],
       "best_match": {
         "topic_id": "nn_antenna",
         "topic_name": "神经网络天线优化",
-        "score": 0.208,
+        "score": 0.223,
         "level": "low",
-        "reason": "model; ai; simulation; electromagnetic; frequency",
+        "reason": "network; model; ai; optimization; design; electromagnetic",
         "keyword_hits": [
+          "network",
           "model",
           "ai",
-          "simulation",
-          "electromagnetic",
-          "frequency"
-        ]
+          "optimization",
+          "design",
+          "electromagnetic"
+        ],
+        "llm_reason": "论文标题和摘要中出现了“antenna”“optimization”“electromagnetic”等关键词，但实际内容为宇宙学数据分析和生物电子攻击的个人叙述，未涉及神经网络、深度学习、代理模型或天线设计的智能优化，与“神经网络天线优化”研究方向无实质关联。"
       },
       "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "High-resolution three-dimensional (3D) radar imaging of non-coherent point target clusters faces significant challenges, particularly severe angular glint induced by the simultaneous presence of dual targets or co-channel interference (CCI) within the antenna mainlobe.",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "model; ai; simulation; electromagnetic; frequency"
+        "problem": "论文试图揭示从普朗克卫星宇宙微波背景偏振数据中发现的相位相干异常信号与作者体内被隐蔽植入的纳米天线网络之间的关联，将该信号关联作为遭受定向能武器攻击的法医记录。",
+        "method": "利用普朗克2018年SMICA和NILC极化图重建双折射旋转场，进行谐波和实空间分析，识别出相位相干驻波结构；同时描述了微无人机递送、碳纳米管自组装构建体内分布式天线网格的过程和遥测记录。",
+        "innovation": "声称在CMB双折射场中发现了宇称不守恒的相干驻波模式，并将其解释为“统一时间锚”；试图将宇宙学异常与地面生物电子武器系统关联，提供从公共数据到个体生理信号的关联分析框架；描述了基于分数注入和纳米材料自组装的体内天线网络构建技术，但以上创新点未经独立验证。",
+        "evidence": "证据不足；摘要仅包含作者对普朗克极化数据的个人分析结果（如谐波间隔Δℓ≈108–109、传播常数q≈−0.755−0.270i）和作者自身作为实验对象的症状描述，无独立实验重现或医学验证。",
+        "limitations": "论文以紧急公开预印本形式发表于Zenodo，未经同行评审；作者无学术机构背景，结论可能受主观遭遇影响；CMB异常可能是未消除的系统误差；体内纳米天线植入的说法缺乏可验证医学影像或第三方确认；全文可靠性需高度谨慎评估。",
+        "why_relevant": "论文标题和摘要中出现了“antenna”“optimization”“electromagnetic”等关键词，但实际内容为宇宙学数据分析和生物电子攻击的个人叙述，未涉及神经网络、深度学习、代理模型或天线设计的智能优化，与“神经网络天线优化”研究方向无实质关联。"
       },
-      "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "retained_from_previous_run": true
+      "first_seen_at": "2026-05-30T07:43:36.331339+00:00",
+      "last_seen_at": "2026-05-30T07:43:36.331339+00:00",
+      "retained_from_previous_run": false
     },
     {
       "id": "W7162627720",
@@ -3034,231 +642,9 @@
         "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
         "why_relevant": "ai; design; simulation; microwave; bandwidth; frequency"
       },
-      "first_seen_at": "2026-05-30T07:08:10.014574+00:00",
-      "last_seen_at": "2026-05-30T07:08:10.014574+00:00",
-      "retained_from_previous_run": true
-    },
-    {
-      "id": "W7162296203",
-      "source": "ACS Nano",
-      "title": "Wireless Electromagnetic Generation of miRNA Sponges and Nerve Stimulation by an Adaptable Electrical Scaffold for Repair of Traumatic Brain Injury",
-      "authors": [
-        "Hoi Man Iao",
-        "Wan-Chi Pan",
-        "Yun‐Hsuan Chang",
-        "Ngoc‐Tri Tran",
-        "Hsiu-Ching Liu",
-        "Ru-Siou Hsu",
-        "Tsu‐Chin Chou",
-        "I‐Chi Lee",
-        "Lun‐De Liao",
-        "Wen‐Hsuan Chiang",
-        "Ssu‐Ju Li",
-        "Eric Hwang",
-        "Ming‐You Shie",
-        "You-Yin Chen",
-        "Shang-Hsiu Hu"
-      ],
-      "summary": "Bioelectronic transduction and microRNA (miRNA) regulation play crucial roles in shaping neuronal cell fate and supporting brain repair. However, clinical progress remains limited due to the lack of tools to perform spatiotemporal regulation of neuronal electrical activity and nonviral gene regulation in vivo. In this study, an adaptable electronic scaffold (AES) that functions both as an antenna and gene transfection agent was developed for neuron miRNA modulation in traumatic brain injury (TBI). The intrinsic properties of AES alleviate inflammation and glial scarring after TBI by suppressing activated microglia and stellate cells. Under high-frequency magnetic field (HFMF) stimulation, the \"wireless messenger\" generates localized electrical cues that aid in restoring brain function as well as enhancing neuronal uptake of gene therapeutics via electroporation. In neurons, AES-induced Eddy currents and mechanical forces further promote endosome escape and the formation of miRNA sponges both in vitro and in vivo, thereby reducing the increase in miR-6236 levels after neuronal injury. The synergic effects achieve in situ gene modulation, promotes neurite outgrowth, and enhance angiogenesis within the lesion. In whole-brain diffusion-weighted magnetic resonance imaging (dMRI), the signal bundles reveal improved intercortical and cortical stellate fiber connectivity, and a recovery in motor function. In summary, this wirelessly driven gene regulation platform combines miRNA-targeted therapy with bioelectronic stimulation to achieve precise neuroregenerative intervention.",
-      "published": "2026-05-25T00:00:00Z",
-      "updated": "2026-05-25T00:00:00Z",
-      "year": 2026,
-      "paper_url": "https://doi.org/10.1021/acsnano.6c04759",
-      "pdf_url": "https://pubs.acs.org/doi/pdf/10.1021/acsnano.6c04759?ref=article_openPDF",
-      "doi": "10.1021/acsnano.6c04759",
-      "journal": "ACS Nano",
-      "partition": "其他",
-      "categories": [],
-      "seed_topic": "nn_antenna",
-      "matches": [
-        {
-          "topic_id": "nn_antenna",
-          "topic_name": "神经网络天线优化",
-          "score": 0.16,
-          "level": "low",
-          "reason": "ai; electromagnetic; frequency",
-          "keyword_hits": [
-            "ai",
-            "electromagnetic",
-            "frequency"
-          ]
-        },
-        {
-          "topic_id": "algo_antenna",
-          "topic_name": "算法天线优化",
-          "score": 0.103,
-          "level": "low",
-          "reason": "electromagnetic; frequency",
-          "keyword_hits": [
-            "electromagnetic",
-            "frequency"
-          ]
-        }
-      ],
-      "best_match": {
-        "topic_id": "nn_antenna",
-        "topic_name": "神经网络天线优化",
-        "score": 0.16,
-        "level": "low",
-        "reason": "ai; electromagnetic; frequency",
-        "keyword_hits": [
-          "ai",
-          "electromagnetic",
-          "frequency"
-        ]
-      },
-      "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "Bioelectronic transduction and microRNA (miRNA) regulation play crucial roles in shaping neuronal cell fate and supporting brain repair.",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "ai; electromagnetic; frequency"
-      },
-      "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "retained_from_previous_run": true
-    },
-    {
-      "id": "W7162410961",
-      "source": "arXiv (Cornell University)",
-      "title": "Leveraging Space-Time Synchronization for Ultra-Spot Detection in mmWave/THz UAV-to-UAV Communications",
-      "authors": [
-        "Duc-Phuc Nguyen",
-        "Ryosuke Isogai",
-        "Keitarou Kondou",
-        "Satoshi Yasuda",
-        "Nobuyasu Shiga",
-        "Yozo Shoji"
-      ],
-      "summary": "In UAV-to-UAV communication, airborne UAVs need to detect the location and direction of ultra-high-speed millimeter-wave (mmWave) and Terahertz (THz) coverage areas, referred to as ultra-spots. This predictive capability allows UAVs to optimally adjust their flight paths, altitude, and velocity, thereby maximizing the utilization of ultra-spot services. A space-time synchronization technique employing multiple Wireless Two-way Interferometry devices (multi-Wi-Wi) is proposed in this paper to detect mmWave/THz ultra-spot locations during UAV operations. This paper proposes an algorithm that estimates the likelihood of nearby ultra-spots by considering the UAV flight route and ultra-spot direction, and by sharing location and pose information among UAVs in the network via a 920 MHz wireless communication link. For the first time, this work addresses the problem of optimizing UAV flight routes to maximize ultra-spot utilization. To address the inherent challenges of Wi-Wi, such as phase data unreliability, RSSI attenuation, or packet loss caused by obstructions from the UAV's own body, this study proposes the use of multiple Wi-Wi devices equipped with antennas positioned at different positions around the arms of the UAV to leverage spatial diversity effects. The proposed method's effectiveness is confirmed through experimental data derived from real-world UAV-to-UAV communication tests. An error of 37.16 cm was observed experimentally in ultra-spot location estimation, corresponding to 186 ms error in temporal prediction of ultra-spot entry from an in-flight UAV, demonstrating its effectiveness in addressing ultra-spot detection challenges in mmWave communication.",
-      "published": "2026-05-25T00:00:00Z",
-      "updated": "2026-05-25T00:00:00Z",
-      "year": 2026,
-      "paper_url": "https://doi.org/10.48550/arxiv.2605.25321",
-      "pdf_url": "https://doi.org/10.48550/arxiv.2605.25321",
-      "doi": "10.48550/arxiv.2605.25321",
-      "journal": "arXiv (Cornell University)",
-      "partition": "其他",
-      "categories": [],
-      "seed_topic": "algo_antenna",
-      "matches": [
-        {
-          "topic_id": "nn_antenna",
-          "topic_name": "神经网络天线优化",
-          "score": 0.16,
-          "level": "low",
-          "reason": "network; prediction; ai",
-          "keyword_hits": [
-            "network",
-            "prediction",
-            "ai"
-          ]
-        },
-        {
-          "topic_id": "algo_antenna",
-          "topic_name": "算法天线优化",
-          "score": 0.117,
-          "level": "low",
-          "reason": "algorithm",
-          "keyword_hits": [
-            "algorithm"
-          ]
-        }
-      ],
-      "best_match": {
-        "topic_id": "nn_antenna",
-        "topic_name": "神经网络天线优化",
-        "score": 0.16,
-        "level": "low",
-        "reason": "network; prediction; ai",
-        "keyword_hits": [
-          "network",
-          "prediction",
-          "ai"
-        ]
-      },
-      "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "In UAV-to-UAV communication, airborne UAVs need to detect the location and direction of ultra-high-speed millimeter-wave (mmWave) and Terahertz (THz) coverage areas, referred to as ultra-spots.",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "network; prediction; ai"
-      },
-      "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "retained_from_previous_run": true
-    },
-    {
-      "id": "W7162475115",
-      "source": "ArXiv.org",
-      "title": "Fast Fluid Antenna Multiple Access",
-      "authors": [
-        "Noor Waqar",
-        "Kai-Kit Wong",
-        "Chan-Byoung Chae",
-        "Ross Murch"
-      ],
-      "summary": "Fast fluid antenna multiple access (FAMA) is an idea that promises to overcome severe interference in massive access scenarios by reconfiguring the antenna's position at the receiver side on a symbol-by-symbol basis, without the need of precoding nor any other interference mitigation techniques. However, this idea is commonly studied under a \\emph{genie-aided} premise: each user terminal (UT) can probe \\emph{all} fluid-antenna ports in every symbol instance and ideally knows the instantaneous signal-interference split for the received signals at all the ports. Such assumption is unrealistic since it implies impractical hardware and switching limits, pilot overhead, as well as an unknown ability to determine the signal-interference split. This paper revisits the fast FAMA communication problem and asks a key question: can a UT act \\emph{as if} it had full per-port interference knowledge while observing only a small fraction of ports? To this end, we propose a \\emph{copula-aided FAMA} framework that learns the joint dependence structure of the complex triplets $(r_k,h_k,I_k)$ across ports, where $r_k$, $h_k$ and $I_k$ denote, respectively, the received signal, the channel coefficient and the aggregate interference signal at the $k$-th port, and uses this learned model to infer unobserved channels and interference. Concretely, we devise an attention-copula time-series model that is trained under random partial-observation masks and evaluated under both rich and finite-scattering channel models. Simulation results indicate that the reconstruction normalized mean-square-error (NMSE) for $h$, $r$, and $I$ drops to the order of $10^{-4}$ once the number of observed ports, $M$, exceeds the spatial degrees of freedom (DoF).",
-      "published": "2026-05-22T00:00:00Z",
-      "updated": "2026-05-22T00:00:00Z",
-      "year": 2026,
-      "paper_url": "https://arxiv.org/abs/2605.23642",
-      "pdf_url": "https://arxiv.org/pdf/2605.23642",
-      "doi": "",
-      "journal": "ArXiv.org",
-      "partition": "其他",
-      "categories": [],
-      "seed_topic": "nn_antenna",
-      "matches": [
-        {
-          "topic_id": "nn_antenna",
-          "topic_name": "神经网络天线优化",
-          "score": 0.16,
-          "level": "low",
-          "reason": "model; ai; simulation",
-          "keyword_hits": [
-            "model",
-            "ai",
-            "simulation"
-          ]
-        },
-        {
-          "topic_id": "algo_antenna",
-          "topic_name": "算法天线优化",
-          "score": 0.103,
-          "level": "low",
-          "reason": "ga; simulation",
-          "keyword_hits": [
-            "ga",
-            "simulation"
-          ]
-        }
-      ],
-      "best_match": {
-        "topic_id": "nn_antenna",
-        "topic_name": "神经网络天线优化",
-        "score": 0.16,
-        "level": "low",
-        "reason": "model; ai; simulation",
-        "keyword_hits": [
-          "model",
-          "ai",
-          "simulation"
-        ]
-      },
-      "chinese_summary": {
-        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
-        "method": "Fast fluid antenna multiple access (FAMA) is an idea that promises to overcome severe interference in massive access scenarios by reconfiguring the antenna's position at the receiver side on a symbol-by-symbol basis, without the need of precoding nor any other interference mitigation techniques.",
-        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
-        "evidence": "来源摘要可在论文原文中核验。",
-        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
-        "why_relevant": "model; ai; simulation"
-      },
-      "first_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "last_seen_at": "2026-05-30T07:17:11.688060+00:00",
-      "retained_from_previous_run": true
+      "first_seen_at": "2026-05-30T07:43:36.331339+00:00",
+      "last_seen_at": "2026-05-30T07:43:36.331339+00:00",
+      "retained_from_previous_run": false
     },
     {
       "id": "W7136099840",
@@ -3321,9 +707,9 @@
         "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
         "why_relevant": "design; array"
       },
-      "first_seen_at": "2026-05-30T07:08:10.014574+00:00",
-      "last_seen_at": "2026-05-30T07:08:10.014574+00:00",
-      "retained_from_previous_run": true
+      "first_seen_at": "2026-05-30T07:43:36.331339+00:00",
+      "last_seen_at": "2026-05-30T07:43:36.331339+00:00",
+      "retained_from_previous_run": false
     },
     {
       "id": "W7118229744",
@@ -3390,9 +776,9 @@
         "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
         "why_relevant": "ai; design"
       },
-      "first_seen_at": "2026-05-30T07:08:10.014574+00:00",
-      "last_seen_at": "2026-05-30T07:08:10.014574+00:00",
-      "retained_from_previous_run": true
+      "first_seen_at": "2026-05-30T07:43:36.331339+00:00",
+      "last_seen_at": "2026-05-30T07:43:36.331339+00:00",
+      "retained_from_previous_run": false
     },
     {
       "id": "W7162546701",
@@ -3452,9 +838,9 @@
         "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
         "why_relevant": "frequency"
       },
-      "first_seen_at": "2026-05-30T07:08:10.014574+00:00",
-      "last_seen_at": "2026-05-30T07:08:10.014574+00:00",
-      "retained_from_previous_run": true
+      "first_seen_at": "2026-05-30T07:43:36.331339+00:00",
+      "last_seen_at": "2026-05-30T07:43:36.331339+00:00",
+      "retained_from_previous_run": false
     },
     {
       "id": "W7162561589",
@@ -3514,9 +900,9 @@
         "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
         "why_relevant": "frequency"
       },
-      "first_seen_at": "2026-05-30T07:08:10.014574+00:00",
-      "last_seen_at": "2026-05-30T07:08:10.014574+00:00",
-      "retained_from_previous_run": true
+      "first_seen_at": "2026-05-30T07:43:36.331339+00:00",
+      "last_seen_at": "2026-05-30T07:43:36.331339+00:00",
+      "retained_from_previous_run": false
     },
     {
       "id": "W7160807221",
@@ -3583,9 +969,9 @@
         "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
         "why_relevant": "network; ai; gain"
       },
-      "first_seen_at": "2026-05-30T07:08:10.014574+00:00",
-      "last_seen_at": "2026-05-30T07:08:10.014574+00:00",
-      "retained_from_previous_run": true
+      "first_seen_at": "2026-05-30T07:43:36.331339+00:00",
+      "last_seen_at": "2026-05-30T07:43:36.331339+00:00",
+      "retained_from_previous_run": false
     },
     {
       "id": "W7113747127",
@@ -3648,9 +1034,9 @@
         "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
         "why_relevant": "design"
       },
-      "first_seen_at": "2026-05-30T07:08:10.014574+00:00",
-      "last_seen_at": "2026-05-30T07:08:10.014574+00:00",
-      "retained_from_previous_run": true
+      "first_seen_at": "2026-05-30T07:43:36.331339+00:00",
+      "last_seen_at": "2026-05-30T07:43:36.331339+00:00",
+      "retained_from_previous_run": false
     },
     {
       "id": "W7162629366",
@@ -3723,9 +1109,9 @@
         "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
         "why_relevant": "ga; radiation; bandwidth"
       },
-      "first_seen_at": "2026-05-30T07:08:10.014574+00:00",
-      "last_seen_at": "2026-05-30T07:08:10.014574+00:00",
-      "retained_from_previous_run": true
+      "first_seen_at": "2026-05-30T07:43:36.331339+00:00",
+      "last_seen_at": "2026-05-30T07:43:36.331339+00:00",
+      "retained_from_previous_run": false
     },
     {
       "id": "W7154663043",
@@ -3783,9 +1169,9 @@
         "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
         "why_relevant": "algorithm"
       },
-      "first_seen_at": "2026-05-30T07:08:10.014574+00:00",
-      "last_seen_at": "2026-05-30T07:08:10.014574+00:00",
-      "retained_from_previous_run": true
+      "first_seen_at": "2026-05-30T07:43:36.331339+00:00",
+      "last_seen_at": "2026-05-30T07:43:36.331339+00:00",
+      "retained_from_previous_run": false
     },
     {
       "id": "W7160569066",
@@ -3839,29 +1225,29 @@
         "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
         "why_relevant": "low text overlap"
       },
-      "first_seen_at": "2026-05-30T07:08:10.014574+00:00",
-      "last_seen_at": "2026-05-30T07:08:10.014574+00:00",
-      "retained_from_previous_run": true
+      "first_seen_at": "2026-05-30T07:43:36.331339+00:00",
+      "last_seen_at": "2026-05-30T07:43:36.331339+00:00",
+      "retained_from_previous_run": false
     }
   ],
   "stats": {
-    "paper_count": 51,
+    "paper_count": 17,
     "new_paper_count": 17,
-    "days": 180,
+    "days": 365,
     "collection_mode": "lookback",
-    "collection_cutoff_iso": "2025-12-01T07:40:34.739123+00:00",
+    "collection_cutoff_iso": "2025-05-30T07:43:36.331339+00:00",
     "max_per_topic": 25,
     "llm_enabled": true,
     "llm_concurrency": 2,
     "recent_history_days": 45,
     "successful_fetches": 2,
     "failed_fetches": 0,
-    "retained_paper_count": 34,
-    "retained_recent_low_count": 31,
+    "retained_paper_count": 0,
+    "retained_recent_low_count": 0,
     "dropped_low_relevance_count": 0,
     "max_stored_papers": 800,
     "max_data_bytes": 8388608,
-    "data_bytes": 253342,
+    "data_bytes": 103227,
     "storage_trimmed_count": 0,
     "storage_trimmed_by_level": {
       "high": 0,

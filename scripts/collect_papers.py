@@ -97,66 +97,9 @@ def load_issue_config(default_config: dict[str, Any]) -> dict[str, Any]:
                 return issue_config
     return default_config
 
-def topic_match_config(topic: Topic, match_words_map: dict[str, Any] | None = None) -> tuple[list[str], list[str]]:
-    entry = (match_words_map or {}).get(topic.id)
-    if isinstance(entry, dict):
-        required = [normalize_space(str(w)).lower() for w in entry.get("required_words", [])]
-        optional = [normalize_space(str(w)).lower() for w in entry.get("match_words", [])]
-    elif isinstance(entry, list):
-        required = []
-        optional = [normalize_space(str(w)).lower() for w in entry]
-    else:
-        required = []
-        optional = [normalize_space(str(w)).lower() for kw in topic.keywords for w in str(kw).split()]
-    return [w for w in required if w], [w for w in optional if w]
-
-
-def query_variants_for_topic(topic: Topic, match_words_map: dict[str, Any] | None = None) -> list[str]:
-    required, optional = topic_match_config(topic, match_words_map)
-    variants: list[str] = []
-    seen: set[str] = set()
-
-    def add(value: str) -> None:
-        value = normalize_space(value)
-        key = value.lower()
-        if value and key not in seen:
-            variants.append(value)
-            seen.add(key)
-
-    if required:
-        required_query = " ".join(required)
-        for word in optional:
-            add(f"{required_query} {word}")
-        add(required_query)
-        return variants[:20]
-
-    for keyword in topic.keywords:
-        add(str(keyword))
-    if not variants:
-        add(f"{topic.name} {topic.description}")
-    return variants[:10]
-
-
-def normalize_doi(value: str | None) -> str:
-    doi = normalize_space(value or "")
-    if doi.lower().startswith("https://doi.org/"):
-        return doi[len("https://doi.org/"):]
-    if doi.lower().startswith("http://doi.org/"):
-        return doi[len("http://doi.org/"):]
-    return doi
-
-
-def doi_url(doi: str, fallback: str = "") -> str:
-    normalized = normalize_doi(doi)
-    return f"https://doi.org/{normalized}" if normalized else fallback
-
-
-def source_label(source: dict[str, Any], journal_name: str) -> str:
-    return source.get("display_name") or journal_name or "OpenAlex"
-
-
 def s2_query_for_topic(topic: Topic) -> str:
-    return query_variants_for_topic(topic)[0]
+    """Broad antenna search - scoring handles relevance."""
+    return "antenna"
 def load_partitions(partition_path: Path | None = None) -> dict[str, set[str]]:
     path = partition_path or DEFAULT_PARTITION_CONFIG
     if not path.exists():
@@ -216,10 +159,10 @@ def fetch_openalex(
     topic: Topic,
     max_results: int,
     partitions: dict[str, set[str]],
-    match_words_map: dict[str, Any] | None = None,
 ) -> list[dict[str, Any]]:
     """Fetch papers from OpenAlex API (free, no key, 100k requests/day)."""
-    per_page = min(max(max_results, 25), 200)
+    query = s2_query_for_topic(topic)
+    per_page = min(max_results, 200)
     retry_count = int(os.getenv("API_RETRIES", "4"))
     timeout_seconds = float(os.getenv("API_TIMEOUT_SECONDS", "90"))
     max_retry_sec = float(os.getenv("API_RETRY_MAX_SECONDS", "180"))
@@ -232,97 +175,97 @@ def fetch_openalex(
         "mailto": os.getenv("CONTACT_EMAIL", ""),
     }
 
-    queries = query_variants_for_topic(topic, match_words_map)
-    max_candidates = max_results * max(1, min(len(queries), 12))
-    for query in queries:
-        cursor = "*"
-        query_count = 0
-        while query_count < max_results and len(papers) < max_candidates:
-            params = {
-                "search": query,
-                "sort": "publication_date:desc",
-                "per_page": str(min(per_page, max_results - query_count)),
-                "cursor": cursor,
-            }
-            url = f"{OA_SEARCH_URL}?{urllib.parse.urlencode(params)}"
+    while len(papers) < max_results:
+        params = {
+            "search": query,
+            "sort": "publication_date:desc",
+            "per_page": str(per_page),
+            "cursor": cursor,
+        }
+        url = f"{OA_SEARCH_URL}?{urllib.parse.urlencode(params)}"
 
-            last_error = None
-            for attempt in range(retry_count):
-                req = urllib.request.Request(url, headers=headers)
-                try:
-                    with urllib.request.urlopen(req, timeout=timeout_seconds) as resp:
-                        data = json.loads(resp.read().decode("utf-8"))
-                    break
-                except Exception as exc:
-                    last_error = exc
-                    if not is_retryable_api_error(exc) or attempt == retry_count - 1:
-                        raise
-                    wait = api_retry_wait_seconds(exc, attempt)
-                    print(f"API temp error for {topic.name}: retrying in {wait:.0f}s", flush=True)
-                    time.sleep(wait)
-            else:
-                raise RuntimeError(f"OpenAlex request failed: {last_error}")
-
-            results = data.get("results") or []
-            if not results:
+        last_error = None
+        for attempt in range(retry_count):
+            req = urllib.request.Request(url, headers=headers)
+            try:
+                with urllib.request.urlopen(req, timeout=timeout_seconds) as resp:
+                    data = json.loads(resp.read().decode("utf-8"))
                 break
+            except Exception as exc:
+                last_error = exc
+                if not is_retryable_api_error(exc) or attempt == retry_count - 1:
+                    raise
+                wait = api_retry_wait_seconds(exc, attempt)
+                print(f"API temp error for {topic.name}: retrying in {wait:.0f}s", flush=True)
+                time.sleep(wait)
+        else:
+            raise RuntimeError(f"OpenAlex request failed: {last_error}")
 
-            for item in results:
-                paper_id = item.get("id", "")
-                if not paper_id or paper_id in seen_ids:
-                    continue
-                seen_ids.add(paper_id)
-
-                authors_list = item.get("authorships") or []
-                authors = [
-                    (a.get("author") or {}).get("display_name", "")
-                    for a in authors_list
-                    if (a.get("author") or {}).get("display_name")
-                ]
-
-                doi = normalize_doi(item.get("doi", ""))
-                primary = item.get("primary_location") or {}
-                source = primary.get("source") or {}
-                journal_name = source.get("display_name", "")
-                pub_date = item.get("publication_date") or ""
-                abstract = reconstruct_abstract(item.get("abstract_inverted_index"))
-                oa = item.get("open_access") or {}
-                pdf_url = oa.get("oa_url", "") if oa else ""
-                landing_url = primary.get("landing_page_url", "")
-                paper_url = doi_url(doi, landing_url)
-                year = int(pub_date[:4]) if pub_date else 0
-
-                papers.append({
-                    "id": paper_id.rsplit("/", 1)[-1] if "/" in paper_id else paper_id,
-                    "source": source_label(source, journal_name),
-                    "title": normalize_space(item.get("title", "")),
-                    "authors": [a for a in authors if a],
-                    "summary": normalize_space(abstract),
-                    "published": f"{pub_date}T00:00:00Z" if pub_date else "",
-                    "updated": f"{pub_date}T00:00:00Z" if pub_date else "",
-                    "year": year,
-                    "paper_url": paper_url,
-                    "pdf_url": pdf_url,
-                    "doi": doi,
-                    "journal": journal_name,
-                    "partition": lookup_partition(journal_name, partitions),
-                    "categories": [],
-                    "seed_topic": topic.id,
-                })
-                query_count += 1
-
-                if query_count >= max_results or len(papers) >= max_candidates:
-                    break
-
-            meta = data.get("meta") or {}
-            next_cursor = meta.get("next_cursor")
-            if query_count >= max_results or len(papers) >= max_candidates or not next_cursor or next_cursor == cursor:
-                break
-            cursor = next_cursor
-            time.sleep(0.5)
-
-        if len(papers) >= max_results:
+        results = data.get("results") or []
+        if not results:
             break
+
+        for item in results:
+            paper_id = item.get("id", "")
+            if not paper_id or paper_id in seen_ids:
+                continue
+            seen_ids.add(paper_id)
+
+            # Authors
+            authors_list = item.get("authorships") or []
+            authors = [
+                (a.get("author") or {}).get("display_name", "")
+                for a in authors_list
+                if (a.get("author") or {}).get("display_name")
+            ]
+
+            # DOI
+            doi = item.get("doi", "")
+
+            # Journal from primary location
+            primary = item.get("primary_location") or {}
+            source = primary.get("source") or {}
+            journal_name = source.get("display_name", "")
+
+            # Publication date
+            pub_date = item.get("publication_date") or ""
+
+            # Abstract (reconstruct from inverted index)
+            abstract = reconstruct_abstract(item.get("abstract_inverted_index"))
+
+            # PDF / landing page
+            oa = item.get("open_access") or {}
+            pdf_url = oa.get("oa_url", "") if oa else ""
+            landing_url = primary.get("landing_page_url", "")
+            paper_url = f"https://doi.org/{doi}" if doi else landing_url
+
+            # Year
+            year = int(pub_date[:4]) if pub_date else 0
+
+            papers.append({
+                "id": paper_id.rsplit("/", 1)[-1] if "/" in paper_id else paper_id,
+                "source": "IEEE",
+                "title": normalize_space(item.get("title", "")),
+                "authors": [a for a in authors if a],
+                "summary": normalize_space(abstract),
+                "published": f"{pub_date}T00:00:00Z" if pub_date else "",
+                "updated": f"{pub_date}T00:00:00Z" if pub_date else "",
+                "year": year,
+                "paper_url": paper_url,
+                "pdf_url": pdf_url,
+                "doi": doi,
+                "journal": journal_name,
+                "partition": lookup_partition(journal_name, partitions),
+                "categories": [],
+                "seed_topic": topic.id,
+            })
+
+        meta = data.get("meta") or {}
+        next_cursor = meta.get("next_cursor")
+        if not next_cursor or next_cursor == cursor:
+            break
+        cursor = next_cursor
+        time.sleep(0.5)  # OpenAlex: generous rate limit, 0.5s is safe
 
     return papers
 
@@ -362,7 +305,7 @@ def collection_cutoff(existing_payload: dict[str, Any], now: dt.datetime,
             return previous_run, "incremental"
     return now - dt.timedelta(days=max(0, days)), "lookback"
 
-def load_match_words(path: Path | None = None) -> dict[str, Any]:
+def load_match_words(path: Path | None = None) -> dict[str, list[str]]:
     """Load per-topic match words from config. Returns empty dict on any error."""
     p = path or DEFAULT_MATCH_WORDS
     if not p.exists():
@@ -376,20 +319,42 @@ def load_match_words(path: Path | None = None) -> dict[str, Any]:
 
 
 def keyword_score(topic: Topic, paper: dict[str, Any],
-                  match_words_map: dict[str, Any] | None = None) -> tuple[float, list[str]]:
+                  match_words_map: dict[str, list[str]] | None = None) -> tuple[float, list[str]]:
+    """Score: required_words MUST hit (>=1), match_words contribute to score."""
     haystack = f"{paper.get('title', '')} {paper.get('summary', '')}".lower()
-    required_words, match_tokens = topic_match_config(topic, match_words_map)
-    if required_words and not any(rw in haystack for rw in required_words if len(rw) >= 2):
-        return 0.0, []
-
     hits = []
-    for token in match_tokens:
-        if len(token) < 2:
-            continue
-        if token in haystack:
-            hits.append(token)
+    weighted = 0.0
+    required_words: list[str] = []
 
-    score = min(1.0, len(hits) / max(4, len(match_tokens) * 0.25))
+    if match_words_map and topic.id in match_words_map:
+        entry = match_words_map[topic.id]
+        if isinstance(entry, dict):
+            required_words = [w.lower() for w in entry.get("required_words", [])]
+            match_tokens = [w.lower() for w in entry.get("match_words", [])]
+        else:
+            match_tokens = [w.lower() for w in (entry if isinstance(entry, list) else [])]
+    else:
+        match_tokens = [w.lower() for kw in topic.keywords for w in kw.split()]
+
+    # Required words: at least one must match, otherwise score=0
+    if required_words:
+        if not any(rw in haystack for rw in required_words if rw and len(rw) >= 2):
+            return 0.0, []
+
+    for token in match_tokens:
+        if not token or len(token) < 2:
+            continue
+        if " " in token:
+            if token in haystack:
+                hits.append(token)
+                weighted += 1.0
+        else:
+            if token in haystack:
+                hits.append(token)
+                weighted += 0.3
+
+    divisor = max(1.0, len(match_tokens) * 0.3)
+    score = min(1.0, weighted / divisor)
     return score, list(dict.fromkeys(hits))[:8]
 def lexical_overlap_score(topic: Topic, paper: dict[str, Any]) -> float:
     topic_terms = set(re.findall(r"[a-zA-Z0-9]+", f"{topic.description} {' '.join(topic.keywords)}".lower()))
@@ -405,14 +370,20 @@ def match_level(score: float) -> str:
     return "low"
 
 def score_paper(topic: Topic, paper: dict[str, Any],
-                match_words_map: dict[str, Any] | None = None) -> dict[str, Any]:
+                match_words_map: dict[str, list[str]] | None = None) -> dict[str, Any]:
+    """Score paper against a topic. Returns 0 if required_words not matched."""
+    if match_words_map and topic.id in match_words_map:
+        entry = match_words_map[topic.id]
+        if isinstance(entry, dict):
+            required = [w.lower() for w in entry.get("required_words", [])]
+            if required:
+                haystack = f"{paper.get('title', '')} {paper.get('summary', '')}".lower()
+                if not any(rw in haystack for rw in required if rw and len(rw) >= 2):
+                    return {"topic_id": topic.id, "topic_name": topic.name,
+                            "score": 0.0, "level": "low",
+                            "reason": f"missing required: {required}", "keyword_hits": []}
+
     k_score, hits = keyword_score(topic, paper, match_words_map)
-    if k_score <= 0:
-        required, _ = topic_match_config(topic, match_words_map)
-        reason = f"missing required: {required}" if required else "low text overlap"
-        return {"topic_id": topic.id, "topic_name": topic.name,
-                "score": 0.0, "level": "low", "reason": reason,
-                "keyword_hits": []}
     l_score = lexical_overlap_score(topic, paper)
     base_score = round(0.65 * k_score + 0.35 * l_score, 3)
     reason = "; ".join(hits[:6]) if hits else "low text overlap"
@@ -430,22 +401,7 @@ def fallback_summary(paper: dict[str, Any], best_match: dict[str, Any]) -> dict[
             "why_relevant": best_match.get("reason", "与配置方向存在文本匹配。")}
 
 def llm_enabled() -> bool:
-    return bool(os.getenv("ANTHROPIC_API_KEY") or os.getenv("LLM_API_KEY") or
-                os.getenv("OPENAI_API_KEY") or os.getenv("DEEPSEEK_API_KEY") or
-                os.getenv("QWEN_API_KEY"))
-
-
-def llm_provider() -> str:
-    provider = os.getenv("LLM_PROVIDER", "").strip().lower()
-    if provider:
-        return provider
-    if os.getenv("ANTHROPIC_API_KEY"):
-        return "anthropic"
-    if os.getenv("QWEN_API_KEY"):
-        return "qwen"
-    if os.getenv("DEEPSEEK_API_KEY"):
-        return "deepseek"
-    return "openai"
+    return bool(os.getenv("LLM_API_KEY") or os.getenv("OPENAI_API_KEY") or os.getenv("DEEPSEEK_API_KEY"))
 
 def llm_headers(api_key: str) -> dict[str, str]:
     return {"Content-Type": "application/json", "Authorization": f"Bearer {api_key}",
@@ -469,7 +425,7 @@ def call_openai_compatible(prompt: str) -> dict[str, Any]:
     return json.loads(data["choices"][0]["message"]["content"])
 
 def build_llm_prompt(topic: Topic, paper: dict[str, Any], base_match: dict[str, Any]) -> str:
-    journal_line = f"期刊：{paper.get('journal', '未知')}\n分区：{paper.get('partition', '其他')}" if paper.get("journal") else ""
+    journal_line = f"期刊：{paper.get("journal", "未知")}\n分区：{paper.get("partition", "其他")}" if paper.get("journal") else ""
     return f"""请根据论文标题、摘要和我的研究方向，输出精确中文分析。不要夸大摘要中没有的信息；如果证据不足，请明确说明。
 
 我的研究方向：
@@ -508,7 +464,7 @@ def summarize_with_llm(topic: Topic, paper: dict[str, Any],
     try:
         data = call_openai_compatible(prompt)
     except Exception as exc:
-        print(f"Warning: LLM summary failed for {paper.get('id')}: {exc}", file=sys.stderr)
+        print(f"Warning: LLM summary failed for {paper.get("id")}: {exc}", file=sys.stderr)
         return fallback_summary(paper, base_match), base_match
     summary = {"problem": str(data.get("problem", "")),
                "method": str(data.get("method", "")),
@@ -661,7 +617,7 @@ def collect(config_path: Path, output_path: Path, days: int, max_per_topic: int,
             time.sleep(float(os.getenv("FETCH_DELAY_SECONDS", "5")))
         print(f"Fetching papers for topic: {topic.name}", flush=True)
         try:
-            topic_papers = fetch_openalex(topic, max_per_topic, partitions, match_words_map)
+            topic_papers = fetch_openalex(topic, max_per_topic, partitions)
             all_candidates.extend(topic_papers)
             successful_fetches += 1
         except Exception as exc:
@@ -761,7 +717,7 @@ def collect(config_path: Path, output_path: Path, days: int, max_per_topic: int,
                          "failed_fetches": failed_fetches, **retention_stats}}
     trimmed, sstats = trim_papers_for_storage(payload, max_stored_papers, max_data_bytes)
     trimmed.sort(key=lambda p: (p["best_match"]["score"], p.get("published", "")), reverse=True)
-    payload["papers"] = trimmed
+    payload['papers'] = trimmed
     payload["stats"].update(sstats)
     payload["stats"]["paper_count"] = len(trimmed)
     payload["stats"]["data_bytes"] = json_size_bytes(payload)
@@ -773,7 +729,7 @@ def main() -> None:
     parser.add_argument("--config", type=Path, default=DEFAULT_CONFIG)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument("--days", type=int, default=int(os.getenv("LOOKBACK_DAYS", "180")))
-    parser.add_argument("--max-per-topic", type=int, default=int(os.getenv("MAX_PER_TOPIC", "25")))
+    parser.add_argument("--max-per-topic", type=int, default=int(os.getenv("MAX_PER_TOPIC", "200")))
     parser.add_argument("--max-summaries", type=int, default=int(os.getenv("MAX_SUMMARIES", "40")))
     parser.add_argument("--max-stored-papers", type=int, default=int(os.getenv("MAX_STORED_PAPERS", str(DEFAULT_MAX_STORED_PAPERS))))
     parser.add_argument("--max-data-bytes", type=int, default=int(os.getenv("MAX_DATA_BYTES", str(DEFAULT_MAX_DATA_BYTES))))
@@ -783,7 +739,7 @@ def main() -> None:
     payload = collect(args.config, args.output, args.days, args.max_per_topic,
                       args.max_summaries, args.max_stored_papers, args.max_data_bytes,
                       args.incremental_since_last_run, args.recent_history_days)
-    print(f"Wrote {len(payload["papers"])} papers to {args.output}")
+    print(f"Wrote {len(payload['papers'])} papers to {args.output}")
 
 if __name__ == "__main__":
     main()
