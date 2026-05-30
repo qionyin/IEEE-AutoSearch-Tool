@@ -1,0 +1,22 @@
+{
+  "_comment": "??????required_words ?????????match_words ????????",
+  "topics": {
+    "nn_antenna": {
+      "required_words": ["antenna"],
+      "match_words": [
+        "neural", "network", "optimization",
+        "deep learning", "surrogate", "model", "machine learning",
+        "AI-assisted", "data-driven", "modeling", "design"
+      ]
+    },
+    "algo_antenna": {
+      "required_words": ["antenna"],
+      "match_words": [
+        "optimization", "algorithm",
+        "evolutionary", "genetic", "particle swarm",
+        "multi-objective", "swarm intelligence", "parameterized",
+        "surrogate-assisted", "design"
+      ]
+    }
+  }
+}

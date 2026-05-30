@@ -1,0 +1,144 @@
+{
+  "generated_at": "Sat, 30 May 2026 06:09:37 +0000",
+  "generated_at_iso": "2026-05-30T06:09:37.084711+00:00",
+  "config_source": "file",
+  "topics": [
+    {
+      "id": "nn_antenna",
+      "name": "神经网络天线优化",
+      "description": "关注神经网络、深度学习、代理模型在天线设计、建模和优化中的应用，包括数据驱动建模和智能优化。",
+      "keywords": [
+        "neural network antenna optimization",
+        "deep learning antenna design",
+        "surrogate model antenna",
+        "machine learning antenna",
+        "AI-assisted antenna optimization",
+        "data-driven antenna modeling",
+        "neuro-network antenna",
+        "ANN antenna"
+      ]
+    },
+    {
+      "id": "algo_antenna",
+      "name": "算法天线优化",
+      "description": "关注进化算法、群体智能、多目标优化等算法在天线设计中的应用，包括遗传算法、粒子群、以及参数化建模优化。",
+      "keywords": [
+        "antenna optimization algorithm",
+        "evolutionary antenna optimization",
+        "genetic algorithm antenna",
+        "particle swarm antenna",
+        "multi-objective antenna optimization",
+        "swarm intelligence antenna",
+        "parameterized antenna optimization",
+        "surrogate-assisted antenna optimization"
+      ]
+    }
+  ],
+  "papers": [
+    {
+      "id": "W7161635244",
+      "source": "IEEE",
+      "title": "Design optimization of wearable antennas using an adaptive network-based fuzzy inference system",
+      "authors": [
+        "Asrafuzzaman Khan Nahin",
+        "Waleed M. Hamanah",
+        "Alaa Hussein",
+        "Ali Ahmed Salem",
+        "Mohamed Ali Abido"
+      ],
+      "summary": "This paper presents a data-driven optimization framework for wearable microstrip patch antennas operating near the 2.4 GHz ISM band using an Adaptive Network-Based Fuzzy Inference System (ANFIS). The proposed approach predicts key antenna geometry parameters-patch width, patch length, and feed point coordinates-from target electromagnetic performance metrics, including resonant frequency, reflection coefficient, bandwidth, and substrate thickness. A dataset of 500 samples was extracted from parametric HFSS simulations, and the ANFIS model was trained using a 70/30 training-testing split. Four membership function types \"triangular, trapezoidal, Gaussian, and generalized bell\" were systematically evaluated to analyze their influence on prediction accuracy and convergence behavior. Results demonstrate strong agreement between ANFIS predictions and HFSS simulations, with sub-millimeter mean absolute errors for patch dimensions and high regression coefficients across parameters. Among the tested membership functions, the generalized bell function showed the most stable convergence and the lowest overall prediction error. The proposed approach reduces reliance on repeated full-wave simulations by providing rapid estimation of antenna geometry from performance specifications, enabling faster prototyping of wearable antennas. The results highlight the importance of membership function selection in neuro-fuzzy modeling for antenna design and demonstrate the feasibility of ANFIS-based surrogate modeling for wearable communication devices.",
+      "published": "2026-05-19T00:00:00Z",
+      "updated": "2026-05-19T00:00:00Z",
+      "year": 2026,
+      "paper_url": "https://doi.org/https://doi.org/10.1038/s41598-026-53397-4",
+      "pdf_url": "https://www.nature.com/articles/s41598-026-53397-4_reference.pdf",
+      "doi": "https://doi.org/10.1038/s41598-026-53397-4",
+      "journal": "Scientific Reports",
+      "partition": "其他",
+      "categories": [],
+      "seed_topic": "nn_antenna",
+      "matches": [
+        {
+          "topic_id": "nn_antenna",
+          "topic_name": "神经网络天线优化",
+          "score": 0.764,
+          "level": "high",
+          "reason": "??????network?optimization?surrogate?model?data-driven?modeling",
+          "keyword_hits": [
+            "network",
+            "optimization",
+            "surrogate",
+            "model",
+            "data-driven",
+            "modeling"
+          ],
+          "llm_reason": "论文聚焦于数据驱动的天线代理模型，使用神经网络（ANFIS）进行天线几何参数预测，直接对应我的研究方向“神经网络天线优化”中的代理模型、数据驱动建模和智能优化。"
+        },
+        {
+          "topic_id": "algo_antenna",
+          "topic_name": "算法天线优化",
+          "score": 0.261,
+          "level": "low",
+          "reason": "??????optimization?design",
+          "keyword_hits": [
+            "optimization",
+            "design"
+          ]
+        }
+      ],
+      "best_match": {
+        "topic_id": "nn_antenna",
+        "topic_name": "神经网络天线优化",
+        "score": 0.764,
+        "level": "high",
+        "reason": "??????network?optimization?surrogate?model?data-driven?modeling",
+        "keyword_hits": [
+          "network",
+          "optimization",
+          "surrogate",
+          "model",
+          "data-driven",
+          "modeling"
+        ],
+        "llm_reason": "论文聚焦于数据驱动的天线代理模型，使用神经网络（ANFIS）进行天线几何参数预测，直接对应我的研究方向“神经网络天线优化”中的代理模型、数据驱动建模和智能优化。"
+      },
+      "chinese_summary": {
+        "problem": "针对可穿戴微带贴片天线设计，解决传统全波仿真耗时长、迭代优化效率低的问题，实现从目标电磁性能到天线几何参数的快速预测。",
+        "method": "采用自适应神经模糊推理系统（ANFIS）构建代理模型，以谐振频率、反射系数、带宽和基板厚度为输入，预测贴片宽度、长度和馈点坐标，并系统评估四种隶属度函数的影响。",
+        "innovation": "1. 将ANFIS应用于可穿戴天线几何参数的逆向预测，实现从性能指标到尺寸的直接映射；2. 系统比较了三角、梯形、高斯和广义钟形隶属度函数对预测精度和收敛性的影响，发现广义钟形函数表现最优；3. 基于500个HFSS仿真样本构建数据集，验证了ANFIS作为替代全波仿真的快速代理模型的可行性。",
+        "evidence": "摘要中报告了子毫米级的平均绝对误差（patch尺寸）和高的回归系数，以及广义钟形函数的最低预测误差和稳定收敛性，但未提供具体数值。",
+        "limitations": "1. 数据集仅500样本，规模较小，可能影响模型泛化性；2. 仅针对2.4 GHz ISM频段的特定可穿戴天线，未验证其他频段或天线类型；3. 隶属度函数的选择基于经验，缺乏理论指导；4. 需要阅读全文确认误差具体数值和对比基准。",
+        "why_relevant": "论文聚焦于数据驱动的天线代理模型，使用神经网络（ANFIS）进行天线几何参数预测，直接对应我的研究方向“神经网络天线优化”中的代理模型、数据驱动建模和智能优化。"
+      },
+      "first_seen_at": "2026-05-30T06:09:37.084711+00:00",
+      "last_seen_at": "2026-05-30T06:09:37.084711+00:00",
+      "retained_from_previous_run": false
+    }
+  ],
+  "stats": {
+    "paper_count": 1,
+    "new_paper_count": 1,
+    "days": 30,
+    "collection_mode": "lookback",
+    "collection_cutoff_iso": "2026-04-30T06:09:37.084711+00:00",
+    "max_per_topic": 10,
+    "llm_enabled": true,
+    "llm_concurrency": 2,
+    "recent_history_days": 45,
+    "successful_fetches": 2,
+    "failed_fetches": 0,
+    "retained_paper_count": 0,
+    "retained_recent_low_count": 0,
+    "dropped_low_relevance_count": 0,
+    "max_stored_papers": 800,
+    "max_data_bytes": 8388608,
+    "data_bytes": 7963,
+    "storage_trimmed_count": 0,
+    "storage_trimmed_by_level": {
+      "high": 0,
+      "medium": 0,
+      "low": 0,
+      "unknown": 0
+    }
+  }
+}

@@ -9,6 +9,7 @@ OA_SEARCH_URL = "https://api.openalex.org/works"
 # OpenAlex returns all fields by default; use select= for subset if needed
 DEFAULT_CONFIG = Path("config/interests.json")
 DEFAULT_PARTITION_CONFIG = Path("config/journal_partitions.json")
+DEFAULT_MATCH_WORDS = Path("config/match_words.json")
 DEFAULT_OUTPUT = Path("web/data/papers.json")
 RETAINED_MATCH_LEVELS = {"high", "medium"}
 DEFAULT_MAX_STORED_PAPERS = 800
@@ -21,7 +22,7 @@ class Topic:
     id: str; name: str; description: str; keywords: list[str]
 
 def load_json(path: Path) -> dict[str, Any]:
-    with path.open("r", encoding="utf-8") as f:
+    with path.open("r", encoding="utf-8-sig") as f:
         return json.load(f)
 
 def write_json(path: Path, data: dict[str, Any]) -> None:
@@ -304,18 +305,53 @@ def collection_cutoff(existing_payload: dict[str, Any], now: dt.datetime,
             return previous_run, "incremental"
     return now - dt.timedelta(days=max(0, days)), "lookback"
 
-def keyword_score(topic: Topic, paper: dict[str, Any]) -> tuple[float, list[str]]:
-    haystack = f"{paper.get("title", "")} {paper.get("summary", "")}".lower()
+def load_match_words(path: Path | None = None) -> dict[str, list[str]]:
+    """Load per-topic match words from config. Falls back to empty dict."""
+    p = path or DEFAULT_MATCH_WORDS
+    if not p.exists():
+        return {}
+    data = load_json(p)
+    return data.get("topics", {})
+
+
+def keyword_score(topic: Topic, paper: dict[str, Any],
+                  match_words_map: dict[str, list[str]] | None = None) -> tuple[float, list[str]]:
+    """Score: required_words MUST hit (>=1), match_words contribute to score."""
+    haystack = f"{paper.get('title', '')} {paper.get('summary', '')}".lower()
     hits = []
     weighted = 0.0
-    for keyword in topic.keywords:
-        normalized = keyword.lower()
-        if normalized in haystack:
-            hits.append(keyword)
-            weighted += min(1.0, max(0.35, len(normalized.split()) / 5))
-    score = min(1.0, weighted / max(2.0, min(5.0, len(topic.keywords) / 2)))
-    return score, hits[:6]
+    required_words: list[str] = []
 
+    if match_words_map and topic.id in match_words_map:
+        entry = match_words_map[topic.id]
+        if isinstance(entry, dict):
+            required_words = [w.lower() for w in entry.get("required_words", [])]
+            match_tokens = [w.lower() for w in entry.get("match_words", [])]
+        else:
+            match_tokens = [w.lower() for w in (entry if isinstance(entry, list) else [])]
+    else:
+        match_tokens = [w.lower() for kw in topic.keywords for w in kw.split()]
+
+    # Required words: at least one must match, otherwise score=0
+    if required_words:
+        if not any(rw in haystack for rw in required_words if rw and len(rw) >= 2):
+            return 0.0, []
+
+    for token in match_tokens:
+        if not token or len(token) < 2:
+            continue
+        if " " in token:
+            if token in haystack:
+                hits.append(token)
+                weighted += 1.0
+        else:
+            if token in haystack:
+                hits.append(token)
+                weighted += 0.3
+
+    divisor = max(1.0, len(match_tokens) * 0.3)
+    score = min(1.0, weighted / divisor)
+    return score, list(dict.fromkeys(hits))[:8]
 def lexical_overlap_score(topic: Topic, paper: dict[str, Any]) -> float:
     topic_terms = set(re.findall(r"[a-zA-Z0-9]+", f"{topic.description} {" ".join(topic.keywords)}".lower()))
     paper_terms = set(re.findall(r"[a-zA-Z0-9]+", f"{paper.get("title", "")} {paper.get("summary", "")}".lower()))
@@ -329,19 +365,32 @@ def match_level(score: float) -> str:
     if score >= 0.42: return "medium"
     return "low"
 
-def score_paper(topic: Topic, paper: dict[str, Any]) -> dict[str, Any]:
-    k_score, hits = keyword_score(topic, paper)
+def score_paper(topic: Topic, paper: dict[str, Any],
+                match_words_map: dict[str, list[str]] | None = None) -> dict[str, Any]:
+    """Score paper against a topic. Returns 0 if required_words not matched."""
+    # Required words gate: at least one must match
+    if match_words_map and topic.id in match_words_map:
+        entry = match_words_map[topic.id]
+        if isinstance(entry, dict):
+            required = [w.lower() for w in entry.get("required_words", [])]
+            if required:
+                haystack = f"{paper.get('title', '')} {paper.get('summary', '')}".lower()
+                if not any(rw in haystack for rw in required if rw and len(rw) >= 2):
+                    return {"topic_id": topic.id, "topic_name": topic.name,
+                            "score": 0.0, "level": "low",
+                            "reason": f"?????: {required}", "keyword_hits": []}
+
+    k_score, hits = keyword_score(topic, paper, match_words_map)
     l_score = lexical_overlap_score(topic, paper)
     base_score = round(0.65 * k_score + 0.35 * l_score, 3)
     reason_parts = []
     if hits:
-        reason_parts.append("关键词命中：" + "、".join(hits))
+        reason_parts.append("??????" + "?".join(hits[:6]))
     if not reason_parts:
-        reason_parts.append("文本语义与方向描述存在弱相关，需要人工复核。")
+        reason_parts.append("??????????????????????")
     return {"topic_id": topic.id, "topic_name": topic.name, "score": base_score,
-            "level": match_level(base_score), "reason": "；".join(reason_parts),
-            "keyword_hits": hits}
-
+            "level": match_level(base_score), "reason": "?".join(reason_parts),
+            "keyword_hits": hits[:6]}
 def fallback_summary(paper: dict[str, Any], best_match: dict[str, Any]) -> dict[str, str]:
     abstract = paper.get("summary", "")
     first_sentence = re.split(r"(?<=[.!?])\s+", abstract)[0] if abstract else ""
@@ -557,6 +606,7 @@ def collect(config_path: Path, output_path: Path, days: int, max_per_topic: int,
     config = load_issue_config(default_config)
     topics = parse_topics(config)
     partitions = load_partitions()
+    match_words_map = load_match_words()
     now = dt.datetime.now(dt.timezone.utc)
     existing_payload = load_existing_payload(output_path)
     cutoff, collection_mode = collection_cutoff(existing_payload, now, days, incremental_since_last_run)
@@ -611,7 +661,7 @@ def collect(config_path: Path, output_path: Path, days: int, max_per_topic: int,
             continue
         published_at = parse_datetime(str(published))
         if published_at and published_at >= cutoff:
-            matches = [score_paper(topic, paper) for topic in topics]
+            matches = [score_paper(topic, paper, match_words_map) for topic in topics]
             matches.sort(key=lambda item: item["score"], reverse=True)
             best_match = matches[0]
             if best_match["score"] <= 0:
