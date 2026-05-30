@@ -64,6 +64,7 @@ jobs:
           API_RETRY_BASE_SECONDS: ${{ vars.API_RETRY_BASE_SECONDS || '10' }}
           API_RETRIES: ${{ vars.API_RETRIES || '4' }}
           FETCH_DELAY_SECONDS: ${{ vars.FETCH_DELAY_SECONDS || '5' }}
+          API_RETRY_MAX_SECONDS: ${{ vars.API_RETRY_MAX_SECONDS || '900' }}
 
         run: python scripts/collect_papers.py
 
@@ -88,5 +89,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
 
