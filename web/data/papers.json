@@ -1,6 +1,6 @@
 {
-  "generated_at": "Sat, 30 May 2026 07:52:49 +0000",
-  "generated_at_iso": "2026-05-30T07:52:49.427754+00:00",
+  "generated_at": "Sat, 30 May 2026 07:57:20 +0000",
+  "generated_at_iso": "2026-05-30T07:57:20.097130+00:00",
   "config_source": "file",
   "topics": [
     {
@@ -109,7 +109,7 @@
         "why_relevant": "network; model; ai; optimization; design; electromagnetic"
       },
       "first_seen_at": "2026-05-30T07:43:36.331339+00:00",
-      "last_seen_at": "2026-05-30T07:52:49.427754+00:00",
+      "last_seen_at": "2026-05-30T07:57:20.097130+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -184,7 +184,7 @@
         "why_relevant": "neural; network; learning; model; ai; optimization"
       },
       "first_seen_at": "2026-05-30T07:43:36.331339+00:00",
-      "last_seen_at": "2026-05-30T07:52:49.427754+00:00",
+      "last_seen_at": "2026-05-30T07:57:20.097130+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -260,7 +260,7 @@
         "why_relevant": "network; ai; design; array; gain; frequency"
       },
       "first_seen_at": "2026-05-30T07:43:36.331339+00:00",
-      "last_seen_at": "2026-05-30T07:52:49.427754+00:00",
+      "last_seen_at": "2026-05-30T07:57:20.097130+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -331,7 +331,7 @@
         "why_relevant": "model; ai; design; array"
       },
       "first_seen_at": "2026-05-30T07:43:36.331339+00:00",
-      "last_seen_at": "2026-05-30T07:52:49.427754+00:00",
+      "last_seen_at": "2026-05-30T07:57:20.097130+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -407,7 +407,7 @@
         "why_relevant": "deep; prediction; ai; design; electromagnetic; radiation"
       },
       "first_seen_at": "2026-05-30T07:43:36.331339+00:00",
-      "last_seen_at": "2026-05-30T07:52:49.427754+00:00",
+      "last_seen_at": "2026-05-30T07:57:20.097130+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -483,7 +483,7 @@
         "why_relevant": "deep; prediction; ai; design; electromagnetic; radiation"
       },
       "first_seen_at": "2026-05-30T07:43:36.331339+00:00",
-      "last_seen_at": "2026-05-30T07:52:49.427754+00:00",
+      "last_seen_at": "2026-05-30T07:57:20.097130+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -553,7 +553,7 @@
         "why_relevant": "surrogate; model; ai; simulation"
       },
       "first_seen_at": "2026-05-30T07:43:36.331339+00:00",
-      "last_seen_at": "2026-05-30T07:52:49.427754+00:00",
+      "last_seen_at": "2026-05-30T07:57:20.097130+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -633,7 +633,7 @@
         "why_relevant": "ai; design; simulation; microwave; bandwidth; frequency"
       },
       "first_seen_at": "2026-05-30T07:43:36.331339+00:00",
-      "last_seen_at": "2026-05-30T07:52:49.427754+00:00",
+      "last_seen_at": "2026-05-30T07:57:20.097130+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -698,7 +698,7 @@
         "why_relevant": "design; array"
       },
       "first_seen_at": "2026-05-30T07:43:36.331339+00:00",
-      "last_seen_at": "2026-05-30T07:52:49.427754+00:00",
+      "last_seen_at": "2026-05-30T07:57:20.097130+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -767,7 +767,7 @@
         "why_relevant": "ai; design"
       },
       "first_seen_at": "2026-05-30T07:43:36.331339+00:00",
-      "last_seen_at": "2026-05-30T07:52:49.427754+00:00",
+      "last_seen_at": "2026-05-30T07:57:20.097130+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -829,7 +829,7 @@
         "why_relevant": "frequency"
       },
       "first_seen_at": "2026-05-30T07:43:36.331339+00:00",
-      "last_seen_at": "2026-05-30T07:52:49.427754+00:00",
+      "last_seen_at": "2026-05-30T07:57:20.097130+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -891,7 +891,7 @@
         "why_relevant": "frequency"
       },
       "first_seen_at": "2026-05-30T07:43:36.331339+00:00",
-      "last_seen_at": "2026-05-30T07:52:49.427754+00:00",
+      "last_seen_at": "2026-05-30T07:57:20.097130+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -960,7 +960,7 @@
         "why_relevant": "network; ai; gain"
       },
       "first_seen_at": "2026-05-30T07:43:36.331339+00:00",
-      "last_seen_at": "2026-05-30T07:52:49.427754+00:00",
+      "last_seen_at": "2026-05-30T07:57:20.097130+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -1025,7 +1025,7 @@
         "why_relevant": "design"
       },
       "first_seen_at": "2026-05-30T07:43:36.331339+00:00",
-      "last_seen_at": "2026-05-30T07:52:49.427754+00:00",
+      "last_seen_at": "2026-05-30T07:57:20.097130+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -1100,7 +1100,7 @@
         "why_relevant": "ga; radiation; bandwidth"
       },
       "first_seen_at": "2026-05-30T07:43:36.331339+00:00",
-      "last_seen_at": "2026-05-30T07:52:49.427754+00:00",
+      "last_seen_at": "2026-05-30T07:57:20.097130+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -1160,7 +1160,7 @@
         "why_relevant": "algorithm"
       },
       "first_seen_at": "2026-05-30T07:43:36.331339+00:00",
-      "last_seen_at": "2026-05-30T07:52:49.427754+00:00",
+      "last_seen_at": "2026-05-30T07:57:20.097130+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -1216,7 +1216,7 @@
         "why_relevant": "low text overlap"
       },
       "first_seen_at": "2026-05-30T07:43:36.331339+00:00",
-      "last_seen_at": "2026-05-30T07:52:49.427754+00:00",
+      "last_seen_at": "2026-05-30T07:57:20.097130+00:00",
       "retained_from_previous_run": false
     }
   ],
@@ -1225,7 +1225,7 @@
     "new_paper_count": 17,
     "days": 180,
     "collection_mode": "lookback",
-    "collection_cutoff_iso": "2025-12-01T07:52:49.427754+00:00",
+    "collection_cutoff_iso": "2025-12-01T07:57:20.097130+00:00",
     "max_per_topic": 25,
     "llm_enabled": true,
     "llm_concurrency": 2,
