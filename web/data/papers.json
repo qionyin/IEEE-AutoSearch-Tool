@@ -1,7 +1,7 @@
 {
-  "generated_at": "Sat, 30 May 2026 04:48:34 +0000",
-  "generated_at_iso": "2026-05-30T04:48:34.119967+00:00",
-  "config_source": "issue",
+  "generated_at": "Sat, 30 May 2026 04:51:23 +0000",
+  "generated_at_iso": "2026-05-30T04:51:23.194551+00:00",
+  "config_source": "file",
   "topics": [
     {
       "id": "llm_low_precision_quantization",
@@ -19,12 +19,6 @@
         "INT4",
         "INT8",
         "KV cache quantization"
-      ],
-      "arxiv_categories": [
-        "cs.CL",
-        "cs.LG",
-        "cs.AI",
-        "cs.DC"
       ]
     },
     {
@@ -42,12 +36,6 @@
         "low precision tensor compute",
         "dataflow architecture",
         "on-chip memory hierarchy"
-      ],
-      "arxiv_categories": [
-        "cs.AR",
-        "cs.DC",
-        "cs.LG",
-        "cs.PF"
       ]
     },
     {
@@ -65,12 +53,6 @@
         "collective communication",
         "prefill decode disaggregation",
         "serving scheduler"
-      ],
-      "arxiv_categories": [
-        "cs.DC",
-        "cs.PF",
-        "cs.CL",
-        "cs.LG"
       ]
     },
     {
@@ -88,12 +70,6 @@
         "GPU memory management",
         "cache prefetching",
         "LLM serving memory"
-      ],
-      "arxiv_categories": [
-        "cs.CL",
-        "cs.LG",
-        "cs.DC",
-        "cs.PF"
       ]
     }
   ],
@@ -266,26 +242,25 @@
     "new_paper_count": 0,
     "days": 1,
     "collection_mode": "lookback",
-    "collection_cutoff_iso": "2026-05-28T14:56:22.882760+00:00",
+    "collection_cutoff_iso": "2026-05-29T04:51:23.194551+00:00",
     "max_per_topic": 25,
     "llm_enabled": true,
     "llm_concurrency": 2,
     "recent_history_days": 45,
-    "successful_fetches": 0,
-    "failed_fetches": 4,
+    "successful_fetches": 2,
+    "failed_fetches": 2,
     "retained_paper_count": 2,
     "retained_recent_low_count": 1,
     "dropped_low_relevance_count": 0,
     "max_stored_papers": 800,
     "max_data_bytes": 8388608,
-    "data_bytes": 15252,
+    "data_bytes": 14781,
     "storage_trimmed_count": 0,
     "storage_trimmed_by_level": {
       "high": 0,
       "medium": 0,
       "low": 0,
       "unknown": 0
-    },
-    "last_error": "All data source requests failed."
+    }
   }
 }
