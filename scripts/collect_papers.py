@@ -733,7 +733,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Collect IEEE papers via Semantic Scholar for paper-daily.")
     parser.add_argument("--config", type=Path, default=DEFAULT_CONFIG)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
-    parser.add_argument("--days", type=int, default=int(os.getenv("LOOKBACK_DAYS", "30")))
+    parser.add_argument("--days", type=int, default=int(os.getenv("LOOKBACK_DAYS", "180")))
     parser.add_argument("--max-per-topic", type=int, default=int(os.getenv("MAX_PER_TOPIC", "25")))
     parser.add_argument("--max-summaries", type=int, default=int(os.getenv("MAX_SUMMARIES", "40")))
     parser.add_argument("--max-stored-papers", type=int, default=int(os.getenv("MAX_STORED_PAPERS", str(DEFAULT_MAX_STORED_PAPERS))))
