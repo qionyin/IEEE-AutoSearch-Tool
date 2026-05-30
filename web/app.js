@@ -195,6 +195,8 @@ function renderPaper(paper) {
   setText(node, ".summary-problem", summary.problem);
   setText(node, ".summary-method", summary.method);
   setText(node, ".summary-innovation", summary.innovation);
+  setText(node, ".summary-evidence", summary.evidence);
+  setText(node, ".summary-limitations", summary.limitations);
   setText(node, ".summary-relevant", summary.why_relevant);
   setText(node, ".match-reason", `${best.topic_name || "未分类"}：${best.reason || ""}`);
 
