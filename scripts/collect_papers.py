@@ -5,8 +5,8 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-S2_SEARCH_URL = "https://api.semanticscholar.org/graph/v1/paper/search"
-S2_FIELDS = "title,abstract,year,authors,journal,externalIds,publicationDate,url,openAccessPdf"
+OA_SEARCH_URL = "https://api.openalex.org/works"
+# OpenAlex returns all fields by default; use select= for subset if needed
 DEFAULT_CONFIG = Path("config/interests.json")
 DEFAULT_PARTITION_CONFIG = Path("config/journal_partitions.json")
 DEFAULT_OUTPUT = Path("web/data/papers.json")
@@ -144,24 +144,52 @@ def is_retryable_api_error(exc: Exception) -> bool:
 def should_stop_fetches(exc: Exception) -> bool:
     return isinstance(exc, urllib.error.HTTPError) and exc.code in {429, 503}
 
-def fetch_semantic_scholar(topic: Topic, max_results: int,
-                           partitions: dict[str, set[str]]) -> list[dict[str, Any]]:
-    query = s2_query_for_topic(topic)
-    offset = 0
-    limit = min(max_results, 100)
+def reconstruct_abstract(inverted_index: dict | None) -> str:
+    """Reconstruct abstract text from OpenAlex inverted index."""
+    if not inverted_index or not isinstance(inverted_index, dict):
+        return ""
+    word_positions = []
+    for word, positions in inverted_index.items():
+        if isinstance(positions, list):
+            for pos in positions:
+                word_positions.append((pos, word))
+    word_positions.sort()
+    return " ".join(w for _, w in word_positions)
+
+
+def fetch_openalex(
+    topic: Topic,
+    max_results: int,
+    partitions: dict[str, set[str]],
+) -> list[dict[str, Any]]:
+    """Fetch papers from OpenAlex API (free, no key, 100k requests/day)."""
+    query = urllib.parse.quote(s2_query_for_topic(topic))
+    per_page = min(max_results, 200)
     retry_count = int(os.getenv("API_RETRIES", "4"))
     timeout_seconds = float(os.getenv("API_TIMEOUT_SECONDS", "90"))
+    max_retry_sec = float(os.getenv("API_RETRY_MAX_SECONDS", "180"))
     papers: list[dict[str, Any]] = []
     seen_ids: set[str] = set()
+    cursor = "*"
+
+    headers = {
+        "User-Agent": "paper-daily-collector/1.0",
+        "mailto": os.getenv("CONTACT_EMAIL", ""),
+    }
 
     while len(papers) < max_results:
-        params = {"query": query, "limit": str(limit),
-                  "offset": str(offset), "fields": S2_FIELDS}
-        url = f"{S2_SEARCH_URL}?{urllib.parse.urlencode(params)}"
+        params = {
+            "search": query,
+            "filter": "type:article",
+            "sort": "publication_date:desc",
+            "per_page": str(per_page),
+            "cursor": cursor,
+        }
+        url = f"{OA_SEARCH_URL}?{urllib.parse.urlencode(params)}"
+
         last_error = None
         for attempt in range(retry_count):
-            req = urllib.request.Request(url,
-                headers={"User-Agent": "paper-daily-collector/1.0"})
+            req = urllib.request.Request(url, headers=headers)
             try:
                 with urllib.request.urlopen(req, timeout=timeout_seconds) as resp:
                     data = json.loads(resp.read().decode("utf-8"))
@@ -174,44 +202,74 @@ def fetch_semantic_scholar(topic: Topic, max_results: int,
                 print(f"API temp error for {topic.name}: retrying in {wait:.0f}s", flush=True)
                 time.sleep(wait)
         else:
-            raise RuntimeError(f"S2 request failed: {last_error}")
+            raise RuntimeError(f"OpenAlex request failed: {last_error}")
 
-        results = data.get("data") or []
+        results = data.get("results") or []
         if not results:
             break
+
         for item in results:
-            paper_id = item.get("paperId", "")
+            paper_id = item.get("id", "")
             if not paper_id or paper_id in seen_ids:
                 continue
             seen_ids.add(paper_id)
-            authors_list = item.get("authors") or []
-            authors = [a.get("name", "") for a in authors_list if a.get("name")]
-            external_ids = item.get("externalIds") or {}
-            doi = external_ids.get("DOI", "")
-            journal_info = item.get("journal") or {}
-            journal_name = journal_info.get("name", "") if journal_info else ""
-            publication_date = item.get("publicationDate") or ""
-            open_access = item.get("openAccessPdf") or {}
-            pdf_url = open_access.get("url", "") if open_access else ""
+
+            # Authors
+            authors_list = item.get("authorships") or []
+            authors = [
+                (a.get("author") or {}).get("display_name", "")
+                for a in authors_list
+                if (a.get("author") or {}).get("display_name")
+            ]
+
+            # DOI
+            doi = item.get("doi", "")
+
+            # Journal from primary location
+            primary = item.get("primary_location") or {}
+            source = primary.get("source") or {}
+            journal_name = source.get("display_name", "")
+
+            # Publication date
+            pub_date = item.get("publication_date") or ""
+
+            # Abstract (reconstruct from inverted index)
+            abstract = reconstruct_abstract(item.get("abstract_inverted_index"))
+
+            # PDF / landing page
+            oa = item.get("open_access") or {}
+            pdf_url = oa.get("oa_url", "") if oa else ""
+            landing_url = primary.get("landing_page_url", "")
+            paper_url = f"https://doi.org/{doi}" if doi else landing_url
+
+            # Year
+            year = int(pub_date[:4]) if pub_date else 0
+
             papers.append({
-                "id": paper_id, "source": "IEEE",
+                "id": paper_id.rsplit("/", 1)[-1] if "/" in paper_id else paper_id,
+                "source": "IEEE",
                 "title": normalize_space(item.get("title", "")),
                 "authors": [a for a in authors if a],
-                "summary": normalize_space(item.get("abstract") or ""),
-                "published": f"{publication_date}T00:00:00Z" if publication_date else "",
-                "updated": f"{publication_date}T00:00:00Z" if publication_date else "",
-                "year": item.get("year") or 0,
-                "paper_url": f"https://doi.org/{doi}" if doi else (item.get("url") or ""),
-                "pdf_url": pdf_url, "doi": doi,
+                "summary": normalize_space(abstract),
+                "published": f"{pub_date}T00:00:00Z" if pub_date else "",
+                "updated": f"{pub_date}T00:00:00Z" if pub_date else "",
+                "year": year,
+                "paper_url": paper_url,
+                "pdf_url": pdf_url,
+                "doi": doi,
                 "journal": journal_name,
                 "partition": lookup_partition(journal_name, partitions),
-                "categories": [], "seed_topic": topic.id,
+                "categories": [],
+                "seed_topic": topic.id,
             })
-        total = data.get("total", 0)
-        offset += len(results)
-        if offset >= total:
+
+        meta = data.get("meta") or {}
+        next_cursor = meta.get("next_cursor")
+        if not next_cursor or next_cursor == cursor:
             break
-        time.sleep(1.2)
+        cursor = next_cursor
+        time.sleep(0.5)  # OpenAlex: generous rate limit, 0.5s is safe
+
     return papers
 
 def parse_datetime(value: str | None) -> dt.datetime | None:
@@ -510,7 +568,7 @@ def collect(config_path: Path, output_path: Path, days: int, max_per_topic: int,
             time.sleep(float(os.getenv("FETCH_DELAY_SECONDS", "5")))
         print(f"Fetching papers for topic: {topic.name}", flush=True)
         try:
-            topic_papers = fetch_semantic_scholar(topic, max_per_topic, partitions)
+            topic_papers = fetch_openalex(topic, max_per_topic, partitions)
             all_candidates.extend(topic_papers)
             successful_fetches += 1
         except Exception as exc:
