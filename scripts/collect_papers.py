@@ -357,8 +357,8 @@ def keyword_score(topic: Topic, paper: dict[str, Any],
     score = min(1.0, weighted / divisor)
     return score, list(dict.fromkeys(hits))[:8]
 def lexical_overlap_score(topic: Topic, paper: dict[str, Any]) -> float:
-    topic_terms = set(re.findall(r"[a-zA-Z0-9]+", f"{topic.description} {" ".join(topic.keywords)}".lower()))
-    paper_terms = set(re.findall(r"[a-zA-Z0-9]+", f"{paper.get("title", "")} {paper.get("summary", "")}".lower()))
+    topic_terms = set(re.findall(r"[a-zA-Z0-9]+", f"{topic.description} {' '.join(topic.keywords)}".lower()))
+    paper_terms = set(re.findall(r"[a-zA-Z0-9]+", f"{paper.get('title', '')} {paper.get('summary', '')}".lower()))
     if not topic_terms or not paper_terms:
         return 0.0
     overlap = topic_terms & paper_terms
@@ -372,7 +372,6 @@ def match_level(score: float) -> str:
 def score_paper(topic: Topic, paper: dict[str, Any],
                 match_words_map: dict[str, list[str]] | None = None) -> dict[str, Any]:
     """Score paper against a topic. Returns 0 if required_words not matched."""
-    # Required words gate: at least one must match
     if match_words_map and topic.id in match_words_map:
         entry = match_words_map[topic.id]
         if isinstance(entry, dict):
@@ -382,18 +381,14 @@ def score_paper(topic: Topic, paper: dict[str, Any],
                 if not any(rw in haystack for rw in required if rw and len(rw) >= 2):
                     return {"topic_id": topic.id, "topic_name": topic.name,
                             "score": 0.0, "level": "low",
-                            "reason": f"?????: {required}", "keyword_hits": []}
+                            "reason": f"missing required: {required}", "keyword_hits": []}
 
     k_score, hits = keyword_score(topic, paper, match_words_map)
     l_score = lexical_overlap_score(topic, paper)
     base_score = round(0.65 * k_score + 0.35 * l_score, 3)
-    reason_parts = []
-    if hits:
-        reason_parts.append("??????" + "?".join(hits[:6]))
-    if not reason_parts:
-        reason_parts.append("??????????????????????")
+    reason = "; ".join(hits[:6]) if hits else "low text overlap"
     return {"topic_id": topic.id, "topic_name": topic.name, "score": base_score,
-            "level": match_level(base_score), "reason": "?".join(reason_parts),
+            "level": match_level(base_score), "reason": reason,
             "keyword_hits": hits[:6]}
 def fallback_summary(paper: dict[str, Any], best_match: dict[str, Any]) -> dict[str, str]:
     abstract = paper.get("summary", "")
@@ -748,4 +743,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-也没有问题
