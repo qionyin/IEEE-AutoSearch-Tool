@@ -47,7 +47,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CONFIG_ISSUE_TITLE: Research Interests
-          LOOKBACK_DAYS: ${{ github.event_name == 'workflow_dispatch' && inputs.lookback_days || vars.LOOKBACK_DAYS || '1' }}
+          LOOKBACK_DAYS: ${{ github.event_name == 'workflow_dispatch' && inputs.lookback_days || vars.LOOKBACK_DAYS || '30' }}
           MAX_PER_TOPIC: ${{ vars.MAX_PER_TOPIC || '25' }}
           MAX_SUMMARIES: ${{ vars.MAX_SUMMARIES || '40' }}
           MAX_STORED_PAPERS: ${{ vars.MAX_STORED_PAPERS || '800' }}
