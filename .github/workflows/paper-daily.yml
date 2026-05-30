@@ -60,6 +60,11 @@ jobs:
           LLM_MODEL: ${{ vars.LLM_MODEL || secrets.LLM_MODEL }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          API_RETRY_MIN_SECONDS: ${{ vars.API_RETRY_MIN_SECONDS || '10' }}
+          API_RETRY_BASE_SECONDS: ${{ vars.API_RETRY_BASE_SECONDS || '10' }}
+          API_RETRIES: ${{ vars.API_RETRIES || '4' }}
+          FETCH_DELAY_SECONDS: ${{ vars.FETCH_DELAY_SECONDS || '5' }}
+
         run: python scripts/collect_papers.py
 
       - name: Save paper data
@@ -83,4 +88,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
 
