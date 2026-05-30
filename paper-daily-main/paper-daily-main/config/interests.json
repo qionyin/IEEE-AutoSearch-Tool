@@ -1,73 +1,34 @@
-﻿{
-    "topics":  [
-                   {
-                       "id":  "llm_low_precision_quantization",
-                       "name":  "大模型低精度量化",
-                       "description":  "关注大语言模型低比特量化、混合精度、量化感知训练、后训练量化、权重量化、激活量化、KV cache 量化以及量化对推理性能和精度的影响。",
-                       "keywords":  [
-                                        "large language model quantization",
-                                        "LLM quantization",
-                                        "low-bit quantization",
-                                        "post-training quantization",
-                                        "weight-only quantization",
-                                        "activation quantization",
-                                        "mixed precision",
-                                        "FP8",
-                                        "INT4",
-                                        "INT8",
-                                        "KV cache quantization"
-                                    ]
-                   },
-                   {
-                       "id":  "tensor_compute_unit_architecture",
-                       "name":  "张量计算单元结构",
-                       "description":  "关注 GPU/NPU/TPU 张量计算单元、矩阵乘加阵列、数据流架构、片上存储层次、低精度张量核、AI 加速器微架构和算子映射。",
-                       "keywords":  [
-                                        "tensor processing unit",
-                                        "tensor core",
-                                        "matrix multiply unit",
-                                        "systolic array",
-                                        "AI accelerator architecture",
-                                        "NPU architecture",
-                                        "GPU tensor core",
-                                        "low precision tensor compute",
-                                        "dataflow architecture",
-                                        "on-chip memory hierarchy"
-                                    ]
-                   },
-                   {
-                       "id":  "llm_inference_cluster_communication",
-                       "name":  "大模型推理集群通信优化",
-                       "description":  "关注分布式大模型推理、prefill/decode 分离、张量并行、流水并行、专家并行、跨节点通信、调度、负载均衡和 serving 系统吞吐延迟优化。",
-                       "keywords":  [
-                                        "LLM inference serving",
-                                        "distributed inference",
-                                        "inference cluster",
-                                        "tensor parallelism",
-                                        "pipeline parallelism",
-                                        "expert parallelism",
-                                        "all-reduce",
-                                        "collective communication",
-                                        "prefill decode disaggregation",
-                                        "serving scheduler"
-                                    ]
-                   },
-                   {
-                       "id":  "kvcache_compression_storage_scheduling",
-                       "name":  "KV cache 压缩与存储调度",
-                       "description":  "关注大模型推理中的 KV cache 压缩、淘汰、分页、卸载、预取、层级存储、显存管理和长上下文推理效率优化。",
-                       "keywords":  [
-                                        "KV cache compression",
-                                        "KV cache eviction",
-                                        "KV cache scheduling",
-                                        "paged attention",
-                                        "attention cache",
-                                        "long context inference",
-                                        "memory offloading",
-                                        "GPU memory management",
-                                        "cache prefetching",
-                                        "LLM serving memory"
-                                    ]
-                   }
-               ]
+{
+  "topics": [
+    {
+      "id": "nn_antenna",
+      "name": "神经网络天线优化",
+      "description": "关注神经网络、深度学习、代理模型在天线设计、建模和优化中的应用，包括数据驱动建模和智能优化。",
+      "keywords": [
+        "neural network antenna optimization",
+        "deep learning antenna design",
+        "surrogate model antenna",
+        "machine learning antenna",
+        "AI-assisted antenna optimization",
+        "data-driven antenna modeling",
+        "neuro-network antenna",
+        "ANN antenna"
+      ]
+    },
+    {
+      "id": "algo_antenna",
+      "name": "算法天线优化",
+      "description": "关注进化算法、群体智能、多目标优化等算法在天线设计中的应用，包括遗传算法、粒子群、以及参数化建模优化。",
+      "keywords": [
+        "antenna optimization algorithm",
+        "evolutionary antenna optimization",
+        "genetic algorithm antenna",
+        "particle swarm antenna",
+        "multi-objective antenna optimization",
+        "swarm intelligence antenna",
+        "parameterized antenna optimization",
+        "surrogate-assisted antenna optimization"
+      ]
+    }
+  ]
 }
