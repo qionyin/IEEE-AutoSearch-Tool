@@ -1,0 +1,228 @@
+{
+  "generated_at": "Sat, 30 May 2026 06:23:15 +0000",
+  "generated_at_iso": "2026-05-30T06:23:15.366175+00:00",
+  "config_source": "file",
+  "topics": [
+    {
+      "id": "nn_antenna",
+      "name": "神经网络天线优化",
+      "description": "关注神经网络、深度学习、代理模型在天线设计、建模和优化中的应用，包括数据驱动建模和智能优化。",
+      "keywords": [
+        "neural network antenna optimization",
+        "deep learning antenna design",
+        "surrogate model antenna",
+        "machine learning antenna",
+        "AI-assisted antenna optimization",
+        "data-driven antenna modeling",
+        "neuro-network antenna",
+        "ANN antenna"
+      ]
+    },
+    {
+      "id": "algo_antenna",
+      "name": "算法天线优化",
+      "description": "关注进化算法、群体智能、多目标优化等算法在天线设计中的应用，包括遗传算法、粒子群、以及参数化建模优化。",
+      "keywords": [
+        "antenna optimization algorithm",
+        "evolutionary antenna optimization",
+        "genetic algorithm antenna",
+        "particle swarm antenna",
+        "multi-objective antenna optimization",
+        "swarm intelligence antenna",
+        "parameterized antenna optimization",
+        "surrogate-assisted antenna optimization"
+      ]
+    }
+  ],
+  "papers": [
+    {
+      "id": "W7161635244",
+      "source": "IEEE",
+      "title": "Design optimization of wearable antennas using an adaptive network-based fuzzy inference system",
+      "authors": [
+        "Asrafuzzaman Khan Nahin",
+        "Waleed M. Hamanah",
+        "Alaa Hussein",
+        "Ali Ahmed Salem",
+        "Mohamed Ali Abido"
+      ],
+      "summary": "This paper presents a data-driven optimization framework for wearable microstrip patch antennas operating near the 2.4 GHz ISM band using an Adaptive Network-Based Fuzzy Inference System (ANFIS). The proposed approach predicts key antenna geometry parameters-patch width, patch length, and feed point coordinates-from target electromagnetic performance metrics, including resonant frequency, reflection coefficient, bandwidth, and substrate thickness. A dataset of 500 samples was extracted from parametric HFSS simulations, and the ANFIS model was trained using a 70/30 training-testing split. Four membership function types \"triangular, trapezoidal, Gaussian, and generalized bell\" were systematically evaluated to analyze their influence on prediction accuracy and convergence behavior. Results demonstrate strong agreement between ANFIS predictions and HFSS simulations, with sub-millimeter mean absolute errors for patch dimensions and high regression coefficients across parameters. Among the tested membership functions, the generalized bell function showed the most stable convergence and the lowest overall prediction error. The proposed approach reduces reliance on repeated full-wave simulations by providing rapid estimation of antenna geometry from performance specifications, enabling faster prototyping of wearable antennas. The results highlight the importance of membership function selection in neuro-fuzzy modeling for antenna design and demonstrate the feasibility of ANFIS-based surrogate modeling for wearable communication devices.",
+      "published": "2026-05-19T00:00:00Z",
+      "updated": "2026-05-19T00:00:00Z",
+      "year": 2026,
+      "paper_url": "https://doi.org/https://doi.org/10.1038/s41598-026-53397-4",
+      "pdf_url": "https://www.nature.com/articles/s41598-026-53397-4_reference.pdf",
+      "doi": "https://doi.org/10.1038/s41598-026-53397-4",
+      "journal": "Scientific Reports",
+      "partition": "其他",
+      "categories": [],
+      "seed_topic": "nn_antenna",
+      "matches": [
+        {
+          "topic_id": "nn_antenna",
+          "topic_name": "神经网络天线优化",
+          "score": 0.735,
+          "level": "high",
+          "reason": "??????network?surrogate?model?prediction?regression?data-driven",
+          "keyword_hits": [
+            "network",
+            "surrogate",
+            "model",
+            "prediction",
+            "regression",
+            "data-driven"
+          ],
+          "llm_reason": "该论文直接涉及神经网络（ANFIS属于神经模糊网络）在天线设计中的代理模型应用，属于数据驱动建模和智能优化范畴，与我的研究方向“神经网络天线优化”高度吻合，关键词如surrogate model、data-driven、prediction均匹配。"
+        },
+        {
+          "topic_id": "algo_antenna",
+          "topic_name": "算法天线优化",
+          "score": 0.427,
+          "level": "medium",
+          "reason": "??????optimization?ga?surrogate?design?simulation?electromagnetic",
+          "keyword_hits": [
+            "optimization",
+            "ga",
+            "surrogate",
+            "design",
+            "simulation",
+            "electromagnetic"
+          ]
+        }
+      ],
+      "best_match": {
+        "topic_id": "nn_antenna",
+        "topic_name": "神经网络天线优化",
+        "score": 0.735,
+        "level": "high",
+        "reason": "??????network?surrogate?model?prediction?regression?data-driven",
+        "keyword_hits": [
+          "network",
+          "surrogate",
+          "model",
+          "prediction",
+          "regression",
+          "data-driven"
+        ],
+        "llm_reason": "该论文直接涉及神经网络（ANFIS属于神经模糊网络）在天线设计中的代理模型应用，属于数据驱动建模和智能优化范畴，与我的研究方向“神经网络天线优化”高度吻合，关键词如surrogate model、data-driven、prediction均匹配。"
+      },
+      "chinese_summary": {
+        "problem": "针对可穿戴微带贴片天线设计依赖重复全波仿真、效率低的问题，提出一种基于自适应神经模糊推理系统（ANFIS）的数据驱动优化框架，以快速从目标电磁性能预测天线几何参数。",
+        "method": "采用ANFIS作为代理模型，从500个HFSS仿真样本中训练，以谐振频率、反射系数、带宽和衬底厚度为输入，预测贴片宽度、长度和馈点坐标；并系统评估了四种隶属度函数（三角形、梯形、高斯、广义钟形）对预测精度的影响。",
+        "innovation": "1. 将ANFIS首次系统应用于可穿戴天线几何参数的逆向预测，实现从性能指标到尺寸的快速映射；2. 对比了四种隶属度函数对预测精度和收敛稳定性的影响，发现广义钟形函数表现最优；3. 构建了数据驱动的代理模型，显著减少对全波仿真的依赖，加速可穿戴天线原型设计。",
+        "evidence": "摘要中提供了可核验的实验证据：基于500个HFSS仿真样本，70/30训练测试划分；ANFIS预测与HFSS仿真结果高度一致，贴片尺寸的平均绝对误差在亚毫米级别，回归系数高；广义钟形隶属度函数收敛最稳定且误差最低。",
+        "limitations": "1. 数据集仅500个样本，规模较小，可能限制模型泛化能力；2. 仅针对2.4 GHz ISM频段的矩形微带贴片天线，未验证其他天线类型或频段；3. 需阅读全文确认是否与全波仿真进行了统计显著性对比，以及是否考虑了制造公差等实际因素。",
+        "why_relevant": "该论文直接涉及神经网络（ANFIS属于神经模糊网络）在天线设计中的代理模型应用，属于数据驱动建模和智能优化范畴，与我的研究方向“神经网络天线优化”高度吻合，关键词如surrogate model、data-driven、prediction均匹配。"
+      },
+      "first_seen_at": "2026-05-30T06:23:15.366175+00:00",
+      "last_seen_at": "2026-05-30T06:23:15.366175+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "W7138903160",
+      "source": "IEEE",
+      "title": "Automated experimentally validated antenna design framework using versatile parameterization scheme",
+      "authors": [
+        "Slawomir Koziel",
+        "Anna Pietrenko-Dabrowska",
+        "Stanislaw Szczepanski"
+      ],
+      "summary": "Modern antenna design is an intrinsic undertaking. It relies heavily on expert knowledge and computational tools, especially electromagnetic (EM) simulation software. The most daunting phase is the development of a fundamental antenna topology that exhibits the assumed functionality (such as antenna’ ability to operate across a broad or multiple frequency bands) while fulfilling other conditions (e.g., sufficiently small size). The process typically takes weeks of interactive work and involves partly trial-and-error-based geometry modification and parametric studies. As a result, a limited number of possible configurations may be examined. Unsupervised topology generation constitutes an attractive alternative, although the existing methodologies are computationally expensive or intrusive (e.g., require dedicated fast solvers and/or adjoint sensitivities). This study introduces a database-aided automated antenna design technique and its experimental validation. Our approach employs a flexible parameterization incorporating adjustable elliptical patches and gaps. Comprehensive simulation data acquired for diverse arrangements of the building blocks and substrate sizes is looked up at the design stage, and the most promising architecture is tuned using the expedited gradient-based optimizer. As demonstrated, the presented approach enabled the specification-based development of high-performance antenna geometries, requiring fewer than two hundred EM simulations. For illustration, several broadband, ultrawideband, and multi-band antennas are designed, including structures optimized for minimum size. A distinctive feature of the procedure is the ability to generate wideband antennas (e.g., 5–6 GHz, 3.1–5.8 GHZ), ultra-wideband structures (3.1–10.6 GHz), and up to triple-band radiators (e.g., 2.45–5.3–7.5 GHz), or devices featuring specific dimensions (e.g., fixed width or length). Due to highly unconventional antenna geometries rendered by the proposed approach, experimental validation of the developed structures is instrumental to corroborate the relevance of the methodology. Toward this end, selected designs are prototyped, and their electrical and field characteristics are measured, showing good agreement with full-wave simulations. This underscores the suitability of the proposed technique for automated antenna development with no expert interaction required.",
+      "published": "2026-03-18T00:00:00Z",
+      "updated": "2026-03-18T00:00:00Z",
+      "year": 2026,
+      "paper_url": "https://doi.org/https://doi.org/10.1038/s41598-026-43974-y",
+      "pdf_url": "https://www.nature.com/articles/s41598-026-43974-y_reference.pdf",
+      "doi": "https://doi.org/10.1038/s41598-026-43974-y",
+      "journal": "Scientific Reports",
+      "partition": "其他",
+      "categories": [],
+      "seed_topic": "algo_antenna",
+      "matches": [
+        {
+          "topic_id": "nn_antenna",
+          "topic_name": "神经网络天线优化",
+          "score": 0.276,
+          "level": "low",
+          "reason": "??????ai?design?simulation?electromagnetic?patch?frequency",
+          "keyword_hits": [
+            "ai",
+            "design",
+            "simulation",
+            "electromagnetic",
+            "patch",
+            "frequency"
+          ],
+          "llm_reason": "论文聚焦于天线设计的自动化优化，核心方法涉及数据驱动（数据库辅助）和智能优化（梯度优化），与我的研究方向“神经网络天线优化”中代理模型、数据驱动建模和智能优化高度相关，但本文未直接使用神经网络，而是基于预计算数据库。"
+        },
+        {
+          "topic_id": "algo_antenna",
+          "topic_name": "算法天线优化",
+          "score": 0.235,
+          "level": "low",
+          "reason": "??????ga?design?simulation?electromagnetic?frequency",
+          "keyword_hits": [
+            "ga",
+            "design",
+            "simulation",
+            "electromagnetic",
+            "frequency"
+          ]
+        }
+      ],
+      "best_match": {
+        "topic_id": "nn_antenna",
+        "topic_name": "神经网络天线优化",
+        "score": 0.276,
+        "level": "low",
+        "reason": "??????ai?design?simulation?electromagnetic?patch?frequency",
+        "keyword_hits": [
+          "ai",
+          "design",
+          "simulation",
+          "electromagnetic",
+          "patch",
+          "frequency"
+        ],
+        "llm_reason": "论文聚焦于天线设计的自动化优化，核心方法涉及数据驱动（数据库辅助）和智能优化（梯度优化），与我的研究方向“神经网络天线优化”中代理模型、数据驱动建模和智能优化高度相关，但本文未直接使用神经网络，而是基于预计算数据库。"
+      },
+      "chinese_summary": {
+        "problem": "论文解决传统天线设计依赖专家知识和大量试错、计算成本高、拓扑生成自动化程度低的问题。",
+        "method": "提出一种基于数据库辅助的自动化天线设计框架，采用包含可调椭圆贴片和间隙的灵活参数化方案，通过查询预计算仿真数据并利用快速梯度优化器进行调谐。",
+        "innovation": "1. 引入数据库辅助的自动化设计流程，无需专家交互即可生成天线拓扑；2. 采用灵活的参数化方案（椭圆贴片和间隙），支持宽带、超宽带及多频段天线设计；3. 通过实验验证了非常规几何结构的实际性能，确保方法有效性。",
+        "evidence": "摘要中提及：设计过程需少于200次电磁仿真；对宽带（如5-6 GHz）、超宽带（3.1-10.6 GHz）及三频段（如2.45-5.3-7.5 GHz）天线进行了设计优化；对选定设计进行了原型制作和测量，电气与场特性与全波仿真吻合良好。",
+        "limitations": "1. 数据库的构建需要大量预计算仿真，可能带来初始成本；2. 方法依赖于特定参数化方案（椭圆贴片和间隙），可能不适用于所有天线类型；3. 需要阅读全文确认梯度优化器的具体实现及对复杂约束的处理能力。",
+        "why_relevant": "论文聚焦于天线设计的自动化优化，核心方法涉及数据驱动（数据库辅助）和智能优化（梯度优化），与我的研究方向“神经网络天线优化”中代理模型、数据驱动建模和智能优化高度相关，但本文未直接使用神经网络，而是基于预计算数据库。"
+      },
+      "first_seen_at": "2026-05-30T06:23:15.366175+00:00",
+      "last_seen_at": "2026-05-30T06:23:15.366175+00:00",
+      "retained_from_previous_run": false
+    }
+  ],
+  "stats": {
+    "paper_count": 2,
+    "new_paper_count": 2,
+    "days": 180,
+    "collection_mode": "lookback",
+    "collection_cutoff_iso": "2025-12-01T06:23:15.366175+00:00",
+    "max_per_topic": 25,
+    "llm_enabled": true,
+    "llm_concurrency": 2,
+    "recent_history_days": 45,
+    "successful_fetches": 2,
+    "failed_fetches": 0,
+    "retained_paper_count": 0,
+    "retained_recent_low_count": 0,
+    "dropped_low_relevance_count": 0,
+    "max_stored_papers": 800,
+    "max_data_bytes": 8388608,
+    "data_bytes": 15499,
+    "storage_trimmed_count": 0,
+    "storage_trimmed_by_level": {
+      "high": 0,
+      "medium": 0,
+      "low": 0,
+      "unknown": 0
+    }
+  }
+}
