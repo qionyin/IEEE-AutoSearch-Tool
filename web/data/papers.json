@@ -1,0 +1,2549 @@
+{
+  "generated_at": "Sat, 30 May 2026 05:44:08 +0000",
+  "generated_at_iso": "2026-05-30T05:44:08.991550+00:00",
+  "config_source": "file",
+  "topics": [
+    {
+      "id": "llm_low_precision_quantization",
+      "name": "大模型低精度量化",
+      "description": "关注大语言模型低比特量化、混合精度、量化感知训练、后训练量化、权重量化、激活量化、KV cache 量化以及量化对推理性能和精度的影响。",
+      "keywords": [
+        "large language model quantization",
+        "LLM quantization",
+        "low-bit quantization",
+        "post-training quantization",
+        "weight-only quantization",
+        "activation quantization",
+        "mixed precision",
+        "FP8",
+        "INT4",
+        "INT8",
+        "KV cache quantization"
+      ]
+    },
+    {
+      "id": "tensor_compute_unit_architecture",
+      "name": "张量计算单元结构",
+      "description": "关注 GPU/NPU/TPU 张量计算单元、矩阵乘加阵列、数据流架构、片上存储层次、低精度张量核、AI 加速器微架构和算子映射。",
+      "keywords": [
+        "tensor processing unit",
+        "tensor core",
+        "matrix multiply unit",
+        "systolic array",
+        "AI accelerator architecture",
+        "NPU architecture",
+        "GPU tensor core",
+        "low precision tensor compute",
+        "dataflow architecture",
+        "on-chip memory hierarchy"
+      ]
+    },
+    {
+      "id": "llm_inference_cluster_communication",
+      "name": "大模型推理集群通信优化",
+      "description": "关注分布式大模型推理、prefill/decode 分离、张量并行、流水并行、专家并行、跨节点通信、调度、负载均衡和 serving 系统吞吐延迟优化。",
+      "keywords": [
+        "LLM inference serving",
+        "distributed inference",
+        "inference cluster",
+        "tensor parallelism",
+        "pipeline parallelism",
+        "expert parallelism",
+        "all-reduce",
+        "collective communication",
+        "prefill decode disaggregation",
+        "serving scheduler"
+      ]
+    },
+    {
+      "id": "kvcache_compression_storage_scheduling",
+      "name": "KV cache 压缩与存储调度",
+      "description": "关注大模型推理中的 KV cache 压缩、淘汰、分页、卸载、预取、层级存储、显存管理和长上下文推理效率优化。",
+      "keywords": [
+        "KV cache compression",
+        "KV cache eviction",
+        "KV cache scheduling",
+        "paged attention",
+        "attention cache",
+        "long context inference",
+        "memory offloading",
+        "GPU memory management",
+        "cache prefetching",
+        "LLM serving memory"
+      ]
+    }
+  ],
+  "papers": [
+    {
+      "id": "2605.28803v1",
+      "source": "arXiv",
+      "title": "Ω-QVLA: Robust Quantization for Vision-Language-Action Models via Composite Rotation and Per-step Scaling",
+      "authors": [
+        "Xinyu Wang",
+        "Mingze Li",
+        "Sicheng Lyu",
+        "Dongxiu Liu",
+        "Kaicheng Yang",
+        "Ziyu Zhao",
+        "Yufei Cui",
+        "Xiao-Wen Chang",
+        "Peng Lu"
+      ],
+      "summary": "Vision-Language-Action (VLA) models unify perception, reasoning, and control within a single policy, yet their multi-billion-parameter backbones and diffusion-based action heads make on-device deployment prohibitively expensive. Prior quantization efforts offer only partial solutions, compressing the LLM backbone while leaving the DiT action head at full precision, or resorting to mixed-precision schemes, driven by the belief that uniformly quantizing the action head is inherently unstable. We challenge this assumption with Omega-QVLA, the first training-free post-training quantization framework that compresses both the language backbone and the entire diffusion action head of a VLA model to a uniform W4A4 precision, eliminating the need for mixed-precision allocation. Omega-QVLA combines a composite SVD-Hadamard rotation that equalizes per-channel weight energy while diffusing residual activation outliers with per-step DiT activation scaling quantization that absorbs dynamic-range drift across denoising steps. On LIBERO, Omega-QVLA compresses Pi 0.5 and GR00T N1.5 to W4A4 with 98.0% and 87.8% task success rates, matching or exceeding their FP16 references of 97.1% and 87.0%, while reducing the static memory footprint by 71.3%. Real-world manipulation experiments further confirm smooth, accurate manipulation where prior methods fail. Code is available at https://github.com/UCMP13753/Omega-QVLA.",
+      "published": "2026-05-27T17:55:01Z",
+      "updated": "2026-05-27T17:55:01Z",
+      "paper_url": "http://arxiv.org/abs/2605.28803v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.28803v1",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "seed_topic": "llm_low_precision_quantization",
+      "matches": [
+        {
+          "topic_id": "llm_low_precision_quantization",
+          "topic_name": "大模型低精度量化",
+          "score": 0.853,
+          "level": "high",
+          "reason": "关键词命中：post-training quantization；arXiv 分类重合：cs.LG",
+          "keyword_hits": [
+            "post-training quantization"
+          ],
+          "llm_reason": "论文涉及大模型后训练量化，旨在实现低比特（W4A4）权重量化和激活量化，与我的研究方向“大模型低精度量化”高度吻合，特别是该方法在LLM和扩散模型上的均匀量化技术对研究有直接参考价值。"
+        },
+        {
+          "topic_id": "tensor_compute_unit_architecture",
+          "topic_name": "张量计算单元结构",
+          "score": 0.156,
+          "level": "low",
+          "reason": "arXiv 分类重合：cs.LG",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "kvcache_compression_storage_scheduling",
+          "topic_name": "KV cache 压缩与存储调度",
+          "score": 0.125,
+          "level": "low",
+          "reason": "arXiv 分类重合：cs.LG",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_inference_cluster_communication",
+          "topic_name": "大模型推理集群通信优化",
+          "score": 0.094,
+          "level": "low",
+          "reason": "arXiv 分类重合：cs.LG",
+          "keyword_hits": []
+        }
+      ],
+      "best_match": {
+        "topic_id": "llm_low_precision_quantization",
+        "topic_name": "大模型低精度量化",
+        "score": 0.853,
+        "level": "high",
+        "reason": "关键词命中：post-training quantization；arXiv 分类重合：cs.LG",
+        "keyword_hits": [
+          "post-training quantization"
+        ],
+        "llm_reason": "论文涉及大模型后训练量化，旨在实现低比特（W4A4）权重量化和激活量化，与我的研究方向“大模型低精度量化”高度吻合，特别是该方法在LLM和扩散模型上的均匀量化技术对研究有直接参考价值。"
+      },
+      "chinese_summary": {
+        "problem": "现有VLA模型量化方法大多只压缩LLM主干而保持DiT动作头全精度，或采用混合精度，因为认为均匀量化动作头不稳定，导致无法实现模型整体的低比特均匀量化，阻碍端侧部署。",
+        "method": "提出训练免费的后训练量化方法Ω-QVLA，结合复合SVD-Hadamard旋转均衡每通道权重能量并扩散激活异常值，以及逐步DiT激活缩放量化技术吸收去噪步骤间的动态范围漂移，实现对LLM主干和扩散动作头的统一W4A4量化。",
+        "innovation": "1) 首次对VLA模型实现无需训练的W4A4统一量化，打破扩散动作头无法均匀量化的假设；2) 提出复合SVD-Hadamard旋转，同时解决权重量化困难和激活异常值问题；3) 设计逐步DiT激活缩放量化方法，无需混合精度即可处理去噪过程中激活的动态范围变化。",
+        "evidence": "在LIBERO基准上，Ω-QVLA将Pi 0.5和GR00T N1.5压缩至W4A4，任务成功率分别达98.0%和87.8%，匹配或超过FP16基准的97.1%和87.0%，静态内存占用减少71.3%；真实世界操作实验验证了平滑准确的操作，优于先前方法。",
+        "limitations": "摘要未提及除LIBERO外的泛化性，量化仅针对特定VLA模型架构，逐步缩放对更长去噪步骤的适应性需进一步验证，未讨论量化对推理延迟的影响。",
+        "why_relevant": "论文涉及大模型后训练量化，旨在实现低比特（W4A4）权重量化和激活量化，与我的研究方向“大模型低精度量化”高度吻合，特别是该方法在LLM和扩散模型上的均匀量化技术对研究有直接参考价值。"
+      },
+      "first_seen_at": "2026-05-28T09:35:48.728882+00:00",
+      "last_seen_at": "2026-05-28T13:18:49.361053+00:00",
+      "retained_from_previous_run": true
+    },
+    {
+      "id": "W7162605972",
+      "source": "IEEE",
+      "title": "Bandwidth-Aware LLM Inference on Heterogeneous Many-Core Supercomputers",
+      "authors": [
+        "Yao Lu",
+        "Zhongzhi Luan",
+        "Gen Li",
+        "Jiaxing Qi",
+        "Shiqing Ma",
+        "Bin Han",
+        "Shizhe Shang",
+        "Hailong Yang",
+        "Depei Qian"
+      ],
+      "summary": "Large language model (LLM) inference is limited by high computational cost and memory bandwidth demands, making deployment on heterogeneous many-core processors challenging. Taking the MT-3000 processor used in the Tianhe supercomputer as an example, its limited main-memory bandwidth and distributed memory hierarchy exemplify these bottlenecks, making it difficult to directly migrate existing GPU-based inference frameworks. To address this problem, we propose THInfer, a hardware-aware inference framework that maximizes data locality under bandwidth-constrained conditions through hardware-software co-design and parallel strategy optimization. THInfer incorporates three key techniques: (1) a high-performance operator library for the VLIW SIMD architecture, providing hand-optimized FP16 kernels that achieve up to 70 percent of the peak performance per cluster; (2) a density-driven computation graph fusion and unified kernel scheduling mechanism, combined with a staged pipelined attention fusion method; and (3) a Prefill-Buffer-Decode (P-B-D) pipeline and bounded buffer management strategy, which supports hybrid parallelism and enables efficient multi-cluster collaboration through two-level communication based on MPI and hthreads. Experiments on the Llama model series show that THInfer improves throughput on the 7B model by 62 percent to 73 percent over DeepSpeed on two V100S GPUs and by 67 percent to 84 percent over the A800 GPU. The 13B and 30B models also demonstrate comparable or better performance. Moreover, THInfer maintains stable performance on the 70B model, whereas typical GPU-based frameworks fail to run under the same setting. Overall, THInfer significantly enhances throughput, reduces latency, and improves scalability, providing a feasible system solution for efficient and scalable LLM inference on heterogeneous many-core architectures.",
+      "published": "2026-05-25T00:00:00Z",
+      "updated": "2026-05-25T00:00:00Z",
+      "year": 2026,
+      "paper_url": "https://arxiv.org/abs/2605.25655",
+      "pdf_url": "https://arxiv.org/pdf/2605.25655",
+      "doi": null,
+      "journal": "arXiv (Cornell University)",
+      "partition": "其他",
+      "categories": [],
+      "seed_topic": "llm_inference_cluster_communication",
+      "matches": [
+        {
+          "topic_id": "llm_inference_cluster_communication",
+          "topic_name": "大模型推理集群通信优化",
+          "score": 0.55,
+          "level": "medium",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": [],
+          "llm_reason": "论文关注分布式推理中的通信优化（两级通信、混合并行），与研究方向中的跨节点通信、张量并行、流水并行、prefill/decode分离等高度相关。"
+        },
+        {
+          "topic_id": "kvcache_compression_storage_scheduling",
+          "topic_name": "KV cache 压缩与存储调度",
+          "score": 0.306,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "tensor_compute_unit_architecture",
+          "topic_name": "张量计算单元结构",
+          "score": 0.262,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_low_precision_quantization",
+          "topic_name": "大模型低精度量化",
+          "score": 0.175,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        }
+      ],
+      "best_match": {
+        "topic_id": "llm_inference_cluster_communication",
+        "topic_name": "大模型推理集群通信优化",
+        "score": 0.55,
+        "level": "medium",
+        "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+        "keyword_hits": [],
+        "llm_reason": "论文关注分布式推理中的通信优化（两级通信、混合并行），与研究方向中的跨节点通信、张量并行、流水并行、prefill/decode分离等高度相关。"
+      },
+      "chinese_summary": {
+        "problem": "异构众核超级计算机上大模型推理受限于有限的主存带宽和分布式内存层次结构，现有GPU推理框架难以直接迁移。",
+        "method": "提出THInfer框架，通过硬件-软件协同设计和并行策略优化最大化数据局部性，包括高性能算子库、密度驱动的计算图融合与统一内核调度、以及Prefill-Buffer-Decode流水线和有界缓冲区管理。",
+        "innovation": "1) 针对VLIW SIMD架构提供手调FP16内核，达到每簇峰值性能的70%；2) 密度驱动的计算图融合与统一内核调度机制，结合分阶段流水线注意力融合方法；3) Prefill-Buffer-Decode流水线支持混合并行和基于MPI/hthreads的两级通信的多簇协作。",
+        "evidence": "在Llama模型系列上，THInfer在7B模型上相比DeepSpeed（两块V100S GPU）吞吐量提升62%-73%，相比A800 GPU提升67%-84%；13B和30B模型表现相当或更好；70B模型稳定运行而GPU框架失败。",
+        "limitations": "实验仅在MT-3000处理器上进行，未在主流GPU集群上对比；需要阅读全文确认通信优化细节（如all-reduce实现）和调度策略。",
+        "why_relevant": "论文关注分布式推理中的通信优化（两级通信、混合并行），与研究方向中的跨节点通信、张量并行、流水并行、prefill/decode分离等高度相关。"
+      },
+      "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "W7162149650",
+      "source": "IEEE",
+      "title": "Frontier: Towards Comprehensive and Accurate LLM Inference Simulation",
+      "authors": [
+        "Yicheng Feng",
+        "Xin Tan",
+        "Yangtao Deng",
+        "Yimin Jiang",
+        "Yibo Zhu",
+        "Hong Xu"
+      ],
+      "summary": "Modern LLM serving is no longer homogeneous or monolithic. Production systems now combine disaggregated execution, complex parallelism, runtime optimizations, and stateful workloads such as reasoning, agents, and RL rollouts. Simulation is attractive for exploring this growing design space, yet existing simulators lack the architectural completeness and decision-grade fidelity it demands. Their monolithic-replica abstractions are ill-suited to disaggregated serving, while average-case analytical proxies can distort SLA predictions and even reverse optimization conclusions. We present Frontier, a discrete-event simulator for modern LLM inference serving. Frontier features a disaggregated abstraction. It captures the structure and dynamics of modern serving systems by modeling co-location, Prefill-Decode Disaggregation (PDD), and Attention-FFN Disaggregation (AFD) with role-specific cluster workers, incorporating key runtime optimizations (e.g., CUDA Graphs, speculative decoding) within the scheduler-batch-engine loop, and supporting stateful requests for emerging workloads. It further provides accurate and generalizable predictions of computation, communication, and memory costs across diverse serving scenarios with complex workload compositions. On 16-H800 GPU testbed, Frontier achieves an average throughput error below 4%. Compared with state-of-the-art simulators, it reduces end-to-end latency error from 44.9% to 6.4% under co-location and from 51.7% to 2.6% under disaggregation. It scales to over 1K GPUs on commodity CPUs and enables new use cases such as SLA-dependent Pareto frontier exploration, heterogeneous disaggregated allocation, agentic reasoning scheduling validation, and RL post-training reconfiguration.",
+      "published": "2026-05-20T00:00:00Z",
+      "updated": "2026-05-20T00:00:00Z",
+      "year": 2026,
+      "paper_url": "https://arxiv.org/abs/2605.21312",
+      "pdf_url": "https://arxiv.org/pdf/2605.21312",
+      "doi": null,
+      "journal": "ArXiv.org",
+      "partition": "其他",
+      "categories": [],
+      "seed_topic": "llm_inference_cluster_communication",
+      "matches": [
+        {
+          "topic_id": "llm_inference_cluster_communication",
+          "topic_name": "大模型推理集群通信优化",
+          "score": 0.428,
+          "level": "high",
+          "reason": "关键词命中：LLM inference serving",
+          "keyword_hits": [
+            "LLM inference serving"
+          ],
+          "llm_reason": "论文聚焦于LLM推理服务的模拟，涉及分离式执行、并行策略（张量并行、流水并行等）、通信开销建模和调度优化，与我的研究方向“大模型推理集群通信优化”高度相关。"
+        },
+        {
+          "topic_id": "kvcache_compression_storage_scheduling",
+          "topic_name": "KV cache 压缩与存储调度",
+          "score": 0.306,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_low_precision_quantization",
+          "topic_name": "大模型低精度量化",
+          "score": 0.131,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "tensor_compute_unit_architecture",
+          "topic_name": "张量计算单元结构",
+          "score": 0.131,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        }
+      ],
+      "best_match": {
+        "topic_id": "llm_inference_cluster_communication",
+        "topic_name": "大模型推理集群通信优化",
+        "score": 0.428,
+        "level": "high",
+        "reason": "关键词命中：LLM inference serving",
+        "keyword_hits": [
+          "LLM inference serving"
+        ],
+        "llm_reason": "论文聚焦于LLM推理服务的模拟，涉及分离式执行、并行策略（张量并行、流水并行等）、通信开销建模和调度优化，与我的研究方向“大模型推理集群通信优化”高度相关。"
+      },
+      "chinese_summary": {
+        "problem": "现有LLM推理模拟器缺乏架构完整性和高保真度，无法准确模拟现代生产系统中的分离式执行、复杂并行、运行时优化及有状态工作负载。",
+        "method": "提出离散事件模拟器Frontier，采用分离式抽象，建模Prefill-Decode分离和Attention-FFN分离，集成CUDA Graphs、推测解码等运行时优化，并支持有状态请求。",
+        "innovation": "1. 提出分离式抽象，支持Prefill-Decode分离和Attention-FFN分离，更贴合生产系统；2. 在调度-批处理-引擎循环中集成关键运行时优化（如CUDA Graphs、推测解码），提高模拟保真度；3. 提供跨多种服务场景的计算、通信和内存成本的准确且可泛化的预测。",
+        "evidence": "在16-H800 GPU测试平台上，平均吞吐量误差低于4%；与最先进模拟器相比，端到端延迟误差在共置场景下从44.9%降至6.4%，在分离场景下从51.7%降至2.6%；可扩展到超过1K GPU。",
+        "limitations": "模拟器精度依赖于对系统行为的建模假设，可能无法完全覆盖所有实际硬件和网络细节；需要阅读全文确认通信模型的具体实现和假设。",
+        "why_relevant": "论文聚焦于LLM推理服务的模拟，涉及分离式执行、并行策略（张量并行、流水并行等）、通信开销建模和调度优化，与我的研究方向“大模型推理集群通信优化”高度相关。"
+      },
+      "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "W7161915960",
+      "source": "IEEE",
+      "title": "OSCAR: Offline Spectral Covariance-Aware Rotation for 2-bit KV Cache Quantization",
+      "authors": [
+        "Zhongzhu Zhou",
+        "Donglin Zhuang",
+        "Jisen Li",
+        "Ziyan Chen",
+        "Shuaiwen Leon Song",
+        "Ben Athiwaratkun",
+        "Xiaoxia Wu"
+      ],
+      "summary": "INT2 KV-cache quantization is attractive for long-context LLM serving, but it remains difficult to make both accurate and deployable. Simple rotations such as Hadamard transforms reduce outliers, but still degrade at INT2 because they are not aligned with downstream attention. We propose OSCAR, an Ultra-low-bit KV Cache quantization method that estimates attention-aware covariance structures offline and uses them to derive fixed rotations and clipping thresholds for quantization. In this way, it aligns KV quantization with the covariance structures that attention actually consumes. More importantly, we not only provide theoretical justification but also develop a fully deployable OSCAR system with a custom INT2 attention kernel that remains compatible with paged KV-cache serving and fused kernel pipelines, enabling seamless integration into modern LLM serving frameworks such as SGLang and vLLM. We evaluate our methods on recent reasoning models with reasoning traces of up to 32k tokens across 5 tasks. On Qwen3-4B-Thinking-2507 and Qwen3-8B, OSCAR reduces the BF16 accuracy gap to 3.78 and 1.42 points, respectively, while naive rotation INT2 collapses to nearly zero. We further scale OSCAR to Qwen3-32B and GLM-4.7 (358B params), where it remains effectively on par with BF16. On long context - RULER-NIAH up to 128K, OSCAR remains robust on both Qwen3 models, while naive rotation INT2 collapses. System-wise, OSCAR reduces KV-cache memory by approximately 8x, improves throughput by up to 7x at large batch sizes under the same memory budget, and accelerates batch-size-1 decoding by up to 3x over BF16 due to reduced memory bandwidth overhead.",
+      "published": "2026-05-18T00:00:00Z",
+      "updated": "2026-05-18T00:00:00Z",
+      "year": 2026,
+      "paper_url": "https://arxiv.org/abs/2605.17757",
+      "pdf_url": "https://arxiv.org/pdf/2605.17757",
+      "doi": null,
+      "journal": "ArXiv.org",
+      "partition": "其他",
+      "categories": [],
+      "seed_topic": "llm_low_precision_quantization",
+      "matches": [
+        {
+          "topic_id": "llm_low_precision_quantization",
+          "topic_name": "大模型低精度量化",
+          "score": 0.428,
+          "level": "high",
+          "reason": "关键词命中：KV cache quantization",
+          "keyword_hits": [
+            "KV cache quantization"
+          ],
+          "llm_reason": "论文聚焦于KV缓存量化，特别是INT2超低比特量化，与我的研究方向“大模型低精度量化”中的KV cache量化高度相关，且涉及权重量化、激活量化等概念。"
+        },
+        {
+          "topic_id": "kvcache_compression_storage_scheduling",
+          "topic_name": "KV cache 压缩与存储调度",
+          "score": 0.35,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "tensor_compute_unit_architecture",
+          "topic_name": "张量计算单元结构",
+          "score": 0.131,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_inference_cluster_communication",
+          "topic_name": "大模型推理集群通信优化",
+          "score": 0.131,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        }
+      ],
+      "best_match": {
+        "topic_id": "llm_low_precision_quantization",
+        "topic_name": "大模型低精度量化",
+        "score": 0.428,
+        "level": "high",
+        "reason": "关键词命中：KV cache quantization",
+        "keyword_hits": [
+          "KV cache quantization"
+        ],
+        "llm_reason": "论文聚焦于KV缓存量化，特别是INT2超低比特量化，与我的研究方向“大模型低精度量化”中的KV cache量化高度相关，且涉及权重量化、激活量化等概念。"
+      },
+      "chinese_summary": {
+        "problem": "现有INT2 KV缓存量化方法在精度和部署性上难以兼得，简单旋转（如Hadamard变换）虽减少异常值，但未与下游注意力对齐，导致精度下降。",
+        "method": "提出OSCAR方法，离线估计注意力感知的协方差结构，并据此推导固定旋转矩阵和裁剪阈值，使KV量化与注意力实际使用的协方差结构对齐。",
+        "innovation": "1. 首次将注意力感知协方差结构用于离线推导旋转和裁剪阈值，实现INT2量化与注意力对齐；2. 提供理论证明；3. 开发了完全可部署的OSCAR系统，包含自定义INT2注意力核，兼容分页KV缓存和融合核流水线，可无缝集成到SGLang和vLLM等框架。",
+        "evidence": "在Qwen3-4B-Thinking-2507和Qwen3-8B上，OSCAR将BF16精度差距分别降至3.78和1.42点，而朴素旋转INT2几乎崩溃；在Qwen3-32B和GLM-4.7（358B参数）上，OSCAR与BF16相当；在RULER-NIAH长上下文（128K）上保持鲁棒；系统方面，KV缓存内存减少约8倍，大batch下吞吐量提升7倍，单batch解码加速3倍。",
+        "limitations": "1. 方法依赖离线协方差估计，可能对动态注意力模式适应性有限；2. 仅评估了INT2量化，未涉及其他低比特（如INT4、FP8）；3. 实验模型主要为Qwen3和GLM系列，泛化性需更多验证。",
+        "why_relevant": "论文聚焦于KV缓存量化，特别是INT2超低比特量化，与我的研究方向“大模型低精度量化”中的KV cache量化高度相关，且涉及权重量化、激活量化等概念。"
+      },
+      "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "W7161916004",
+      "source": "IEEE",
+      "title": "VeriCache: Turning Lossy KV Cache into Lossless LLM Inference",
+      "authors": [
+        "Jiayi Yao",
+        "Samuel Shen",
+        "Kuntai Du",
+        "Shaoting Feng",
+        "Dongjoo Seo",
+        "Rui Zhang",
+        "Yuyang Huang",
+        "Yuhan Liu",
+        "Shan Lu",
+        "Junchen Jiang"
+      ],
+      "summary": "The large size of the KV cache has become a major bottleneck for serving LLMs with increasing context lengths. In response, many KV cache compression methods, such as token dropping and quantization, have been proposed. However, almost all of these methods are inherently lossy-despite minimal accuracy degradation for short outputs, their outputs increasingly diverge from full-KV-cache outputs as more tokens are decoded, which leads to catastrophic failures in code generation and tool calling. We present VeriCache, the first inference framework that ensures the same output as full-KV-cache decoding but largely preserves the high decoding throughput of a range of KV cache compression algorithms. VeriCache uses the compressed KV cache to draft tokens, then verifies them against the full KV cache. While it may seem like just speculative decoding, VeriCache requires addressing a key system challenge to work-keeping the full KV cache out of GPU memory and minimizing the overhead of swapping it in for verification. The insight is two-fold: (1) compressed-KV decoding can be parallelized with full-KV swap, because one is HBM-bandwidth-bound and the other is PCIe/network-bound, and (2) the compressed KV cache often produces output similar to the full KV cache, allowing a long drafting horizon to amortize each full-KV swap. VeriCache applies to both long-context decoding and remote prefix caching, supports a broad family of token-dropping and quantization methods through a uniform compressor interface, and composes with traditional speculative decoding. Experimental results show that VeriCache achieves up to 4X higher throughput than full-KV inference while producing identical outputs.",
+      "published": "2026-05-17T00:00:00Z",
+      "updated": "2026-05-17T00:00:00Z",
+      "year": 2026,
+      "paper_url": "https://arxiv.org/abs/2605.17613",
+      "pdf_url": "https://arxiv.org/pdf/2605.17613",
+      "doi": null,
+      "journal": "ArXiv.org",
+      "partition": "其他",
+      "categories": [],
+      "seed_topic": "kvcache_compression_storage_scheduling",
+      "matches": [
+        {
+          "topic_id": "kvcache_compression_storage_scheduling",
+          "topic_name": "KV cache 压缩与存储调度",
+          "score": 0.428,
+          "level": "high",
+          "reason": "关键词命中：KV cache compression",
+          "keyword_hits": [
+            "KV cache compression"
+          ],
+          "llm_reason": "论文直接研究KV cache压缩（有损方法）并引入调度（交换、并行化），与我的研究方向“KV cache压缩与存储调度”高度吻合，涉及压缩、淘汰、卸载、预取和显存管理。"
+        },
+        {
+          "topic_id": "llm_low_precision_quantization",
+          "topic_name": "大模型低精度量化",
+          "score": 0.219,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_inference_cluster_communication",
+          "topic_name": "大模型推理集群通信优化",
+          "score": 0.175,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "tensor_compute_unit_architecture",
+          "topic_name": "张量计算单元结构",
+          "score": 0.087,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        }
+      ],
+      "best_match": {
+        "topic_id": "kvcache_compression_storage_scheduling",
+        "topic_name": "KV cache 压缩与存储调度",
+        "score": 0.428,
+        "level": "high",
+        "reason": "关键词命中：KV cache compression",
+        "keyword_hits": [
+          "KV cache compression"
+        ],
+        "llm_reason": "论文直接研究KV cache压缩（有损方法）并引入调度（交换、并行化），与我的研究方向“KV cache压缩与存储调度”高度吻合，涉及压缩、淘汰、卸载、预取和显存管理。"
+      },
+      "chinese_summary": {
+        "problem": "大模型推理中KV cache体积过大成为瓶颈，现有有损压缩方法在长上下文解码时输出与完整KV cache逐渐偏离，导致代码生成和工具调用等任务出现灾难性失败。",
+        "method": "提出VeriCache框架，使用压缩KV cache进行草稿解码，然后与完整KV cache进行验证，通过并行化压缩解码和完整KV cache的交换来最小化开销。",
+        "innovation": "1. 首次将有损KV cache压缩转化为无损推理，确保输出与完整KV cache完全一致；2. 利用压缩解码和完整KV交换的带宽瓶颈差异实现并行化，降低交换开销；3. 通过统一压缩器接口支持多种token丢弃和量化方法，并与传统推测解码兼容。",
+        "evidence": "实验表明，VeriCache在保持输出与完整KV cache相同的前提下，吞吐量提升高达4倍。",
+        "limitations": "需要阅读全文确认：完整KV cache的交换开销在不同硬件配置下的具体表现；验证步骤的延迟影响；对极端长上下文或高并发场景的扩展性。",
+        "why_relevant": "论文直接研究KV cache压缩（有损方法）并引入调度（交换、并行化），与我的研究方向“KV cache压缩与存储调度”高度吻合，涉及压缩、淘汰、卸载、预取和显存管理。"
+      },
+      "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "W7162605672",
+      "source": "IEEE",
+      "title": "The Quantization Benefits of Residual-Free Transformers",
+      "authors": [
+        "Yiping Ji",
+        "Mahalakshmi Sabanayagam",
+        "Peyman Moghadam",
+        "Hemanth Saratchandran",
+        "Simon Lucey"
+      ],
+      "summary": "Large-scale transformer training and deployment are increasingly constrained by the transfer of activations, gradients, and optimizer states across accelerators. Low-bit quantization offers a natural remedy, but transformer activations are often heavy-tailed and outlier-dominated, making simple quantization highly lossy. We show that this difficulty is not only a property of the quantizer, but also of the architecture. Specifically, residual connections can drive transformer activations away from Gaussianity during training. Using controlled comparisons between residual and residual-free transformers, we demonstrate that this effect leads to substantially higher quantization error and accuracy degradation at low precision in residual models. We explain the phenomenon through an excess kurtosis analysis, showing that residual mixing can amplify non-Gaussianity, whereas dense mixing in residual-free contracts non-Gaussianity. We then show that residual-free transformers can be made trainable using orthogonal initialization, spectral or second-order optimization, and depth-aware scaling of attention temperature. In language tasks, while there is a small drop in full precision performance, these models retain near-Gaussian activations and exhibit significantly improved robustness to low-bit quantization. Our results identify an accuracy--compressibility trade-off in transformer design and motivate architecture-level approaches to quantization-friendly foundation models.",
+      "published": "2026-05-25T00:00:00Z",
+      "updated": "2026-05-25T00:00:00Z",
+      "year": 2026,
+      "paper_url": "https://arxiv.org/abs/2605.25880",
+      "pdf_url": "https://arxiv.org/pdf/2605.25880",
+      "doi": null,
+      "journal": "arXiv (Cornell University)",
+      "partition": "其他",
+      "categories": [],
+      "seed_topic": "llm_low_precision_quantization",
+      "matches": [
+        {
+          "topic_id": "llm_low_precision_quantization",
+          "topic_name": "大模型低精度量化",
+          "score": 0.402,
+          "level": "high",
+          "reason": "关键词命中：low-bit quantization",
+          "keyword_hits": [
+            "low-bit quantization"
+          ],
+          "llm_reason": "论文聚焦低比特量化对Transformer的影响，并分析架构设计对量化鲁棒性的作用，直接关联我的研究方向中的低比特量化、后训练量化以及量化对推理性能的影响。"
+        },
+        {
+          "topic_id": "tensor_compute_unit_architecture",
+          "topic_name": "张量计算单元结构",
+          "score": 0.131,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "kvcache_compression_storage_scheduling",
+          "topic_name": "KV cache 压缩与存储调度",
+          "score": 0.044,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_inference_cluster_communication",
+          "topic_name": "大模型推理集群通信优化",
+          "score": 0.0,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        }
+      ],
+      "best_match": {
+        "topic_id": "llm_low_precision_quantization",
+        "topic_name": "大模型低精度量化",
+        "score": 0.402,
+        "level": "high",
+        "reason": "关键词命中：low-bit quantization",
+        "keyword_hits": [
+          "low-bit quantization"
+        ],
+        "llm_reason": "论文聚焦低比特量化对Transformer的影响，并分析架构设计对量化鲁棒性的作用，直接关联我的研究方向中的低比特量化、后训练量化以及量化对推理性能的影响。"
+      },
+      "chinese_summary": {
+        "problem": "大模型训练和部署中，激活值、梯度和优化器状态的传输成为瓶颈，低比特量化是解决方案，但Transformer激活值存在重尾和异常值，导致量化精度损失严重。",
+        "method": "通过对比残差和无残差Transformer，分析残差连接对激活值高斯性的影响，并采用正交初始化、谱优化或二阶优化以及深度感知注意力温度缩放使无残差Transformer可训练，从而提升低比特量化鲁棒性。",
+        "innovation": "1. 首次揭示残差连接是导致Transformer激活值非高斯性的关键因素，从而增加量化误差；2. 证明无残差Transformer通过密集混合可以收缩非高斯性，保持近高斯激活值；3. 提出使无残差Transformer可训练的方法，在语言任务中实现精度-可压缩性权衡。",
+        "evidence": "通过控制实验对比残差和无残差Transformer，使用超峰度分析解释现象，并在语言任务中验证无残差模型在低比特量化下精度损失更小。",
+        "limitations": "实验仅在语言任务上验证，未涉及其他模态；无残差Transformer在全精度下性能略有下降；可能需要阅读全文确认具体量化设置和数据集。",
+        "why_relevant": "论文聚焦低比特量化对Transformer的影响，并分析架构设计对量化鲁棒性的作用，直接关联我的研究方向中的低比特量化、后训练量化以及量化对推理性能的影响。"
+      },
+      "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "W7162474673",
+      "source": "IEEE",
+      "title": "HyperParallel-MoE: Multi-Core Interleaved Scheduling for Fast MoE Training on Ascend NPUs",
+      "authors": [
+        "Zewen Jin",
+        "Congkun Ai",
+        "Guangpeng Zhang",
+        "Hanbo Zhang",
+        "Haoran Wang",
+        "Shihan Xiao",
+        "Da Lei",
+        "Xuefeng Jin",
+        "Teng Su",
+        "Cheng Xin Li"
+      ],
+      "summary": "Modern Mixture-of-Experts (MoE) models increasingly rely on large-scale AI accelerator clusters for efficient training. Ascend NPUs expose heterogeneous on-chip compute resources, including matrix-oriented AIC units and vector-oriented AIV units with explicit cross-queue synchronization support. However, existing training frameworks largely execute MoE operators in a serialized kernel-by-kernel manner, leaving substantial heterogeneous parallelism underutilized. This paper presents HyperParallel-MoE, a compilation and scheduling framework for MoE training on Ascend NPUs. HyperParallel-MoE transforms operator-level MoE execution into a statically scheduled tile-level heterogeneous taskflow spanning AIC and AIV resources. It introduces AIV-driven one-sided communication to eliminate host-side collective synchronization, dependency-preserving tile task generation to unify communication and computation under a common task abstraction, and event-driven static scheduling to coordinate cross-queue execution with low runtime overhead. HyperParallel-MoE further executes the compiled taskflow within a unified runtime that concurrently drives AIC and AIV workers inside a single kernel launch, enabling fine-grained overlap among communication, matrix computation, and vector computation while preserving existing optimized operators. We implement HyperParallel-MoE in the MindSpore and MindFormers stack and evaluate it using DeepSeek-style MoE models on Ascend A3 clusters. Across multiple expert-parallel configurations, HyperParallel-MoE reduces Dispatch-to-Combine MoE-FFN latency by up to 1.58x, demonstrating that tile-level heterogeneous scheduling can substantially improve MoE training efficiency on modern NPUs.",
+      "published": "2026-05-22T00:00:00Z",
+      "updated": "2026-05-22T00:00:00Z",
+      "year": 2026,
+      "paper_url": "https://arxiv.org/abs/2605.23764",
+      "pdf_url": "https://arxiv.org/pdf/2605.23764",
+      "doi": null,
+      "journal": "ArXiv.org",
+      "partition": "其他",
+      "categories": [],
+      "seed_topic": "llm_inference_cluster_communication",
+      "matches": [
+        {
+          "topic_id": "tensor_compute_unit_architecture",
+          "topic_name": "张量计算单元结构",
+          "score": 0.35,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_inference_cluster_communication",
+          "topic_name": "大模型推理集群通信优化",
+          "score": 0.175,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_low_precision_quantization",
+          "topic_name": "大模型低精度量化",
+          "score": 0.131,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "kvcache_compression_storage_scheduling",
+          "topic_name": "KV cache 压缩与存储调度",
+          "score": 0.044,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        }
+      ],
+      "best_match": {
+        "topic_id": "tensor_compute_unit_architecture",
+        "topic_name": "张量计算单元结构",
+        "score": 0.35,
+        "level": "low",
+        "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+        "keyword_hits": []
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "Modern Mixture-of-Experts (MoE) models increasingly rely on large-scale AI accelerator clusters for efficient training.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "文本语义与方向描述存在弱相关，需要人工复核。"
+      },
+      "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "W7162149442",
+      "source": "IEEE",
+      "title": "Decomposing MXFP4 quantization error for LLM reinforcement learning: reducible bias, recoverable deadzone, and an irreducible floor",
+      "authors": [
+        "Xiaocan Li",
+        "Shiliang Wu",
+        "Zheng Shen"
+      ],
+      "summary": "MXFP4 arithmetic can dramatically accelerate reinforcement learning (RL) post-training of large language models (LLMs), yet the quantization error introduces severe accuracy degradation. Existing work treats the quantization error as a monolithic noise term, missing the distinct mechanisms upon interpreting how quantization error damages training. We prove an exact three-way decomposition of quantization error and show how each component dominates a distinct RL training pathway. Our theoretical and empirical analysis decomposes the MXFP4 quantization error into three additive components: \"scale bias\" from power-of-two rounding, \"deadzone truncation\" from zeroing small values, and \"grid noise\" from rounding to the nearest 4-bit grid. Each component dominates a distinct RL failure mode: scale bias accumulates multiplicatively through the backward pass, affecting gradient accuracy; deadzone truncation degrades rollout quality; and grid noise raises the policy's entropy. We combine corrections that are RL failure mode-targeted but not component-exclusive: Macro-block scaling to reduce scale bias, Outlier Fallback recovers deadzone entries, but also partially reduces scale bias induced error, and Adaptive Quantization Noise (AQN) for controlling the policy entropy. On Qwen2.5-3B dense and Qwen3-30B-A3B-Base mixture-of-experts model, the targeted corrections recover BF16 accuracy to within 0.7% and exceed BF16 by +1.0% respectively.",
+      "published": "2026-05-19T00:00:00Z",
+      "updated": "2026-05-19T00:00:00Z",
+      "year": 2026,
+      "paper_url": "https://arxiv.org/abs/2605.20402",
+      "pdf_url": "https://arxiv.org/pdf/2605.20402",
+      "doi": null,
+      "journal": "ArXiv.org",
+      "partition": "其他",
+      "categories": [],
+      "seed_topic": "llm_low_precision_quantization",
+      "matches": [
+        {
+          "topic_id": "llm_low_precision_quantization",
+          "topic_name": "大模型低精度量化",
+          "score": 0.35,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_inference_cluster_communication",
+          "topic_name": "大模型推理集群通信优化",
+          "score": 0.087,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "tensor_compute_unit_architecture",
+          "topic_name": "张量计算单元结构",
+          "score": 0.044,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "kvcache_compression_storage_scheduling",
+          "topic_name": "KV cache 压缩与存储调度",
+          "score": 0.044,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        }
+      ],
+      "best_match": {
+        "topic_id": "llm_low_precision_quantization",
+        "topic_name": "大模型低精度量化",
+        "score": 0.35,
+        "level": "low",
+        "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+        "keyword_hits": []
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "MXFP4 arithmetic can dramatically accelerate reinforcement learning (RL) post-training of large language models (LLMs), yet the quantization error introduces severe accuracy degradation.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "文本语义与方向描述存在弱相关，需要人工复核。"
+      },
+      "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "W7161916845",
+      "source": "IEEE",
+      "title": "KVDrive: A Holistic Multi-Tier KV Cache Management System for Long-Context LLM Inference",
+      "authors": [
+        "Jian Lin",
+        "Jiazhi Mi",
+        "Zicong Hong",
+        "Haodong Wang",
+        "Qianli Liu",
+        "Haodyue Zhang",
+        "Peng Li",
+        "Song Guo"
+      ],
+      "summary": "Supporting long-context LLMs is challenging due to the substantial memory demands of the key-value (KV) cache. Existing offloading systems store the full cache in host memory and selectively fetch critical entries during decoding, but this strategy quickly hits a ceiling: sparsity cannot be pushed further without degrading accuracy. As a result, when context length and batch size grow, the volume of KV transfers rises sharply and becomes the dominant source of decoding latency. We present KVDrive, a holistic multi-tier KV cache management system spanning GPU memory, host DRAM, and SSD. Unlike prior work that pursues greater sparsity through algorithmic refinements, KVDrive tackles the problem from a systems perspective - jointly orchestrating cache placement, pipeline scheduling, and cross-tier coordination to sustain high-throughput inference under tight GPU budgets. KVDrive advances three fundamental capabilities: it adapts cache management to attention behavior to maximize reuse and minimize redundant data movement; it restructures the decoding pipeline to overlap I/O- and CPU/GPU compute-bound stages, eliminating stalls across heterogeneous resources; and it harmonizes data movement across memory tiers to unlock scalable long-context inference far beyond GPU and DRAM limits. We have implemented a fully functional prototype of KVDrive and evaluated it on long-context benchmarks with popular LLMs. The system achieves up to 1.74x higher throughput compared to state-of-the-art works while preserving accuracy.",
+      "published": "2026-05-18T00:00:00Z",
+      "updated": "2026-05-18T00:00:00Z",
+      "year": 2026,
+      "paper_url": "https://arxiv.org/abs/2605.18071",
+      "pdf_url": "https://arxiv.org/pdf/2605.18071",
+      "doi": null,
+      "journal": "ArXiv.org",
+      "partition": "其他",
+      "categories": [],
+      "seed_topic": "kvcache_compression_storage_scheduling",
+      "matches": [
+        {
+          "topic_id": "kvcache_compression_storage_scheduling",
+          "topic_name": "KV cache 压缩与存储调度",
+          "score": 0.35,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "tensor_compute_unit_architecture",
+          "topic_name": "张量计算单元结构",
+          "score": 0.175,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_low_precision_quantization",
+          "topic_name": "大模型低精度量化",
+          "score": 0.131,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_inference_cluster_communication",
+          "topic_name": "大模型推理集群通信优化",
+          "score": 0.131,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        }
+      ],
+      "best_match": {
+        "topic_id": "kvcache_compression_storage_scheduling",
+        "topic_name": "KV cache 压缩与存储调度",
+        "score": 0.35,
+        "level": "low",
+        "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+        "keyword_hits": []
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "Supporting long-context LLMs is challenging due to the substantial memory demands of the key-value (KV) cache.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "文本语义与方向描述存在弱相关，需要人工复核。"
+      },
+      "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "W7162045077",
+      "source": "IEEE",
+      "title": "SPHERICAL KV: Angle-Domain Attention and Rate-Distortion Retention for Efficient Long-Context Inference",
+      "authors": [
+        "Anay Chauhan",
+        "Gurucharan Marthi Krishna Kumar",
+        "Arion Das",
+        "Amit Dhanda",
+        "Vinija Jain",
+        "Aman Chadha",
+        "Amitava Das"
+      ],
+      "summary": "Long-context inference is increasingly constrained by the KV cache: resident memory grows with context length, and decoding becomes limited by repeated High Bandwidth Memory (HBM) streaming rather than arithmetic. Existing methods such as eviction, windowing, quantization, and offloading reduce footprint, but often leave the critical-path bottleneck only partially addressed, especially when compressed states must still be reconstructed into dense vectors during decoding. We present Spherical KV, a long-context inference method that treats KV allocation as a rate-distortion problem grounded in attention geometry for efficient decoding. The method is built on two ideas: (i) represent directional information cheaply in the decode hot loop, and (ii) allocate retention and precision according to estimated future utility. Its first component, Angle-Domain Attention (ADA), stores keys in a spherical parameterization consisting of a scalar radius and compact angle codes, and computes attention logits directly from these codes without reconstructing dense keys. This preserves a paged, block-local, fusion-friendly decode path and directly targets HBM traffic in realistic serving settings. Its second component, Rate-Distortion Retention (RDR), jointly chooses keep/drop decisions and precision tiers per token and head under a fixed budget, producing tier-homogeneous pages with lightweight metadata and coalesced reads. Together, ADA and RDR provide a deployment-oriented mechanism for reducing KV residency while preserving decode efficiency.",
+      "published": "2026-05-13T00:00:00Z",
+      "updated": "2026-05-13T00:00:00Z",
+      "year": 2026,
+      "paper_url": "https://arxiv.org/abs/2605.18856",
+      "pdf_url": "https://arxiv.org/pdf/2605.18856",
+      "doi": null,
+      "journal": "ArXiv.org",
+      "partition": "其他",
+      "categories": [],
+      "seed_topic": "kvcache_compression_storage_scheduling",
+      "matches": [
+        {
+          "topic_id": "kvcache_compression_storage_scheduling",
+          "topic_name": "KV cache 压缩与存储调度",
+          "score": 0.35,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_low_precision_quantization",
+          "topic_name": "大模型低精度量化",
+          "score": 0.219,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_inference_cluster_communication",
+          "topic_name": "大模型推理集群通信优化",
+          "score": 0.175,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "tensor_compute_unit_architecture",
+          "topic_name": "张量计算单元结构",
+          "score": 0.131,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        }
+      ],
+      "best_match": {
+        "topic_id": "kvcache_compression_storage_scheduling",
+        "topic_name": "KV cache 压缩与存储调度",
+        "score": 0.35,
+        "level": "low",
+        "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+        "keyword_hits": []
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "Long-context inference is increasingly constrained by the KV cache: resident memory grows with context length, and decoding becomes limited by repeated High Bandwidth Memory (HBM) streaming rather than arithmetic.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "文本语义与方向描述存在弱相关，需要人工复核。"
+      },
+      "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "W7161915961",
+      "source": "IEEE",
+      "title": "ProxyKV: Cross-Model Proxy Pruning for Efficient Long-Context LLM Inference",
+      "authors": [
+        "Junjie Li",
+        "Jiong Lou",
+        "Jie Li"
+      ],
+      "summary": "Efficient long-context inference in Large Language Models (LLMs) is severely constrained by the Key-Value (KV) cache memory wall, yet existing pruning methods force a choice between low-latency heuristics that sacrifice precision and high-precision reconstruction methods that incur prohibitive prefilling overhead. To bridge this scoring-cost--accuracy gap, we propose ProxyKV, a cross-model proxy pruning framework that offloads importance scoring to a lightweight intra-family Small-Model Proxy executed asynchronously to the Large-Model Target. To bridge the architectural gap between heterogeneous models, we design the HybridAxialMapper, which disentangles temporal feature extraction from cross-head alignment, together with a Multi-Granularity Hybrid Loss that shifts the learning objective from rigid regression to relative ranking consistency. Across the Llama-3.1, Qwen-2.5, and Qwen-3 families spanning targets from 7B up to 32B parameters on LongBench, SCBench, and RULER, ProxyKV matches KVZip on aggregate (recovering $\\sim$$98.7\\%$ of its mean accuracy) while delivering up to a $3.21\\times$ prefilling speedup on Llama-3.1-8B (dual-GPU; $\\sim$$1.5\\times$ shared single-GPU) and sustaining the speedup at contexts up to 170k tokens on Qwen-2.5-7B.",
+      "published": "2026-05-09T00:00:00Z",
+      "updated": "2026-05-09T00:00:00Z",
+      "year": 2026,
+      "paper_url": "https://arxiv.org/abs/2605.16360",
+      "pdf_url": "https://arxiv.org/pdf/2605.16360",
+      "doi": null,
+      "journal": "ArXiv.org",
+      "partition": "其他",
+      "categories": [],
+      "seed_topic": "kvcache_compression_storage_scheduling",
+      "matches": [
+        {
+          "topic_id": "llm_low_precision_quantization",
+          "topic_name": "大模型低精度量化",
+          "score": 0.35,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "kvcache_compression_storage_scheduling",
+          "topic_name": "KV cache 压缩与存储调度",
+          "score": 0.35,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "tensor_compute_unit_architecture",
+          "topic_name": "张量计算单元结构",
+          "score": 0.219,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_inference_cluster_communication",
+          "topic_name": "大模型推理集群通信优化",
+          "score": 0.087,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        }
+      ],
+      "best_match": {
+        "topic_id": "llm_low_precision_quantization",
+        "topic_name": "大模型低精度量化",
+        "score": 0.35,
+        "level": "low",
+        "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+        "keyword_hits": []
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "Efficient long-context inference in Large Language Models (LLMs) is severely constrained by the Key-Value (KV) cache memory wall, yet existing pruning methods force a choice between low-latency heuristics that sacrifice precision and high-precision reconstruction methods that incur prohibitive prefi",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "文本语义与方向描述存在弱相关，需要人工复核。"
+      },
+      "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "W7162475087",
+      "source": "IEEE",
+      "title": "ThriftAttention: Selective Mixed Precision for Long-Context FP4 Attention",
+      "authors": [
+        "Joe Sharratt"
+      ],
+      "summary": "Efficient attention algorithms are critical to mitigate the quadratic cost of attention in long-context workloads. Prior work utilises block-scaled quantisation techniques on Blackwell GPUs to move attention computation to 4-bit precision to accelerate inference. However, these techniques result in significant quality degradation in long-context settings. We show that the output impact of quantisation error is highly non-uniform and increases with the importance of each query-key interaction, concentrating functionally relevant error in a small number of attention blocks that contain the most important tokens. We propose ThriftAttention, a low-bit attention variant that delivers near-FP16 long-context quality at FP4 inference efficiency. This approach proceeds in two stages. First, a heuristic rapidly selects a small number of important query-key block pairs for FP16 precision. Second, the selected blocks are computed in FP16 and the remaining blocks in FP4, with both paths merged via online softmax into a single output. We demonstrate across long-context benchmarks and model families that by computing only 5% of query-key blocks in FP16, ThriftAttention recovers on average 89.1% of the FP4-to-FP16 performance gap. We show ThriftAttention's advantage grows with sequence length, mitigating the systematic FP4 quality degradation observed at longer contexts. The code is available at https://github.com/joesharratt1229/ThriftAttention.",
+      "published": "2026-05-21T00:00:00Z",
+      "updated": "2026-05-21T00:00:00Z",
+      "year": 2026,
+      "paper_url": "https://arxiv.org/abs/2605.23081",
+      "pdf_url": "https://arxiv.org/pdf/2605.23081",
+      "doi": null,
+      "journal": "ArXiv.org",
+      "partition": "其他",
+      "categories": [],
+      "seed_topic": "llm_low_precision_quantization",
+      "matches": [
+        {
+          "topic_id": "llm_low_precision_quantization",
+          "topic_name": "大模型低精度量化",
+          "score": 0.314,
+          "level": "low",
+          "reason": "关键词命中：mixed precision",
+          "keyword_hits": [
+            "mixed precision"
+          ]
+        },
+        {
+          "topic_id": "kvcache_compression_storage_scheduling",
+          "topic_name": "KV cache 压缩与存储调度",
+          "score": 0.175,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "tensor_compute_unit_architecture",
+          "topic_name": "张量计算单元结构",
+          "score": 0.131,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_inference_cluster_communication",
+          "topic_name": "大模型推理集群通信优化",
+          "score": 0.044,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        }
+      ],
+      "best_match": {
+        "topic_id": "llm_low_precision_quantization",
+        "topic_name": "大模型低精度量化",
+        "score": 0.314,
+        "level": "low",
+        "reason": "关键词命中：mixed precision",
+        "keyword_hits": [
+          "mixed precision"
+        ]
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "Efficient attention algorithms are critical to mitigate the quadratic cost of attention in long-context workloads.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "关键词命中：mixed precision"
+      },
+      "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "W7162149936",
+      "source": "IEEE",
+      "title": "NanoCP: Request-Level Dynamic Context Parallelism for Data-Expert Parallel Decoding",
+      "authors": [
+        "Jiefei Chen",
+        "Binbin Lin",
+        "Jinming Ma",
+        "Jiangfei Duan",
+        "Haojie Duanmu",
+        "Hao Liu",
+        "Qinxiu Cheng",
+        "Xiuhong Li",
+        "Zhilin Pei",
+        "Hui Wang",
+        "Xingcheng Zhang",
+        "Dahua Lin"
+      ],
+      "summary": "Modern serving systems for Mixture-of-Experts (MoE) models adopt hybrid data-expert parallelism: expert parallelism (EP) shards experts across GPUs to scale capacity, while data parallelism (DP) replicates attention layers across instances to process independent requests. Existing systems bind each request's attention, MoE communication, and KV cache to a single instance. Because attention latency scales with KV cache size while MoE communication latency scales with batch size, this binding cannot balance both simultaneously, producing EP stragglers; it also fragments KV memory across instances, inflating tail latency under long contexts. While existing context parallelism (CP) mitigates these constraints, its uniform parallelism degree incurs prohibitive communication and attention-side overheads. We present \\work, which decouples MoE communication from KV cache placement and achieves dual balance through dynamic context parallelism (DCP). DCP assigns each request a context-parallel degree sized to its KV footprint: long requests distribute attention across multiple instances; short requests remain local. This dynamic parallelism effectively liquefies the KV cache across the cluster, balancing both the per-instance KV cache occupancy and batch sizes without unnecessary load-balancing costs. To bridge DCP with static execution, \\work introduces an ahead-of-time (AOT) graph engine paired with a custom routing-based communication backend. Experimental results show that \\work maintains up to $1.88\\times$--$3.27\\times$ higher request rates under strict time-per-output-token (TPOT) service level objectives (SLOs). Furthermore, \\work significantly mitigates stragglers, reducing P99 tail latency by up to $1.79\\times$--$2.12\\times$.",
+      "published": "2026-05-20T00:00:00Z",
+      "updated": "2026-05-20T00:00:00Z",
+      "year": 2026,
+      "paper_url": "https://arxiv.org/abs/2605.21100",
+      "pdf_url": "https://arxiv.org/pdf/2605.21100",
+      "doi": null,
+      "journal": "ArXiv.org",
+      "partition": "其他",
+      "categories": [],
+      "seed_topic": "llm_inference_cluster_communication",
+      "matches": [
+        {
+          "topic_id": "kvcache_compression_storage_scheduling",
+          "topic_name": "KV cache 压缩与存储调度",
+          "score": 0.306,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_inference_cluster_communication",
+          "topic_name": "大模型推理集群通信优化",
+          "score": 0.271,
+          "level": "low",
+          "reason": "关键词命中：expert parallelism",
+          "keyword_hits": [
+            "expert parallelism"
+          ]
+        },
+        {
+          "topic_id": "llm_low_precision_quantization",
+          "topic_name": "大模型低精度量化",
+          "score": 0.087,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "tensor_compute_unit_architecture",
+          "topic_name": "张量计算单元结构",
+          "score": 0.044,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        }
+      ],
+      "best_match": {
+        "topic_id": "kvcache_compression_storage_scheduling",
+        "topic_name": "KV cache 压缩与存储调度",
+        "score": 0.306,
+        "level": "low",
+        "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+        "keyword_hits": []
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "Modern serving systems for Mixture-of-Experts (MoE) models adopt hybrid data-expert parallelism: expert parallelism (EP) shards experts across GPUs to scale capacity, while data parallelism (DP) replicates attention layers across instances to process independent requests.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "文本语义与方向描述存在弱相关，需要人工复核。"
+      },
+      "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "W7161204476",
+      "source": "IEEE",
+      "title": "Position: LLM Inference Should Be Evaluated as Energy-to-Token Production",
+      "authors": [
+        "Xiang Liu",
+        "Shimiao Yuan",
+        "Zhenheng Tang",
+        "Peijie Dong",
+        "Kaiyong Zhao",
+        "Qiang Wang",
+        "Bo Li",
+        "Xiaowen Chu"
+      ],
+      "summary": "LLM inference is still evaluated mainly as a model or software problem: accuracy, latency, throughput, and hardware utilization. This is incomplete. At deployment scale, the relevant output is a quality-conditioned token produced under joint constraints from effective compute, delivered data-center power, cooling capacity, PUE, and utilization. We argue that the ML community should treat inference as \\emph{energy-to-token production}. We formalize this view with a dimensionally consistent Token Production Function in which token rate is bounded by both compute-per-token and energy-per-token ceilings. Listed API prices vary by over an order of magnitude across providers, but we use price dispersion only as directional motivation, not as causal evidence of marginal cost. The core physical question is instead: under fixed quality and service targets, when does the binding constraint move from theoretical peak compute toward delivered power, cooling, and operational efficiency? Under this framing, system optimizations -- latent KV-cache compression, sparse or heavily compressed attention, quantization, routing, and difficulty-adaptive reasoning -- are not merely local engineering tricks. They are energy-to-token levers because they reduce FLOPs/token, joules/token, memory traffic, or utilization losses under fixed $(q^{*},s^{*})$. We therefore call for inference papers and benchmarks to report Joules/token, active binding constraint, PUE-adjusted delivered power, and utilization-adjusted token output alongside accuracy and latency.",
+      "published": "2026-05-12T00:00:00Z",
+      "updated": "2026-05-12T00:00:00Z",
+      "year": 2026,
+      "paper_url": "https://arxiv.org/abs/2605.11733",
+      "pdf_url": "https://arxiv.org/pdf/2605.11733",
+      "doi": null,
+      "journal": "arXiv (Cornell University)",
+      "partition": "其他",
+      "categories": [],
+      "seed_topic": "kvcache_compression_storage_scheduling",
+      "matches": [
+        {
+          "topic_id": "kvcache_compression_storage_scheduling",
+          "topic_name": "KV cache 压缩与存储调度",
+          "score": 0.306,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_low_precision_quantization",
+          "topic_name": "大模型低精度量化",
+          "score": 0.262,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "tensor_compute_unit_architecture",
+          "topic_name": "张量计算单元结构",
+          "score": 0.131,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_inference_cluster_communication",
+          "topic_name": "大模型推理集群通信优化",
+          "score": 0.131,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        }
+      ],
+      "best_match": {
+        "topic_id": "kvcache_compression_storage_scheduling",
+        "topic_name": "KV cache 压缩与存储调度",
+        "score": 0.306,
+        "level": "low",
+        "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+        "keyword_hits": []
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "LLM inference is still evaluated mainly as a model or software problem: accuracy, latency, throughput, and hardware utilization.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "文本语义与方向描述存在弱相关，需要人工复核。"
+      },
+      "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "W7160969331",
+      "source": "IEEE",
+      "title": "An Efficient Hybrid Sparse Attention with CPU-GPU Parallelism for Long-Context Inference",
+      "authors": [
+        "Feiyu Yao",
+        "Zhixiong Niu",
+        "Xiaqing Li",
+        "Yongqiang Xiong",
+        "Juan Fang",
+        "Qian Wang"
+      ],
+      "summary": "Long-context inference increasingly operates over CPU-resident KV caches, either because decoding-time KV states exceed GPU memory capacity or because disaggregated prefill-decode systems place KV data in host memory. Although block-sparse attention reduces attention cost in this setting, sparsity alone is insufficient for end-to-end efficiency. GPU-only designs remain constrained by PCIe bandwidth and metadata memory overhead, while CPU-GPU hybrid designs still suffer from substantial GPU idle time and bottlenecks in CPU-side top-k selection and sparse attention computation. Fluxion is built on three key insights: output-aware KV budgeting, head-specific and granularity-aware sparse configuration, and cross-device coordinated execution for sparse attention over CPU-resident KV caches. Guided by these insights, Fluxion combines a lightweight head-property predictor, a granularity-budget selector, and a priority-based scheduler to jointly optimize budget allocation, sparse configuration, and CPU-GPU execution overlap. This co-design enables hybrid sparse attention to achieve both accuracy and system efficiency in long-context inference. Across 2 models, 3 benchmarks, and 40 tasks, Fluxion preserves quality well -- the worst average degradation is only -0.26 relative to FULL, while delivering 1.5$\\times$-3.7$\\times$ speedup over the strongest fixed sparse hybrid baseline, whose KV budget is only 0.05.",
+      "published": "2026-05-08T00:00:00Z",
+      "updated": "2026-05-08T00:00:00Z",
+      "year": 2026,
+      "paper_url": "https://arxiv.org/abs/2605.07719",
+      "pdf_url": "https://arxiv.org/pdf/2605.07719",
+      "doi": null,
+      "journal": "ArXiv.org",
+      "partition": "其他",
+      "categories": [],
+      "seed_topic": "kvcache_compression_storage_scheduling",
+      "matches": [
+        {
+          "topic_id": "kvcache_compression_storage_scheduling",
+          "topic_name": "KV cache 压缩与存储调度",
+          "score": 0.306,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_inference_cluster_communication",
+          "topic_name": "大模型推理集群通信优化",
+          "score": 0.219,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "tensor_compute_unit_architecture",
+          "topic_name": "张量计算单元结构",
+          "score": 0.131,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_low_precision_quantization",
+          "topic_name": "大模型低精度量化",
+          "score": 0.087,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        }
+      ],
+      "best_match": {
+        "topic_id": "kvcache_compression_storage_scheduling",
+        "topic_name": "KV cache 压缩与存储调度",
+        "score": 0.306,
+        "level": "low",
+        "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+        "keyword_hits": []
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "Long-context inference increasingly operates over CPU-resident KV caches, either because decoding-time KV states exceed GPU memory capacity or because disaggregated prefill-decode systems place KV data in host memory.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "文本语义与方向描述存在弱相关，需要人工复核。"
+      },
+      "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "W7161091255",
+      "source": "IEEE",
+      "title": "Sparse Attention as a Range Searching Problem: Towards an Inference-Efficient Index for KV Cache",
+      "authors": [
+        "Mohsen Dehghankar",
+        "Abolfazl Asudeh"
+      ],
+      "summary": "Sparse attention improves LLM inference efficiency by selecting a subset of key-value entries, but at the cost of potential accuracy degradation. In particular, omitting critical KV entries can induce substantial errors in model outputs. Existing methods typically operate under fixed or adaptive token budgets and provide empirical robustness or partial theoretical guarantees, yet they do not ensure zero false negatives in decoding steps, particularly since the set of relevant tokens is both query- and step-dependent. Our empirical observations confirm that missing even one critical key can lead to sharp error spikes, especially in long reasoning tasks where the set of important tokens varies throughout decoding. This observation motivates the need for indexing methods that dynamically adapt to these variations across decoding steps while guaranteeing a full recall of the relevant keys above a certain threshold. We address this challenge by reformulating sparse attention as the halfspace range searching problem. However, existing range searching indices are not suitable for modern LLM inference due to their computational and implementation overheads. To overcome this, we introduce Louver, a novel index structure tailored for efficient KV cache retrieval. Louver (i) guarantees zero false negatives with respect to a specified threshold in both theory and practice, (ii) is lightweight to integrate into existing LLM pipelines, and (iii) incorporates hardware-aware optimizations for both CPU and GPU executions. Our experiments demonstrate that Louver outperforms prior sparse attention methods in both accuracy and runtime, and is faster than highly optimized dense attentions such as FlashAttention. These results highlight that recall guarantees are a critical and overlooked dimension of sparse attention, and open a new direction for building theoretically grounded, efficient KV cache indices.",
+      "published": "2026-05-07T00:00:00Z",
+      "updated": "2026-05-07T00:00:00Z",
+      "year": 2026,
+      "paper_url": "https://arxiv.org/abs/2605.06763",
+      "pdf_url": "https://arxiv.org/pdf/2605.06763",
+      "doi": null,
+      "journal": "ArXiv.org",
+      "partition": "其他",
+      "categories": [],
+      "seed_topic": "kvcache_compression_storage_scheduling",
+      "matches": [
+        {
+          "topic_id": "kvcache_compression_storage_scheduling",
+          "topic_name": "KV cache 压缩与存储调度",
+          "score": 0.306,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_low_precision_quantization",
+          "topic_name": "大模型低精度量化",
+          "score": 0.175,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_inference_cluster_communication",
+          "topic_name": "大模型推理集群通信优化",
+          "score": 0.087,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "tensor_compute_unit_architecture",
+          "topic_name": "张量计算单元结构",
+          "score": 0.044,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        }
+      ],
+      "best_match": {
+        "topic_id": "kvcache_compression_storage_scheduling",
+        "topic_name": "KV cache 压缩与存储调度",
+        "score": 0.306,
+        "level": "low",
+        "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+        "keyword_hits": []
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "Sparse attention improves LLM inference efficiency by selecting a subset of key-value entries, but at the cost of potential accuracy degradation.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "文本语义与方向描述存在弱相关，需要人工复核。"
+      },
+      "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "W7162606149",
+      "source": "IEEE",
+      "title": "Kavier: Exploring Performance, Sustainability, and Efficiency of LLM Ecosystems under Inference through Cache-Aware Discrete-Event Simulation",
+      "authors": [
+        "Radu Nicolae",
+        "Alexandru Iosup",
+        "Animesh Trivedi",
+        "Jesse Donkervliet"
+      ],
+      "summary": "Large Language Models (LLMs) are widely used by our increasingly digitalized society, but raise sustainability, performance, and financial concerns, especially as inference workloads grow. To improve the design and operation of LLM ecosystems, we envision simulators and simulation-based digital twins becoming primary decision-making tools. LLM ecosystems leverage many heterogeneous components, making simulation a non-trivial, yet critical operation. The simulation challenge is exacerbated by the absence of a comprehensive reference architecture of LLM ecosystems; the lack of such a conceptual model can be costly and could misguide the designers and engineers. Without a reference architecture, even the most experienced stakeholders could tinker in researching, engineering, or maintaining LLM ecosystems. In this work, we bring a three-fold contribution to the scientific community. Firstly, we synthesize, propose, and validate a reference architecture (RA) of LLM ecosystems under inference. Then, adhering to the reference architecture, we design Kavier, the first simulation instrument able to predict the performance, sustainability, and efficiency of LLM ecosystems under inference, through discrete-event and cache-aware simulation, focusing on Key-Value-(KV-)Caching and prompt prefix caching policies. Through experiments with a Kavier prototype and real-world traces, (i) we measure the accuracy of Kavier and its performance in massive-scale simulations, (ii) we compare the performance of different KV-Caching policies, and (iii) we analyze the performance, sustainability, and efficiency of LLM ecosystems under various prefix caching policies. Overall, we show that Kavier enables operators, researchers, and engineers to predict LLM ecosystems in a time, performance, and cost-efficient way.",
+      "published": "2026-05-24T00:00:00Z",
+      "updated": "2026-05-24T00:00:00Z",
+      "year": 2026,
+      "paper_url": "https://arxiv.org/abs/2605.25247",
+      "pdf_url": "https://arxiv.org/pdf/2605.25247",
+      "doi": null,
+      "journal": "arXiv (Cornell University)",
+      "partition": "其他",
+      "categories": [],
+      "seed_topic": "llm_inference_cluster_communication",
+      "matches": [
+        {
+          "topic_id": "llm_low_precision_quantization",
+          "topic_name": "大模型低精度量化",
+          "score": 0.262,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "kvcache_compression_storage_scheduling",
+          "topic_name": "KV cache 压缩与存储调度",
+          "score": 0.175,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "tensor_compute_unit_architecture",
+          "topic_name": "张量计算单元结构",
+          "score": 0.087,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_inference_cluster_communication",
+          "topic_name": "大模型推理集群通信优化",
+          "score": 0.087,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        }
+      ],
+      "best_match": {
+        "topic_id": "llm_low_precision_quantization",
+        "topic_name": "大模型低精度量化",
+        "score": 0.262,
+        "level": "low",
+        "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+        "keyword_hits": []
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "Large Language Models (LLMs) are widely used by our increasingly digitalized society, but raise sustainability, performance, and financial concerns, especially as inference workloads grow.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "文本语义与方向描述存在弱相关，需要人工复核。"
+      },
+      "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "W7162045346",
+      "source": "IEEE",
+      "title": "K-Quantization and its Impact on Output Performance",
+      "authors": [
+        "Robin Baki Davidsson",
+        "Pierre Nugues"
+      ],
+      "summary": "Recent advancements in large language models (LLMs) have shown their remarkable capacities in many NLP tasks. However, their substantial size often presents challenges for deployment. This necessitates efficient techniques for model compression, with quantization emerging as a prominent solution. Despite its benefits, the exact impact of quantization (from 2- to 6-bit) on the performance and accuracy of LLMs remains an active area of research. This paper investigates the performance of eight LLMs at various quantization levels, focusing on tasks such as MMLU-Pro for knowledge processing and reasoning, CRUXEval for code comprehension, and MuSR for reading comprehension. Our results show a consistent trend where higher precision (e.g., 8-bit Q8\\_0) yields improved performance, albeit with diminishing returns. Aggressive quantization (e.g., 2-bit Q2\\_K) usually retains acceptable accuracy, though some models show a substantial loss in performance. Our findings indicate that while lower bit precision generally reduces performance, the impact varies across models and tasks. Larger models show greater resilience to aggressive quantization, but can still undergo significant drops at lower precision levels. Mid-sized models in the 7-9 billion parameter range strike an optimal balance between efficiency and resource usage. Such results provide insights into the trade-offs between model size, quantization, and performance.",
+      "published": "2026-05-19T00:00:00Z",
+      "updated": "2026-05-19T00:00:00Z",
+      "year": 2026,
+      "paper_url": "https://arxiv.org/abs/2605.19645",
+      "pdf_url": "https://arxiv.org/pdf/2605.19645",
+      "doi": null,
+      "journal": "ArXiv.org",
+      "partition": "其他",
+      "categories": [],
+      "seed_topic": "llm_low_precision_quantization",
+      "matches": [
+        {
+          "topic_id": "llm_low_precision_quantization",
+          "topic_name": "大模型低精度量化",
+          "score": 0.262,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "tensor_compute_unit_architecture",
+          "topic_name": "张量计算单元结构",
+          "score": 0.131,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "kvcache_compression_storage_scheduling",
+          "topic_name": "KV cache 压缩与存储调度",
+          "score": 0.044,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_inference_cluster_communication",
+          "topic_name": "大模型推理集群通信优化",
+          "score": 0.0,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        }
+      ],
+      "best_match": {
+        "topic_id": "llm_low_precision_quantization",
+        "topic_name": "大模型低精度量化",
+        "score": 0.262,
+        "level": "low",
+        "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+        "keyword_hits": []
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "Recent advancements in large language models (LLMs) have shown their remarkable capacities in many NLP tasks.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "文本语义与方向描述存在弱相关，需要人工复核。"
+      },
+      "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "W7162044767",
+      "source": "IEEE",
+      "title": "LongLive-2.0: An NVFP4 Parallel Infrastructure for Long Video Generation",
+      "authors": [
+        "Yukang Chen",
+        "Luozhou Wang",
+        "Wei Huang",
+        "Shuai Yang",
+        "Bohan Zhang",
+        "Yicheng Xiao",
+        "Ruihang Chu",
+        "Weian Mao",
+        "Qixin Hu",
+        "Shaoteng Liu",
+        "Yuyang Zhao",
+        "Huizi Mao",
+        "Ying-Cong Chen",
+        "Enze Xie",
+        "Xiaojuan Qi",
+        "Song Han"
+      ],
+      "summary": "We present LongLive-2.0, an NVFP4-based parallel infrastructure throughout the full training and inference workflow of long video generation, addressing speed and memory bottlenecks. For training, we introduce sequence-parallel autoregressive (AR) training, instantiated as Balanced SP, which co-designs the efficient teacher-forcing layout with SP execution by pairing clean-history and noisy-target temporal chunks on each rank, enabling a natural teacher-forcing mask with SP-aware chunked VAE encoding. Combined with NVFP4 precision, it reduces GPU memory cost and accelerates GEMM computation during training, the proportion of which increases as video length grows. Moreover, we show that a high-quality infrastructure and dataset enable a remarkably clean training pipeline. Unlike existing Self-Forcing series methods that rely on ODE initialization and subsequent distribution matching distillation (DMD), LongLive-2.0 directly tunes a diffusion model into a long, multi-shot, interactive auto-regressive (AR) diffusion model. It can be further converted to real-time generation (4 to 2 denoising steps) with standalone LoRA weights. For inference on Blackwell GPUs, we enable W4A4 NVFP4 inference, quantize KV cache into NVFP4 for memory savings, and boost end-to-end throughput with asynchronous streaming VAE decoding. On non-Blackwell GPU architectures, we deploy SP inference to match the speed on Blackwell GPUs, while the quantized KV cache can lower inter-GPU communication of SP. Experiments show up to 2.15x speedup in training, and 1.84x in inference. LongLive-2.0-5B achieves 45.7 FPS inference while attaining strong performance on benchmarks. To our knowledge, LongLive-2.0 is the first NVFP4 training and inference system for long video generation.",
+      "published": "2026-05-18T00:00:00Z",
+      "updated": "2026-05-18T00:00:00Z",
+      "year": 2026,
+      "paper_url": "https://arxiv.org/abs/2605.18739",
+      "pdf_url": "https://arxiv.org/pdf/2605.18739",
+      "doi": null,
+      "journal": "ArXiv.org",
+      "partition": "其他",
+      "categories": [],
+      "seed_topic": "llm_low_precision_quantization",
+      "matches": [
+        {
+          "topic_id": "kvcache_compression_storage_scheduling",
+          "topic_name": "KV cache 压缩与存储调度",
+          "score": 0.262,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_low_precision_quantization",
+          "topic_name": "大模型低精度量化",
+          "score": 0.219,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "tensor_compute_unit_architecture",
+          "topic_name": "张量计算单元结构",
+          "score": 0.175,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_inference_cluster_communication",
+          "topic_name": "大模型推理集群通信优化",
+          "score": 0.131,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        }
+      ],
+      "best_match": {
+        "topic_id": "kvcache_compression_storage_scheduling",
+        "topic_name": "KV cache 压缩与存储调度",
+        "score": 0.262,
+        "level": "low",
+        "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+        "keyword_hits": []
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "We present LongLive-2.0, an NVFP4-based parallel infrastructure throughout the full training and inference workflow of long video generation, addressing speed and memory bottlenecks.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "文本语义与方向描述存在弱相关，需要人工复核。"
+      },
+      "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "W7137861966",
+      "source": "IEEE",
+      "title": "Serving Hybrid LLM Loads with SLO Guarantees Using CPU-GPU Attention Piggybacking",
+      "authors": [
+        "Zizhao Mo",
+        "Junlin Chen",
+        "Huanle Xu",
+        "Chengzhong Xu"
+      ],
+      "summary": "Nowadays, service providers often deploy multiple types of LLM services within shared clusters. While the service co-location improves resource utilization, it introduces significant interference risks for latency-sensitive (LS) services -- which have strict SLO requirements for inference latency -- and severely constrains the service capacity of best-effort (BE) services due to limited available memory. To address interference, existing systems typically rely on reserving headroom to constrain BE resource usage. However, this approach's coarse granularity compromises the SLO compliance of the latency-sensitive service and unnecessarily restricts the generation potential of the best-effort service. In this paper, we propose OmniServe, a novel LLM serving system that efficiently harnesses both CPU and GPU resources to mitigate interference and improve throughput. Central to OmniServe is the Attention Piggybacking mechanism, which effectively offloads the Attention computation of BE services to CPUs on the fly. This mechanism also facilitates asynchronous communication between CPU and GPU streams, preventing GPUs from being blocked while aggregating Attention results. Additionally, OmniServe incorporates a dynamic batching control policy to adapt to fluctuating request arrivals, facilitating Dense module computation using layer-wise batching. Experimental results show that OmniServe improves the SLO attainment rate for LS services by up to 1.48&amp;#215; while enhancing BE serving throughput by up to 9.85&amp;#215; compared to state-of-the-art systems.",
+      "published": "2026-05-18T00:00:00Z",
+      "updated": "2026-05-18T00:00:00Z",
+      "year": 2026,
+      "paper_url": "https://doi.org/https://doi.org/10.1145/3802107",
+      "pdf_url": "https://doi.org/10.1145/3802107",
+      "doi": "https://doi.org/10.1145/3802107",
+      "journal": "Proceedings of the ACM on Management of Data",
+      "partition": "其他",
+      "categories": [],
+      "seed_topic": "llm_inference_cluster_communication",
+      "matches": [
+        {
+          "topic_id": "kvcache_compression_storage_scheduling",
+          "topic_name": "KV cache 压缩与存储调度",
+          "score": 0.262,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_inference_cluster_communication",
+          "topic_name": "大模型推理集群通信优化",
+          "score": 0.175,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "tensor_compute_unit_architecture",
+          "topic_name": "张量计算单元结构",
+          "score": 0.131,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_low_precision_quantization",
+          "topic_name": "大模型低精度量化",
+          "score": 0.044,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        }
+      ],
+      "best_match": {
+        "topic_id": "kvcache_compression_storage_scheduling",
+        "topic_name": "KV cache 压缩与存储调度",
+        "score": 0.262,
+        "level": "low",
+        "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+        "keyword_hits": []
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "Nowadays, service providers often deploy multiple types of LLM services within shared clusters.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "文本语义与方向描述存在弱相关，需要人工复核。"
+      },
+      "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "W7162218603",
+      "source": "IEEE",
+      "title": "Exploiting Multicast for Accelerating Collective Communication",
+      "authors": [
+        "Chao Xu",
+        "Xu Zhang",
+        "Zihang Luo",
+        "Yuyan Wu",
+        "Guoxin Qian",
+        "Yufeng Yao",
+        "Chihyung Wang",
+        "Jingbin Zhou"
+      ],
+      "summary": "Reducing collective communication latency is a critical goal for large model training and inference in both academia and industry. Many-to-many communications, such as AllGather and AlltoAll (dispatch), are core components of modern parallelization strategies. State-of-the-art implementations of these communications rely on unicast-based writes and transmit duplicate copies of the same data across physical links for multiple receivers. This redundant transmission congests network bottlenecks and degrades end-to-end latency. We present MultiWrite, a novel many-to-many transmission semantic that eliminates redundant packets to directly reduce operator latency. MultiWrite adopts multicast principles while addressing critical limitations of traditional multicast for AI workloads. These limitations include heavy management plane overhead and ecosystem compatibility issues. We implement MultiWrite on Ascend NPUs. Long-term stress tests demonstrate that our MultiWrite-based operators achieve up to 33% latency reduction on commercially deployed devices.",
+      "published": "2026-05-21T00:00:00Z",
+      "updated": "2026-05-21T00:00:00Z",
+      "year": 2026,
+      "paper_url": "https://arxiv.org/abs/2605.22428",
+      "pdf_url": "https://arxiv.org/pdf/2605.22428",
+      "doi": null,
+      "journal": "ArXiv.org",
+      "partition": "其他",
+      "categories": [],
+      "seed_topic": "llm_inference_cluster_communication",
+      "matches": [
+        {
+          "topic_id": "llm_inference_cluster_communication",
+          "topic_name": "大模型推理集群通信优化",
+          "score": 0.227,
+          "level": "low",
+          "reason": "关键词命中：collective communication",
+          "keyword_hits": [
+            "collective communication"
+          ]
+        },
+        {
+          "topic_id": "llm_low_precision_quantization",
+          "topic_name": "大模型低精度量化",
+          "score": 0.131,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "tensor_compute_unit_architecture",
+          "topic_name": "张量计算单元结构",
+          "score": 0.131,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "kvcache_compression_storage_scheduling",
+          "topic_name": "KV cache 压缩与存储调度",
+          "score": 0.131,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        }
+      ],
+      "best_match": {
+        "topic_id": "llm_inference_cluster_communication",
+        "topic_name": "大模型推理集群通信优化",
+        "score": 0.227,
+        "level": "low",
+        "reason": "关键词命中：collective communication",
+        "keyword_hits": [
+          "collective communication"
+        ]
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "Reducing collective communication latency is a critical goal for large model training and inference in both academia and industry.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "关键词命中：collective communication"
+      },
+      "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "W7162606140",
+      "source": "IEEE",
+      "title": "Motion-Compensated Weight Compression",
+      "authors": [
+        "Ismail Lamaakal"
+      ],
+      "summary": "Neural network weights are increasingly a bottleneck for deployment, yet most compression pipelines treat layers independently and overlook cross-layer redundancy induced by function-preserving symmetries. We propose Motion-Compensated Weight Compression (MCWC), a weight-only codec that aligns permutation-symmetric blocks (e.g., hidden units and attention heads) to maximize cross-layer correspondence, turning depth into a predictable sequence. In the aligned coordinate system, MCWC uses a lightweight layer-sequential predictor with periodic keyframes and encodes only quantized prediction residuals using a learned entropy model trained under a rate distortion objective. A simple decoder reconstructs deployable weights by entropy decoding, dequantization, predictor-driven reconstruction, and inverse alignment, enabling fast weight materialization for inference. Across Transformer language modeling and vision classification, MCWC improves the rate accuracy Pareto frontier over strong quantization and learned weight-codec baselines, while maintaining competitive decode time. Ablations confirm that alignment, prediction, entropy modeling, and keyframe scheduling are each necessary for the full gains. Our code is available via https://github.com/Ism-ail11/MCWC.",
+      "published": "2026-05-23T00:00:00Z",
+      "updated": "2026-05-23T00:00:00Z",
+      "year": 2026,
+      "paper_url": "https://arxiv.org/abs/2605.24754",
+      "pdf_url": "https://arxiv.org/pdf/2605.24754",
+      "doi": null,
+      "journal": "arXiv (Cornell University)",
+      "partition": "其他",
+      "categories": [],
+      "seed_topic": "llm_low_precision_quantization",
+      "matches": [
+        {
+          "topic_id": "llm_low_precision_quantization",
+          "topic_name": "大模型低精度量化",
+          "score": 0.219,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "kvcache_compression_storage_scheduling",
+          "topic_name": "KV cache 压缩与存储调度",
+          "score": 0.175,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_inference_cluster_communication",
+          "topic_name": "大模型推理集群通信优化",
+          "score": 0.087,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "tensor_compute_unit_architecture",
+          "topic_name": "张量计算单元结构",
+          "score": 0.0,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        }
+      ],
+      "best_match": {
+        "topic_id": "llm_low_precision_quantization",
+        "topic_name": "大模型低精度量化",
+        "score": 0.219,
+        "level": "low",
+        "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+        "keyword_hits": []
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "Neural network weights are increasingly a bottleneck for deployment, yet most compression pipelines treat layers independently and overlook cross-layer redundancy induced by function-preserving symmetries.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "文本语义与方向描述存在弱相关，需要人工复核。"
+      },
+      "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "W7162149330",
+      "source": "IEEE",
+      "title": "PALS: Power-Aware LLM Serving for Mixture-of-Experts Models",
+      "authors": [
+        "Can Hankendi",
+        "Rana Shahout",
+        "Minlan Yu",
+        "Ayse K. Coskun"
+      ],
+      "summary": "Large language model (LLM) inference has become a dominant workload in modern data centers, driving significant GPU utilization and energy consumption. While prior systems optimize throughput and latency by batching, scheduling, and parallelism, they largely treat GPU power as a static constraint rather than a controllable resource. In this paper, we present a power-aware runtime for LLM serving, PALS, that treats GPU power caps as a first-class control knob and jointly optimizes them with software parameters such as batch size. The system combines lightweight offline power-performance models with a feedback-driven controller to select configurations that satisfy throughput targets while maximizing energy efficiency. We implement PALS within an existing LLM serving framework, vLLM, demonstrating that it requires no model retraining or API changes. Across multi-GPU systems and both dense and mixture-of-experts (MoE) models, PALS improves energy efficiency by up to 26.3%, reduces QoS violations by 4x to 7x under power constraints, and tracks dynamic power budgets. These results highlight the potential of integrating power control directly into LLM inference runtimes, enabling energy-proportional and grid-interactive AI systems.",
+      "published": "2026-05-20T00:00:00Z",
+      "updated": "2026-05-20T00:00:00Z",
+      "year": 2026,
+      "paper_url": "https://arxiv.org/abs/2605.21427",
+      "pdf_url": "https://arxiv.org/pdf/2605.21427",
+      "doi": null,
+      "journal": "ArXiv.org",
+      "partition": "其他",
+      "categories": [],
+      "seed_topic": "llm_inference_cluster_communication",
+      "matches": [
+        {
+          "topic_id": "kvcache_compression_storage_scheduling",
+          "topic_name": "KV cache 压缩与存储调度",
+          "score": 0.219,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_low_precision_quantization",
+          "topic_name": "大模型低精度量化",
+          "score": 0.175,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_inference_cluster_communication",
+          "topic_name": "大模型推理集群通信优化",
+          "score": 0.175,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "tensor_compute_unit_architecture",
+          "topic_name": "张量计算单元结构",
+          "score": 0.087,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        }
+      ],
+      "best_match": {
+        "topic_id": "kvcache_compression_storage_scheduling",
+        "topic_name": "KV cache 压缩与存储调度",
+        "score": 0.219,
+        "level": "low",
+        "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+        "keyword_hits": []
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "Large language model (LLM) inference has become a dominant workload in modern data centers, driving significant GPU utilization and energy consumption.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "文本语义与方向描述存在弱相关，需要人工复核。"
+      },
+      "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "W7162149711",
+      "source": "IEEE",
+      "title": "Mix-Quant: Quantized Prefilling, Precise Decoding for Agentic LLMs",
+      "authors": [
+        "Haiquan Lu",
+        "Zigeng Chen",
+        "Gongfan Fang",
+        "Xinyin Ma",
+        "Xinchao Wang"
+      ],
+      "summary": "LLM agents have recently emerged as a powerful paradigm for solving complex tasks through planning, tool use, memory retrieval, and multi-step interaction. However, these agentic workflows often introduce substantial input-side overhead, making the compute-intensive prefilling stage a key bottleneck in long-context, multi-turn inference. In this work, we propose Mix-Quant, a simple and effective phase-aware quantization framework for fast agentic inference. We first investigate FP4 quantization in agentic LLM workflows and observe that quantizing the entire inference process can incur significant performance degradation. In contrast, the prefilling stage exhibits substantial quantization redundancy and can therefore be quantized with minimal accuracy loss, despite being the dominant source of computation. Based on this insight, we apply high-throughput NVFP4 quantization to the prefilling phase while preserving BF16 precision for decoding. By decoupling prefilling acceleration from decoding quality, Mix-Quant combines phase-aware algorithmic quantization with hardware-efficient NVFP4 execution to alleviate the inference bottleneck in LLM agents. Extensive experiments across long-context and agentic benchmarks demonstrate that Mix-Quant largely preserves task performance while delivering significant efficiency improvements, achieving up to a 3x speedup during prefilling.",
+      "published": "2026-05-19T00:00:00Z",
+      "updated": "2026-05-19T00:00:00Z",
+      "year": 2026,
+      "paper_url": "https://arxiv.org/abs/2605.20315",
+      "pdf_url": "https://arxiv.org/pdf/2605.20315",
+      "doi": null,
+      "journal": "ArXiv.org",
+      "partition": "其他",
+      "categories": [],
+      "seed_topic": "llm_low_precision_quantization",
+      "matches": [
+        {
+          "topic_id": "kvcache_compression_storage_scheduling",
+          "topic_name": "KV cache 压缩与存储调度",
+          "score": 0.219,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "tensor_compute_unit_architecture",
+          "topic_name": "张量计算单元结构",
+          "score": 0.175,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_low_precision_quantization",
+          "topic_name": "大模型低精度量化",
+          "score": 0.131,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_inference_cluster_communication",
+          "topic_name": "大模型推理集群通信优化",
+          "score": 0.087,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        }
+      ],
+      "best_match": {
+        "topic_id": "kvcache_compression_storage_scheduling",
+        "topic_name": "KV cache 压缩与存储调度",
+        "score": 0.219,
+        "level": "low",
+        "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+        "keyword_hits": []
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "LLM agents have recently emerged as a powerful paradigm for solving complex tasks through planning, tool use, memory retrieval, and multi-step interaction.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "文本语义与方向描述存在弱相关，需要人工复核。"
+      },
+      "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "W7160727400",
+      "source": "IEEE",
+      "title": "VisMMOE: Exploiting Visual-Expert Affinity for Efficient Visual-Language MoE Offloading",
+      "authors": [
+        "Cheng Xu",
+        "Xiaofeng Hou",
+        "Jiacheng Liu",
+        "Chao Li"
+      ],
+      "summary": "Large-scale vision-language mixture-of-experts (VL-MoE) models provide strong multimodal capability, but efficient deployment on memory-constrained platforms remains difficult. Existing MoE offloading systems are largely designed for text-centric workloads and become much less effective for visual-heavy inputs, where large numbers of visual tokens induce broader and less predictable expert accesses. We present VisMMoE, a VL-MoE offloading system built on a single systems insight: pruning redundant visual tokens can improve offloading not only by reducing computation, but also by reshaping expert demand. We refer to this effect as \\textit{visual-expert affinity}: token pruning makes expert accesses more concentrated within layers and more stable across layers, producing a smaller and more predictable expert working set. Guided by this insight, VisMMoE combines affinity-aware token compression, lookahead expert prediction, and cache/pipeline orchestration to improve expert locality and prefetch effectiveness under tight memory budgets. We implement VisMMoE on multiple frameworks and evaluate it on representative VL-MoE models and benchmarks. VisMMoE improves end-to-end inference performance by up to 2.68x and 1.61x, respectively, over strong baselines for today's VL-MoE deployments while maintaining competitive accuracy.",
+      "published": "2026-05-07T00:00:00Z",
+      "updated": "2026-05-07T00:00:00Z",
+      "year": 2026,
+      "paper_url": "https://arxiv.org/abs/2605.05899",
+      "pdf_url": "https://arxiv.org/pdf/2605.05899",
+      "doi": null,
+      "journal": "ArXiv.org",
+      "partition": "其他",
+      "categories": [],
+      "seed_topic": "kvcache_compression_storage_scheduling",
+      "matches": [
+        {
+          "topic_id": "kvcache_compression_storage_scheduling",
+          "topic_name": "KV cache 压缩与存储调度",
+          "score": 0.219,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_low_precision_quantization",
+          "topic_name": "大模型低精度量化",
+          "score": 0.175,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_inference_cluster_communication",
+          "topic_name": "大模型推理集群通信优化",
+          "score": 0.131,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "tensor_compute_unit_architecture",
+          "topic_name": "张量计算单元结构",
+          "score": 0.087,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        }
+      ],
+      "best_match": {
+        "topic_id": "kvcache_compression_storage_scheduling",
+        "topic_name": "KV cache 压缩与存储调度",
+        "score": 0.219,
+        "level": "low",
+        "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+        "keyword_hits": []
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "Large-scale vision-language mixture-of-experts (VL-MoE) models provide strong multimodal capability, but efficient deployment on memory-constrained platforms remains difficult.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "文本语义与方向描述存在弱相关，需要人工复核。"
+      },
+      "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "W7160727535",
+      "source": "IEEE",
+      "title": "ROSE: Rollout On Serving GPUs via Cooperative Elasticity for Agentic RL",
+      "authors": [
+        "Wei Gao",
+        "Yuheng Zhao",
+        "Dilxat Muhtar",
+        "Dakai An",
+        "Xuchun Shang",
+        "Tianyuan Wu",
+        "Lunxi Cao",
+        "Shaopan Xiong",
+        "Weixun Wang",
+        "Ju Huang",
+        "Teng Ma",
+        "Siran Yang",
+        "Jiamang Wang",
+        "Lin Qu",
+        "Bo Zheng",
+        "Wei Wang"
+      ],
+      "summary": "Agentic reinforcement learning (RL) is reshaping LLM post-training, but end-to-end training time is dominated by compute-intensive, multi-turn rollouts whose resource demand varies significantly across training steps. Resource-fixed systems cannot adapt to this variation, while resource-elastic approaches that provision external GPUs on demand suffer from high allocation overhead and limited availability. We observe that serving clusters leave substantial GPU compute and memory idle, and propose cooperative elasticity: sharing already-deployed serving GPUs with rollout workloads to provide on-demand elastic capacity. Realizing this is non-trivial, as it must preserve serving SLOs under bursty traffic while minimizing cross-cluster communication overhead. We present ROSE, a system that realizes cooperative elasticity for agentic RL post-training, comprising three components: (1) an SLO-safe co-serving executor that co-locates heterogeneous serving and rollout models on the same GPUs, dynamically sharing memory and compute while preserving serving SLOs; (2) a cross-cluster weight transfer engine that leverages shard-aware routing and weight sparsity for fast synchronization; and (3) an elastic rollout scheduler that dynamically routes rollouts across dedicated and opportunistic serving GPUs. Experiments across multiple model sizes and cluster scales show that ROSE improves end-to-end throughput by 1.3 - 3.3 x over resource-fixed baselines and reduces rollout time by 1.2 - 1.5 x over resource-elastic baselines, with no serving SLO violations.",
+      "published": "2026-05-07T00:00:00Z",
+      "updated": "2026-05-07T00:00:00Z",
+      "year": 2026,
+      "paper_url": "https://arxiv.org/abs/2605.06534",
+      "pdf_url": "https://arxiv.org/pdf/2605.06534",
+      "doi": null,
+      "journal": "ArXiv.org",
+      "partition": "其他",
+      "categories": [],
+      "seed_topic": "kvcache_compression_storage_scheduling",
+      "matches": [
+        {
+          "topic_id": "llm_low_precision_quantization",
+          "topic_name": "大模型低精度量化",
+          "score": 0.219,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_inference_cluster_communication",
+          "topic_name": "大模型推理集群通信优化",
+          "score": 0.219,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "tensor_compute_unit_architecture",
+          "topic_name": "张量计算单元结构",
+          "score": 0.175,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "kvcache_compression_storage_scheduling",
+          "topic_name": "KV cache 压缩与存储调度",
+          "score": 0.175,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        }
+      ],
+      "best_match": {
+        "topic_id": "llm_low_precision_quantization",
+        "topic_name": "大模型低精度量化",
+        "score": 0.219,
+        "level": "low",
+        "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+        "keyword_hits": []
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "Agentic reinforcement learning (RL) is reshaping LLM post-training, but end-to-end training time is dominated by compute-intensive, multi-turn rollouts whose resource demand varies significantly across training steps.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "文本语义与方向描述存在弱相关，需要人工复核。"
+      },
+      "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "W7162218217",
+      "source": "IEEE",
+      "title": "Hy-MT2: A Family of Fast, Efficient and Powerful Multilingual Translation Models in the Wild",
+      "authors": [
+        "Mao Zheng",
+        "Zheng Li",
+        "Tao Chen",
+        "Bo Lv",
+        "Mingrui Sun",
+        "Mingyang Song",
+        "Jinlong Song",
+        "Hong Huang",
+        "Decheng Wu",
+        "Hai Wang",
+        "Yifan Song",
+        "Yanfeng Chen",
+        "Guanwei Zhang"
+      ],
+      "summary": "Hy-MT2 is a family of fast-thinking multilingual translation models designed for complex real-world scenarios. It includes three model sizes: 1.8B, 7B, and 30B-A3B (MoE), all of which support translation among 33 languages and effectively follow translation instructions in multiple languages. Multi-dimensional evaluations show that Hy-MT2 delivers outstanding performance across general, real-world business, domain-specific, and instruction-following translation tasks. The 7B and 30B models outperform open-source models such as DeepSeek-V4-Pro and Kimi K2.6 in fast-thinking mode, while the lightweight 1.8B model also surpasses mainstream commercial APIs from providers such as Microsoft and Doubao overall. Moreover, when paired with AngelSlim's 1.25-bit extreme quantization for on-device deployment, the lightweight 1.8B model requires only 440 MB of storage and achieves a 1.5x inference speedup.",
+      "published": "2026-05-21T00:00:00Z",
+      "updated": "2026-05-21T00:00:00Z",
+      "year": 2026,
+      "paper_url": "https://arxiv.org/abs/2605.22064",
+      "pdf_url": "https://arxiv.org/pdf/2605.22064",
+      "doi": null,
+      "journal": "arXiv (Cornell University)",
+      "partition": "其他",
+      "categories": [],
+      "seed_topic": "llm_low_precision_quantization",
+      "matches": [
+        {
+          "topic_id": "llm_low_precision_quantization",
+          "topic_name": "大模型低精度量化",
+          "score": 0.175,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_inference_cluster_communication",
+          "topic_name": "大模型推理集群通信优化",
+          "score": 0.087,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "tensor_compute_unit_architecture",
+          "topic_name": "张量计算单元结构",
+          "score": 0.044,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "kvcache_compression_storage_scheduling",
+          "topic_name": "KV cache 压缩与存储调度",
+          "score": 0.044,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        }
+      ],
+      "best_match": {
+        "topic_id": "llm_low_precision_quantization",
+        "topic_name": "大模型低精度量化",
+        "score": 0.175,
+        "level": "low",
+        "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+        "keyword_hits": []
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "Hy-MT2 is a family of fast-thinking multilingual translation models designed for complex real-world scenarios.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "文本语义与方向描述存在弱相关，需要人工复核。"
+      },
+      "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "W7162219022",
+      "source": "IEEE",
+      "title": "DynaFlow: Transparent and Flexible Intra-Device Parallelism via Programmable Operator Scheduling",
+      "authors": [
+        "Yi Pan",
+        "Yile Gu",
+        "Jinbin Luo",
+        "Yibo Wu",
+        "Ziren Wang",
+        "Hongtao Zhang",
+        "Ziyi Xu",
+        "Shengkai Lin",
+        "Baris Kasikci",
+        "Stephanie Wang"
+      ],
+      "summary": "Intra-device parallelism addresses resource under-utilization in ML inference and training by overlapping the execution of operators with different resource usage. However, its wide adoption is hindered by a fundamental conflict with the static, sequential programming model of existing frameworks. Integrating these strategies requires invasive, model-specific code overhauls, representing an intractable engineering cost. This is further amplified by the high sensitivity of strategies to execution contexts (e.g., workload, model architecture, hardware), forcing developers to implement and maintain multiple specialized solutions. To address this, we propose DynaFlow, a framework that enables the transparent and flexible integration of intra-device parallelism by decoupling the logical model definition from the physical execution schedule. DynaFlow introduces a flexible frontend with annotations for graph partitioning and a programmable interface for defining custom intra-device parallelism strategies. Its efficient backend manages complex control/data-flow asynchronously, uses custom memory management to eliminate copy overheads, and preserves compatibility with optimizations like CUDA Graphs and TorchInductor. We demonstrate that DynaFlow can integrate representative parallelism strategies into 6 state-of-the-art ML systems with minimal code changes, achieving up to a 1.29x throughput improvement. DynaFlow is publicly available at https://github.com/uw-syfi/DynaFlow.",
+      "published": "2026-05-20T00:00:00Z",
+      "updated": "2026-05-20T00:00:00Z",
+      "year": 2026,
+      "paper_url": "https://arxiv.org/abs/2605.21603",
+      "pdf_url": "https://arxiv.org/pdf/2605.21603",
+      "doi": null,
+      "journal": "ArXiv.org",
+      "partition": "其他",
+      "categories": [],
+      "seed_topic": "llm_inference_cluster_communication",
+      "matches": [
+        {
+          "topic_id": "kvcache_compression_storage_scheduling",
+          "topic_name": "KV cache 压缩与存储调度",
+          "score": 0.175,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_low_precision_quantization",
+          "topic_name": "大模型低精度量化",
+          "score": 0.087,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "tensor_compute_unit_architecture",
+          "topic_name": "张量计算单元结构",
+          "score": 0.087,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_inference_cluster_communication",
+          "topic_name": "大模型推理集群通信优化",
+          "score": 0.087,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        }
+      ],
+      "best_match": {
+        "topic_id": "kvcache_compression_storage_scheduling",
+        "topic_name": "KV cache 压缩与存储调度",
+        "score": 0.175,
+        "level": "low",
+        "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+        "keyword_hits": []
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "Intra-device parallelism addresses resource under-utilization in ML inference and training by overlapping the execution of operators with different resource usage.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "文本语义与方向描述存在弱相关，需要人工复核。"
+      },
+      "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "W7161915101",
+      "source": "IEEE",
+      "title": "Computational Challenges in Token Economics: Bridging Economic Theory and AI System Design",
+      "authors": [
+        "Ou Wu",
+        "Yingjun Deng"
+      ],
+      "summary": "Token economics has emerged as a useful lens for understanding resource allocation, value creation, and pricing in large language model systems. While recent work has increasingly treated tokens as economic primitives, there remains a substantial gap between high-level economic theory and the computational realities of modern AI infrastructure. This paper identifies and analyzes the key computational challenges that arise when token-economic principles are implemented in real-time inference systems. We argue that computational feasibility is not merely one dimension of token economics, but its governing constraint: these challenges are driven by fundamental tensions among fine-grained valuation, low-latency execution, and allocation optimality under uncertainty. To structure this problem space, we introduce the notion of \\textbf{Computational Token Economics} and propose the \\textbf{Token Economics Trilemma} -- a conditional no-free-lunch principle that captures the inherent trade-offs among granularity, real-time performance, and optimality. We further categorize the main technical challenges into three areas: real-time value accounting, constrained resource allocation, and economic-aware system architecture. Rather than presenting a complete solution, this paper aims to define a research agenda for bridging token economics and AI system design, highlighting open problems at the intersection of computational economics, machine learning systems, and AI infrastructure.",
+      "published": "2026-05-17T00:00:00Z",
+      "updated": "2026-05-17T00:00:00Z",
+      "year": 2026,
+      "paper_url": "https://arxiv.org/abs/2605.17410",
+      "pdf_url": "https://arxiv.org/pdf/2605.17410",
+      "doi": null,
+      "journal": "ArXiv.org",
+      "partition": "其他",
+      "categories": [],
+      "seed_topic": "kvcache_compression_storage_scheduling",
+      "matches": [
+        {
+          "topic_id": "llm_low_precision_quantization",
+          "topic_name": "大模型低精度量化",
+          "score": 0.175,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "tensor_compute_unit_architecture",
+          "topic_name": "张量计算单元结构",
+          "score": 0.131,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_inference_cluster_communication",
+          "topic_name": "大模型推理集群通信优化",
+          "score": 0.044,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "kvcache_compression_storage_scheduling",
+          "topic_name": "KV cache 压缩与存储调度",
+          "score": 0.044,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        }
+      ],
+      "best_match": {
+        "topic_id": "llm_low_precision_quantization",
+        "topic_name": "大模型低精度量化",
+        "score": 0.175,
+        "level": "low",
+        "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+        "keyword_hits": []
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "Token economics has emerged as a useful lens for understanding resource allocation, value creation, and pricing in large language model systems.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "文本语义与方向描述存在弱相关，需要人工复核。"
+      },
+      "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "W7162606253",
+      "source": "IEEE",
+      "title": "Energy-Aware Computing in the Year 2026",
+      "authors": [
+        "Roblex Nana Tchakoute",
+        "Claude Tadonki"
+      ],
+      "summary": "High-Performance Computing (HPC) has recently entered the Exascale era, and considerable efforts are being made to fully harness this potential power for large-scale applications, such as cutting-edge generative AI (training and exploitation). The corresponding energy consumption is very high, and forecasts are alarming, making this metric a critical systemic bottleneck. Addressing this issue presents a genuine challenge for the entire cloud-edge-HPC continuum at all scales, from low-power IoT microcontrollers to multi-megawatt data centers. Beyond financial costs, green computing is driven by considerations related to climate change and environmental concerns such as carbon footprint ($CO_2e$), as well as constraints on energy production and supply, leading to a real need to regulate {\\em information and communication technology} (ICT) activities. This article presents a comprehensive overview of energy-efficient computing, taking into account the most recent and significant contributions. Based on this exploration of the state of the art, we design and describe a holistic taxonomy of the aforementioned publications, structured around various perspectives, including {\\em hardware and software aspects, measurement instrumentation, software optimizations, dynamic task scheduling, voltage scaling, workload consolidation, federated learning}, and {\\em cooling}. Particular emphasis is placed on large-scale AI, which receives significant attention due to its considerable resource requirements. We conclude with an analysis of a forward-looking roadmap that considers the main perspectives of sustainable computing.",
+      "published": "2026-05-23T00:00:00Z",
+      "updated": "2026-05-23T00:00:00Z",
+      "year": 2026,
+      "paper_url": "https://arxiv.org/abs/2605.24569",
+      "pdf_url": "https://arxiv.org/pdf/2605.24569",
+      "doi": null,
+      "journal": "arXiv (Cornell University)",
+      "partition": "其他",
+      "categories": [],
+      "seed_topic": "llm_low_precision_quantization",
+      "matches": [
+        {
+          "topic_id": "llm_low_precision_quantization",
+          "topic_name": "大模型低精度量化",
+          "score": 0.131,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "tensor_compute_unit_architecture",
+          "topic_name": "张量计算单元结构",
+          "score": 0.131,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "llm_inference_cluster_communication",
+          "topic_name": "大模型推理集群通信优化",
+          "score": 0.087,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "kvcache_compression_storage_scheduling",
+          "topic_name": "KV cache 压缩与存储调度",
+          "score": 0.087,
+          "level": "low",
+          "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+          "keyword_hits": []
+        }
+      ],
+      "best_match": {
+        "topic_id": "llm_low_precision_quantization",
+        "topic_name": "大模型低精度量化",
+        "score": 0.131,
+        "level": "low",
+        "reason": "文本语义与方向描述存在弱相关，需要人工复核。",
+        "keyword_hits": []
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "High-Performance Computing (HPC) has recently entered the Exascale era, and considerable efforts are being made to fully harness this potential power for large-scale applications, such as cutting-edge generative AI (training and exploitation).",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "文本语义与方向描述存在弱相关，需要人工复核。"
+      },
+      "first_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "last_seen_at": "2026-05-30T05:44:08.991550+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "2605.28488v1",
+      "source": "arXiv",
+      "title": "Bridging Maximum Likelihood and Optimal Transport for Efficient Inference and Model Selection in Stochastic Block Models",
+      "authors": [
+        "Simon Queric",
+        "Cédric Vincent-Cuaz",
+        "Charles Bouveyron",
+        "Marco Corneli"
+      ],
+      "summary": "We study inference in stochastic block models (SBMs) through the lens of optimal transport (OT). We first establish that maximum likelihood variational inference (MLVI) can be interpreted as a semi-relaxed Gromov-Wasserstein (srGW) projection with entropic regularization. While this formulation yields accurate clustering, the entropic regularization prevents transport plans to be sparse, hindering intrinsic model selection. Consequently, we investigate unregularized srGW estimators, and prove that they consistently recover both the SBM connectivity matrix and latent cluster assignments in the asymptotic regime. However, this asymptotic property does not translate into reliable model selection in finite samples, and calls for additional mechanisms to promote sparsity in the inferred cluster proportions. We empirically show that such a regularized formulation yields estimators that simultaneously recover model parameters and select the number of clusters in a single optimization problem, thereby avoiding costly grid search or heuristic model selection procedures.",
+      "published": "2026-05-27T13:44:43Z",
+      "updated": "2026-05-27T13:44:43Z",
+      "paper_url": "http://arxiv.org/abs/2605.28488v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.28488v1",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "math.ST"
+      ],
+      "seed_topic": "llm_inference_cluster_communication",
+      "matches": [
+        {
+          "topic_id": "llm_inference_cluster_communication",
+          "topic_name": "大模型推理集群通信优化",
+          "score": 0.125,
+          "level": "low",
+          "reason": "arXiv 分类重合：cs.LG",
+          "keyword_hits": [],
+          "llm_reason": "本研究针对图数据的统计推断与模型选择，与分布式推理集群通信优化（如张量并行、调度等领域）无直接关联，仅因arXiv分类包含cs.LG产生微弱匹配。"
+        },
+        {
+          "topic_id": "llm_low_precision_quantization",
+          "topic_name": "大模型低精度量化",
+          "score": 0.094,
+          "level": "low",
+          "reason": "arXiv 分类重合：cs.LG",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "tensor_compute_unit_architecture",
+          "topic_name": "张量计算单元结构",
+          "score": 0.094,
+          "level": "low",
+          "reason": "arXiv 分类重合：cs.LG",
+          "keyword_hits": []
+        },
+        {
+          "topic_id": "kvcache_compression_storage_scheduling",
+          "topic_name": "KV cache 压缩与存储调度",
+          "score": 0.094,
+          "level": "low",
+          "reason": "arXiv 分类重合：cs.LG",
+          "keyword_hits": []
+        }
+      ],
+      "best_match": {
+        "topic_id": "llm_inference_cluster_communication",
+        "topic_name": "大模型推理集群通信优化",
+        "score": 0.125,
+        "level": "low",
+        "reason": "arXiv 分类重合：cs.LG",
+        "keyword_hits": [],
+        "llm_reason": "本研究针对图数据的统计推断与模型选择，与分布式推理集群通信优化（如张量并行、调度等领域）无直接关联，仅因arXiv分类包含cs.LG产生微弱匹配。"
+      },
+      "chinese_summary": {
+        "problem": "在随机块模型（SBM）中，如何同时实现高效的聚类推断与自动模型选择（即确定簇的数量），避免传统网格搜索等启发式方法。",
+        "method": "将最大似然变分推断解释为半松弛Gromov-Wasserstein投影，进而研究非正则化的srGW估计量，并提出一种正则化形式以在单一优化问题中同时推断参数和选择簇数。",
+        "innovation": "揭示了最大似然变分推断与半松弛熵正则化Gromov-Wasserstein投影的等价性；证明了非正则化srGW估计量在渐近情况下能一致恢复连接矩阵和潜在簇分配；引入稀疏性正则化机制，在有限样本下实现自动模型选择，无需额外计算。",
+        "evidence": "摘要中仅提及理论证明（渐近一致性）和经验展示（正则化形式同时完成参数估计和模型选择），但未提供具体实验指标或数据集。",
+        "limitations": "未说明有限样本下正则化方法的具体性能阈值；实证部分仅概括，未给出对比基准或量化结果；方法基于SBM假定，泛化至其它图模型未讨论。",
+        "why_relevant": "本研究针对图数据的统计推断与模型选择，与分布式推理集群通信优化（如张量并行、调度等领域）无直接关联，仅因arXiv分类包含cs.LG产生微弱匹配。"
+      },
+      "first_seen_at": "2026-05-28T09:35:48.728882+00:00",
+      "last_seen_at": "2026-05-28T13:18:49.361053+00:00",
+      "retained_from_previous_run": true
+    }
+  ],
+  "stats": {
+    "paper_count": 31,
+    "new_paper_count": 29,
+    "days": 30,
+    "collection_mode": "lookback",
+    "collection_cutoff_iso": "2026-04-30T05:44:08.991550+00:00",
+    "max_per_topic": 10,
+    "llm_enabled": true,
+    "llm_concurrency": 2,
+    "recent_history_days": 45,
+    "successful_fetches": 4,
+    "failed_fetches": 0,
+    "retained_paper_count": 2,
+    "retained_recent_low_count": 1,
+    "dropped_low_relevance_count": 0,
+    "max_stored_papers": 800,
+    "max_data_bytes": 8388608,
+    "data_bytes": 156667,
+    "storage_trimmed_count": 0,
+    "storage_trimmed_by_level": {
+      "high": 0,
+      "medium": 0,
+      "low": 0,
+      "unknown": 0
+    }
+  }
+}

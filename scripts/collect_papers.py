@@ -97,11 +97,8 @@ def load_issue_config(default_config: dict[str, Any]) -> dict[str, Any]:
     return default_config
 
 def s2_query_for_topic(topic: Topic) -> str:
-    terms = []
-    for keyword in topic.keywords[:8]:
-        terms.append(f'"{keyword}"')
-    return " OR ".join(terms) if terms else topic.name
-
+    """Build search query for OpenAlex (space-separated keywords)."""
+    return " ".join(topic.keywords[:8])
 def load_partitions(partition_path: Path | None = None) -> dict[str, set[str]]:
     path = partition_path or DEFAULT_PARTITION_CONFIG
     if not path.exists():
@@ -163,7 +160,7 @@ def fetch_openalex(
     partitions: dict[str, set[str]],
 ) -> list[dict[str, Any]]:
     """Fetch papers from OpenAlex API (free, no key, 100k requests/day)."""
-    query = urllib.parse.quote(s2_query_for_topic(topic))
+    query = s2_query_for_topic(topic)
     per_page = min(max_results, 200)
     retry_count = int(os.getenv("API_RETRIES", "4"))
     timeout_seconds = float(os.getenv("API_TIMEOUT_SECONDS", "90"))
@@ -180,7 +177,6 @@ def fetch_openalex(
     while len(papers) < max_results:
         params = {
             "search": query,
-            "filter": "type:article",
             "sort": "publication_date:desc",
             "per_page": str(per_page),
             "cursor": cursor,
@@ -446,16 +442,20 @@ def summarize_one(args: tuple[Topic, dict[str, Any]]) -> tuple[str, dict[str, st
     return paper_id, summary, adjusted_match
 
 def dedupe_papers(papers: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    seen = set()
+    """Deduplicate by paper ID, then by DOI to catch cross-source duplicates."""
+    seen_ids = set()
+    seen_dois = set()
     unique = []
     for paper in papers:
         key = paper.get("id") or paper.get("paper_url")
-        if key in seen:
+        doi = (paper.get("doi") or "").lower()
+        if key in seen_ids or (doi and doi in seen_dois):
             continue
-        seen.add(key)
+        seen_ids.add(key)
+        if doi:
+            seen_dois.add(doi)
         unique.append(paper)
     return unique
-
 def paper_key(paper: dict[str, Any]) -> str:
     return str(paper.get("id") or paper.get("paper_url") or "")
 
@@ -679,7 +679,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Collect IEEE papers via Semantic Scholar for paper-daily.")
     parser.add_argument("--config", type=Path, default=DEFAULT_CONFIG)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
-    parser.add_argument("--days", type=int, default=int(os.getenv("LOOKBACK_DAYS", "7")))
+    parser.add_argument("--days", type=int, default=int(os.getenv("LOOKBACK_DAYS", "30")))
     parser.add_argument("--max-per-topic", type=int, default=int(os.getenv("MAX_PER_TOPIC", "25")))
     parser.add_argument("--max-summaries", type=int, default=int(os.getenv("MAX_SUMMARIES", "40")))
     parser.add_argument("--max-stored-papers", type=int, default=int(os.getenv("MAX_STORED_PAPERS", str(DEFAULT_MAX_STORED_PAPERS))))
